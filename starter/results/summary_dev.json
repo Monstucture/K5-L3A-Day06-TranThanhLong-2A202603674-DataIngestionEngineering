@@ -1,0 +1,123 @@
+{
+  "run_started_utc": "2026-11-13T04:48:56+00:00",
+  "split": "dev",
+  "questions": 24,
+  "embedding": {
+    "provider": "ollama (local)",
+    "model": "qwen3-embedding:4b",
+    "dimensions": 2560,
+    "cost_usd": 0
+  },
+  "vector_store": "PostgreSQL + pgvector, cosine distance (<=>), exact search",
+  "strategies": {
+    "A": {
+      "chunking": "fixed_size",
+      "size": 500,
+      "overlap": 50,
+      "index": "A",
+      "use_filter": false
+    },
+    "B": {
+      "chunking": "by_paragraph",
+      "max_size": 500,
+      "index": "B",
+      "use_filter": false
+    },
+    "C": {
+      "chunking": "by_paragraph",
+      "max_size": 500,
+      "index": "B",
+      "use_filter": true
+    }
+  },
+  "index_stats": {
+    "A": {
+      "chunks": 368,
+      "total_chars": 170206,
+      "min_chars": 63,
+      "median_chars": 500.0,
+      "mean_chars": 462.5,
+      "max_chars": 500,
+      "chunk_seconds": 0.001,
+      "embed_seconds": 12.497,
+      "upsert_seconds": 0.507,
+      "rows_before_upsert": 368,
+      "rows_after_upsert": 368
+    },
+    "B": {
+      "chunks": 405,
+      "total_chars": 154563,
+      "min_chars": 27,
+      "median_chars": 412,
+      "mean_chars": 381.6,
+      "max_chars": 499,
+      "chunk_seconds": 0.006,
+      "embed_seconds": 12.521,
+      "upsert_seconds": 0.498,
+      "rows_before_upsert": 405,
+      "rows_after_upsert": 405
+    }
+  },
+  "metrics": {
+    "A": {
+      "dev": {
+        "questions": 24,
+        "hit@1": "13/24",
+        "hit@1_rate": 0.542,
+        "hit@3": "18/24",
+        "hit@3_rate": 0.75,
+        "page_hit@3": "22/24",
+        "page_hit@3_rate": 0.917,
+        "misses@3": [
+          "q07",
+          "q12",
+          "q17",
+          "q23",
+          "q24",
+          "q33"
+        ]
+      }
+    },
+    "B": {
+      "dev": {
+        "questions": 24,
+        "hit@1": "19/24",
+        "hit@1_rate": 0.792,
+        "hit@3": "20/24",
+        "hit@3_rate": 0.833,
+        "page_hit@3": "24/24",
+        "page_hit@3_rate": 1.0,
+        "misses@3": [
+          "q18",
+          "q23",
+          "q24",
+          "q33"
+        ]
+      }
+    },
+    "C": {
+      "dev": {
+        "questions": 24,
+        "hit@1": "19/24",
+        "hit@1_rate": 0.792,
+        "hit@3": "20/24",
+        "hit@3_rate": 0.833,
+        "page_hit@3": "24/24",
+        "page_hit@3_rate": 1.0,
+        "misses@3": [
+          "q18",
+          "q23",
+          "q24",
+          "q33"
+        ]
+      }
+    }
+  },
+  "environment": {
+    "python": "3.14.3",
+    "pypdf": "6.21.4",
+    "psycopg": "3.3.8",
+    "ollama": "0.6.3",
+    "pgvector": "not installed"
+  }
+}
