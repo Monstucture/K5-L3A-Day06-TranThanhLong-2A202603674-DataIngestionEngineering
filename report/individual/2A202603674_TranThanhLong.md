@@ -15,9 +15,10 @@ Trần Thanh Long · 2A202603674 · L3A
   - **C:** dùng **đúng chunk và index của B**, chỉ thêm filter `chapter` cho câu hỏi có filter (câu không có filter chạy như B).
   - **Khác biệt duy nhất B–C là metadata filter.** A–B chỉ đổi cách chunk (cùng ngân sách 500 ký tự, cùng model, cùng store).
 - **≥20 câu:** 34 câu trong `benchmark/questions.json`, **24 dev / 10 test**, chia trước khi chạy. Loại câu: direct 11, comparison 11, paraphrase 6, metadata_filter 5, condition 1. **5 câu có filter `chapter`** (dev: q12, q14, q26; test: q04, q29); câu hỏi tự nêu phạm vi ("In the chemistry chapter…") nên filter không lấy từ đáp án. Kiểm chứng evidence: mỗi `evidence_quote` được chép nguyên văn và kiểm tra tự động là có trên `gold_page` sau chuẩn hóa (`run.py` dừng nếu thiếu); `gold_page` là số trang của file PDF (đã sửa từ số trang in của sách). Nguy cơ rò rỉ: trang 2 là trang gold của 2 câu test (q05, q06) và 2 câu dev (q01, q07), dù hỏi các ý khác nhau.
-- **Tiêu chí chọn chiến lược đã chốt trước khi xem test:** Chọn chiến lược có Evidence Hit@3 trên dev cao nhất; nếu bằng nhau thì chọn Hit@1 dev cao hơn; nếu vẫn bằng thì chọn chiến lược đơn giản hơn / ít chunk hơn. Mọi điều chỉnh tham số chỉ dựa trên dev. Test chỉ chạy một lần sau khi đã chốt. (Tiêu chí được commit ở `fc07b95` lúc 12:14, trước lần chạy test lúc 12:41 ngày 2026-11-13.)
+- **Tiêu chí chọn chiến lược đã chốt trước khi xem test:** Chọn chiến lược có Evidence Hit@3 trên dev cao nhất; nếu bằng nhau thì chọn Hit@1 dev cao hơn; nếu vẫn bằng thì chọn chiến lược đơn giản hơn / ít chunk hơn. Mọi điều chỉnh tham số chỉ dựa trên dev. Test chỉ chạy một lần sau khi đã chốt.
 
 ## Kết quả
+# Chapter 1 & 2 of the book
 | Strategy | Split | Hit@1 (n/N) | Evidence Hit@3 (n/N) | Chunk count | Thời gian | Chi phí |
 |---|---|---|---|---|---|---|
 | A | dev | 13/24 | 18/24 | 368 | 12.6 s | 0 |
@@ -31,9 +32,25 @@ Thời gian = embed toàn bộ chunk của index trên laptop (upsert thêm kho�
 
 | Strategy | Coherence trung bình /2 (n) | Metadata đủ và đúng (n/N) | Filter tuân thủ (n/N hoặc N/A) | Grounding 0/1/2 (số câu) và trung bình /2 |
 |---|---|---|---|---|
-| A | 1.1 (10) | 30/30 | N/A (không filter) | 0 / 2 / 8 — 1.8 |
-| B | 1.5 (10) | 30/30 | N/A (không filter) | 0 / 3 / 7 — 1.7 |
-| C | 1.5 (10, cùng chunk với B) | 30/30 | 2/2 (q04, q29) | 0 / 3 / 7 — 1.7 |
+| A | 1 (10) | N/A | N/A (không filter) | 0 / 2 / 8 — 1.8 |
+| B | 1 (10) | N/A | N/A (không filter) | 0 / 3 / 7 — 1.7 |
+| C | 1 (10, cùng chunk với B) | 30/30 | 2/2 (q04, q29) | 0 / 3 / 7 — 1.7 |
+
+# Full book
+| Strategy | Split | Hit@1 (n/N) | Evidence Hit@3 (n/N) | Chunk count | Thời gian | Chi phí |
+|---|---|---|---|---|---|---|
+| A | dev | 13/24 | 17/24 | 6356 | 229.3 s | 0 |
+| B | dev | 18/24 | 20/24 | 6675 | 210.5 s | 0 |
+| C | dev | 18/24 | 20/24 | 6675 | 210.5 s | 0 |
+
+miss "q18", "q23", "q24", "q33" ; 
+
+| A | test | 5/10 | 9/10 | 6356 | 221.4s s | 0 |
+| B | test | 8/10 | 10/10 | 6675 | 212.8 s | 0 |
+| C | test | 8/10 | 10/10 | 6675 | 212.8 s | 0 |
+
+Thời gian = embed toàn bộ chunk của index trên laptop (upsert thêm khoảng 0,3 s). Độ dài chunk: A trung bình 462 ký tự (63–500), B trung bình 396 ký tự (27–500).
+
 
 **Đường dẫn trace, nhãn thủ công và cách chọn mẫu:**
 - Trace top-3 đầy đủ: `starter/results/traces_dev.jsonl`, `starter/results/traces_test.jsonl`; chỉ số: `summary_dev.json`, `summary_test.json`.
@@ -46,7 +63,7 @@ Thời gian = embed toàn bộ chunk của index trên laptop (upsert thêm kho�
 - **So sánh A–B và B–C; 2 ví dụ sai có ID câu và nguồn:**
   - **A–B (chỉ đổi cách chunk):** B tốt hơn rõ ở Hit@1 (dev 18/24 so với 13/24; test 8/10 so với 5/10) và Hit@3 (dev 20/24 so với 18/24; test 10/10 so với 9/10). Coherence B 1.5 so với A 1.1: 9/10 chunk của A bắt đầu hoặc kết thúc giữa từ ("gadro's number", "At so"). Grounding A nhỉnh hơn (1.8 so với 1.7) vì cửa sổ A dài hơn trung bình (462 so với 396 ký tự) nên đôi khi mang thêm ngữ cảnh (q05: A có cả định nghĩa anatomy và physiology, B chỉ có câu "anatomy is about structure, physiology is about function"). Chi phí và thời gian gần như bằng nhau.
   - **B–C (chỉ đổi filter):** Hit@1/Hit@3 giống hệt trên cả dev và test. Lý do: với cả 5 câu có filter, B đã xếp chunk gold ở hạng 1, và 4/5 câu có top-3 toàn chunk đúng chương, nên filter không đổi được hit. Filter vẫn có tác dụng thấy được ở câu còn lại: dev q12, B có kết quả hạng 3 thuộc chương 2 (trang 47, §2.3), C thay bằng chunk chương 1. C tuân thủ filter 2/2 câu test. Kết luận: trên corpus nhỏ 2 chương, filter `chapter` đảm bảo phạm vi nhưng không cải thiện xếp hạng.
-  - **Ví dụ sai 1 — test q06, chiến lược A (nguồn: trang 2):** câu evidence "Microscopic anatomy includes cytology, the study of cells and histology, the study of tissues." bị cửa sổ cố định cắt đôi: `A:…:p002:c003` kết thúc ở "the study of tis", `A:…:p002:c004` bắt đầu ở "the study of cells and histology…". Đúng trang (page hit) nhưng không chunk nào chứa đủ evidence nên Hit@3 = 0. B giữ trọn câu trong `B:…:s1.1:c004` và đạt Hit@1.
+  - **Ví dụ sai 1 — test q06, chiến lược A (nguồn: trang 2):** câu evidence "Microscopic anatomy includes cytology, the study of cells and histology, the study of tissues." bị cửa sổ cố định cắt đôi: A:…:p002:c004 bắt đầu ở "the study of cells and histology…". Đúng trang (page hit) nhưng không chunk nào chứa đủ evidence nên Hit@3 = 0. B giữ trọn câu trong B:…:s1.1:c004 và đạt Hit@1.
   - **Ví dụ sai 2 — dev q18, chiến lược B (nguồn: trang 19):** câu hỏi về ba mặt phẳng giải phẫu; evidence là gạch đầu dòng về sagittal plane. B trả về chunk frontal/transverse plane (trang 19–20) và đoạn mở đầu về mặt phẳng, chunk chứa câu sagittal không vào top-3: các gạch đầu dòng gần như giống nhau về nghĩa nên cạnh tranh nhau. A lại đúng vì cửa sổ 500 ký tự gộp phần mở đầu với câu sagittal.
   - **Lỗi chung cả ba chiến lược:** dev q23, q24, q33 là câu so sánh rộng (ví dụ q33 so sánh triglyceride, phospholipid, steroid và protein); top-3 toàn chunk về lipid (trang 62–64) nên câu evidence về protein không được lấy. Câu hỏi bao nhiều ý nhưng evidence chỉ là một câu.
 - **Chiến lược chọn, đánh đổi, điều kiện áp dụng:** theo tiêu chí đã chốt: Hit@3 dev B = C = 20/24 > A 18/24; Hit@1 dev B = C = 18/24; hòa nên chọn chiến lược đơn giản hơn: **B** (C cần thêm đầu vào filter mà không tăng chỉ số). Test xác nhận B ≥ A và B = C. Đánh đổi: B cần đoán cấu trúc (heading, đoạn) và tạo một số chunk rất ngắn (27 ký tự: heading bị tách) nhưng giữ câu trọn vẹn; A đơn giản, không phụ thuộc bố cục nhưng hay cắt evidence. Nên dùng C khi người dùng thật sự chỉ định phạm vi và corpus có nhiều chương/tài liệu dễ nhầm; với 2 chương như ở đây, B là đủ.
