@@ -3,7 +3,7 @@
 ## Dữ liệu và pipeline
 - Chủ đề, nguồn/quyền, số trang và quy tắc tính trang: OpenStax Anatomy & Physiology 2e, chapters 1–2 (CC BY-NC-SA 4.0), 70 trang
 - Chuẩn hóa, lỗi và giới hạn:
-- Embedding model/provider/version/số chiều, vector store/version, metric, lệnh chạy và chi phí:
+- Embedding model/provider/version/số chiều, vector store/version, metric, lệnh chạy và chi phí: qwen3-embedding:4b; 2560 dimensions ;local model cost my laptop vram
 - Metadata bắt buộc, trường lọc bổ sung, nguồn giá trị và lý do chọn:
 
 ## Cấu hình và benchmark
