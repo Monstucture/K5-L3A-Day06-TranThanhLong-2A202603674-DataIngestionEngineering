@@ -21,6 +21,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 import ollama
+import pymupdf
 from dotenv import load_dotenv
 
 from src.chunking import _SENTENCE_SPLIT
@@ -60,7 +61,7 @@ def startup() -> None:
         raise SystemExit("The index is empty. Run `python -m src.run --split dev` once first.")
     questions = read_json(QUESTIONS_PATH)
     STATE.update(
-        embedder=embedder, store=store,
+        embedder=embedder, store=store, pdf=pymupdf.open(PDF_PATH), png_cache={},
         pages={p.page: p for p in pages if p.page in counted},
         # dev questions only, so the demo never becomes a way of looking at the test set
         examples=[q for q in questions if q["split"] == "dev"],
@@ -179,6 +180,41 @@ def chunk_view(params: dict) -> dict:
             "page_text": flat(doc_page.text), "chunks": chunks}
 
 
+PAGE_ZOOM = 2  # render at 144 dpi so text stays sharp when scaled to the panel
+
+
+def pdf_page(number: int):
+    if number not in STATE["pages"]:
+        raise ValueError(f"Page {number} is not a content page.")
+    return STATE["pdf"][number - 1]
+
+
+def page_png(number: int) -> bytes:
+    if number not in STATE["png_cache"]:
+        STATE["png_cache"][number] = pdf_page(number).get_pixmap(matrix=pymupdf.Matrix(PAGE_ZOOM, PAGE_ZOOM)).tobytes("png")
+    return STATE["png_cache"][number]
+
+
+def find_boxes(page, text: str) -> list:
+    """Rectangles of `text` on the page; long or oddly broken text is searched in 6-word pieces."""
+    rects = page.search_for(text)
+    if rects:
+        return rects
+    words = text.split()
+    return [r for i in range(0, len(words), 6) for r in page.search_for(" ".join(words[i:i + 6]))]
+
+
+def page_marks(body: dict) -> dict:
+    """Boxes for each requested mark ({"text", "kind", "id"}) on one page, in page units."""
+    page = pdf_page(int(body.get("page", 0)))
+    rects = []
+    for mark in body.get("marks", [])[:60]:
+        for r in find_boxes(page, flat(str(mark.get("text", ""))))[:40]:
+            rects.append({"kind": mark.get("kind"), "id": mark.get("id"),
+                          "x0": r.x0, "y0": r.y0, "x1": r.x1, "y1": r.y1})
+    return {"width": page.rect.width, "height": page.rect.height, "rects": rects}
+
+
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, *args) -> None:  # keep the terminal quiet
         pass
@@ -215,9 +251,32 @@ class Handler(BaseHTTPRequestHandler):
                     self.send_json(chunk_view(params))
             elif url.path == "/api/ask":
                 self.stream(params)
+            elif url.path == "/api/page.png":
+                with LOCK:
+                    data = page_png(int(params.get("page", 0)))
+                self.send_response(200)
+                self.send_header("Content-Type", "image/png")
+                self.send_header("Content-Length", str(len(data)))
+                self.send_header("Cache-Control", "max-age=3600")
+                self.end_headers()
+                self.wfile.write(data)
             else:
                 self.send_json({"error": "not found"}, 404)
         except ValueError as error:
+            self.send_json({"error": str(error)}, 400)
+
+    def do_POST(self) -> None:
+        if urlparse(self.path).path != "/api/marks":
+            self.send_json({"error": "not found"}, 404)
+            return
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+            if length > 200_000:
+                raise ValueError("Request too large.")
+            body = json.loads(self.rfile.read(length) or b"{}")
+            with LOCK:
+                self.send_json(page_marks(body))
+        except (ValueError, json.JSONDecodeError) as error:
             self.send_json({"error": str(error)}, 400)
 
     def stream(self, params: dict) -> None:

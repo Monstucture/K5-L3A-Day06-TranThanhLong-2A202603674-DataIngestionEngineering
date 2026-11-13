@@ -3,3 +3,5 @@ psycopg[binary]==3.3.8
 pypdf>=5,<7
 python-dotenv>=1,<2
 ollama==0.6.3
+# Demo only (starter/demo): renders PDF pages and finds highlight positions.
+pymupdf==2.1

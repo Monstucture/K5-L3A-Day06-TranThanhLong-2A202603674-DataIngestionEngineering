@@ -84,6 +84,15 @@ li[data-status="fail"] .dot { background: var(--err); border-color: var(--err); 
 .stats { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
 .stats b { color: var(--ink); font-size: 16px; display: block; }
 .empty { color: var(--muted); font-size: 14px; }
+.pdfwrap { position: relative; margin-top: 10px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: #fff; }
+.pdfwrap img { display: block; width: 100%; height: auto; }
+.mark { position: absolute; border-radius: 2px; }
+.mark.chunk { background: rgba(47, 111, 222, .10); z-index: 1; }
+.mark.relevant { background: rgba(255, 214, 0, .32); z-index: 2; }
+.mark.cited { background: rgba(255, 166, 0, .50); box-shadow: 0 0 0 1px rgba(200, 120, 0, .8); z-index: 3; }
+.mark.gold { border: 2px solid #1f8a4c; z-index: 4; }
+.mark.flash { animation: flash 1.2s ease-out; }
+.legend .chunk-sw { --sw: rgba(47, 111, 222, .25); }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 </style>
 </head>
@@ -138,6 +147,17 @@ li[data-status="fail"] .dot { background: var(--err); border-color: var(--err); 
         <h2>Answer</h2>
         <div class="answer" id="answer"><span class="empty">Ask a question to see the answer here.</span></div>
         <div class="meta" id="answer-meta"></div>
+      </div>
+      <div class="panel">
+        <h2>Where it is in the PDF</h2>
+        <div class="legend">
+          <span class="chunk-sw">retrieved chunk</span>
+          <span style="--sw: var(--relevant)">relevant sentence</span>
+          <span style="--sw: var(--cited)">cited in the answer</span>
+          <span style="--sw: transparent; --ol: 2px solid var(--gold)">gold evidence</span>
+        </div>
+        <div class="seg" id="pdf-pages"></div>
+        <div id="pdf-view"><div class="empty">The pages of the retrieved chunks will appear here.</div></div>
       </div>
       <div class="panel">
         <h2>Retrieved text</h2>
@@ -276,6 +296,62 @@ function renderHits() {
   }).join("");
 }
 
+// ---------- PDF view ----------
+let pdfRequest = 0;  // ignore answers to older requests
+
+function hitPages() {
+  const pages = new Map();  // page -> ranks of the chunks on it
+  run.hits.forEach((h, i) => { for (let p = h.page; p <= h.page_end; p++) pages.set(p, [...(pages.get(p) || []), i + 1]); });
+  return [...pages].sort((a, b) => a[0] - b[0]);
+}
+
+function renderPdfButtons() {
+  const pages = hitPages();
+  if (!pages.length) { $("#pdf-pages").innerHTML = ""; return; }
+  if (!pages.some(([p]) => p === run.pdfPage)) run.pdfPage = run.hits[0].page;
+  segmented($("#pdf-pages"), pages.map(([p, ranks]) => ({ label: `Page ${p} · chunk #${ranks.join(", #")}`, value: p })),
+            run.pdfPage, (p) => { run.pdfPage = p; renderPdf(); });
+}
+
+async function renderPdf() {
+  if (!run || !run.hits.length) return;
+  renderPdfButtons();
+  const page = run.pdfPage, id = ++pdfRequest, cited = new Set(run.cited);
+  const marks = [];
+  run.hits.forEach((h, i) => {
+    if (h.page > page || page > h.page_end) return;
+    marks.push({ text: h.text, kind: "chunk", id: `#${i + 1}` });
+    for (const s of run.sentences.filter((s) => s.hit === i && (s.relevant || cited.has(s.id))))
+      marks.push({ text: s.text, kind: cited.has(s.id) ? "cited" : "relevant", id: s.id });
+  });
+  if (run.gold && run.gold.page === page) marks.push({ text: run.gold.quote, kind: "gold", id: "gold" });
+  const res = await fetch("/api/marks", { method: "POST", headers: { "Content-Type": "application/json" },
+                                          body: JSON.stringify({ page, marks }) });
+  const data = await res.json();
+  if (id !== pdfRequest) return;
+  if (data.error) { $("#pdf-view").innerHTML = `<div class="error">${esc(data.error)}</div>`; return; }
+  const pct = (v, total) => `${(v / total) * 100}%`;
+  const pad = 1.5;
+  $("#pdf-view").innerHTML = `<div class="pdfwrap"><img src="/api/page.png?page=${page}" alt="PDF page ${page}">${
+    data.rects.map((r) => `<div class="mark ${r.kind}" data-sid="${esc(r.id || "")}" title="${esc(r.id || "")}"
+      style="left:${pct(r.x0 - pad, data.width)};top:${pct(r.y0 - pad, data.height)};width:${pct(r.x1 - r.x0 + 2 * pad, data.width)};height:${pct(r.y1 - r.y0 + 2 * pad, data.height)}"></div>`).join("")
+  }</div>`;
+}
+
+function flashPdf(sid) {
+  const s = run.sentences.find((x) => x.id === sid);
+  if (!s) return;
+  const h = run.hits[s.hit];
+  const show = () => {
+    const boxes = document.querySelectorAll(`#pdf-view .mark[data-sid="${sid}"]`);
+    if (boxes[0]) boxes[0].scrollIntoView({ behavior: "smooth", block: "center" });
+    for (const b of boxes) { b.classList.remove("flash"); void b.offsetWidth; b.classList.add("flash"); }
+  };
+  if (run.pdfPage >= h.page && run.pdfPage <= h.page_end) { show(); return; }
+  run.pdfPage = h.page;
+  renderPdf().then(show);
+}
+
 function renderAnswer(text, final) {
   const known = new Set(run.sentences.map((s) => s.id));
   const html = esc(text).replace(/\[?(S\d+)\]?/g, (m, id) => known.has(id) && final
@@ -283,10 +359,9 @@ function renderAnswer(text, final) {
   $("#answer").innerHTML = html || `<span class="empty">…</span>`;
   for (const b of $("#answer").querySelectorAll(".cite")) {
     b.onclick = () => {
+      flashPdf(b.dataset.sid);
       const target = document.querySelector(`#hits [data-sid="${b.dataset.sid}"]`);
-      if (!target) return;
-      target.scrollIntoView({ behavior: "smooth", block: "center" });
-      target.classList.remove("flash"); void target.offsetWidth; target.classList.add("flash");
+      if (target) { target.classList.remove("flash"); void target.offsetWidth; target.classList.add("flash"); }
     };
   }
 }
@@ -295,7 +370,10 @@ function ask() {
   const q = $("#question").value.trim();
   if (!q) { $("#question").focus(); return; }
   if (state.source) state.source.close();
-  run = { hits: [], sentences: [], cited: [], gold: null, text: "" };
+  run = { hits: [], sentences: [], cited: [], gold: null, text: "", pdfPage: null };
+  pdfRequest++;
+  $("#pdf-pages").innerHTML = "";
+  $("#pdf-view").innerHTML = `<div class="empty">Waiting for the search…</div>`;
   renderSteps();
   $("#answer").innerHTML = `<span class="empty">Working…</span>`;
   $("#answer-meta").textContent = "";
@@ -310,12 +388,12 @@ function ask() {
   state.source = es;
   const on = (name, fn) => es.addEventListener(name, (e) => fn(JSON.parse(e.data)));
   on("step", updateStep);
-  on("hits", (hits) => { run.hits = hits; renderHits(); });
-  on("sentences", (s) => { run.sentences = s; renderHits(); });
-  on("gold", (g) => { run.gold = g; renderHits(); });
+  on("hits", (hits) => { run.hits = hits; renderHits(); renderPdf(); });
+  on("sentences", (s) => { run.sentences = s; renderHits(); renderPdf(); });
+  on("gold", (g) => { run.gold = g; renderHits(); if (run.hits.length) { run.pdfPage = g.page; renderPdf(); } });
   on("token", (t) => { run.text += t; renderAnswer(run.text, false); });
   on("answer", (a) => {
-    run.cited = a.cited; renderAnswer(a.text, true); renderHits();
+    run.cited = a.cited; renderAnswer(a.text, true); renderHits(); renderPdf();
     $("#answer-meta").textContent = `${a.model} · strategy ${state.strategy} · cites ${a.cited.join(", ") || "no sentence"}`;
   });
   on("fail", (f) => {
