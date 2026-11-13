@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenStax RAG Demo</title>
+<style>
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --ink: #1d2433; --muted: #5f6b7a; --line: #dde2e8;
+  --accent: #2f6fde; --accent-ink: #ffffff; --ok: #1f8a4c; --err: #c23b3b;
+  --relevant: #fff3b0; --cited: #ffd54a; --gold: #1f8a4c;
+  --c0: #dbe9ff; --c1: #ffe1cc; --c2: #dcf3df; --c3: #f1dcff; --overlap: #ffb3b3;
+  --radius: 10px; --shadow: 0 1px 2px rgba(20, 30, 50, .06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12151b; --panel: #1b2029; --ink: #e5e9f0; --muted: #98a3b3; --line: #2d3440;
+    --accent: #6b9bff; --accent-ink: #0d1117; --ok: #4cc57f; --err: #ff7b7b;
+    --relevant: #4a4320; --cited: #8a6d00; --gold: #4cc57f;
+    --c0: #1f3554; --c1: #4a3020; --c2: #1f4028; --c3: #3a2650; --overlap: #6e2a2a;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { padding: 18px 24px 0; max-width: 1280px; margin: 0 auto; }
+header h1 { margin: 0; font-size: 20px; }
+header p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+nav { display: flex; gap: 4px; margin-top: 14px; border-bottom: 1px solid var(--line); }
+nav button { border: 0; background: none; color: var(--muted); padding: 10px 14px; font: inherit; cursor: pointer; border-bottom: 2px solid transparent; }
+nav button[aria-selected="true"] { color: var(--ink); border-color: var(--accent); font-weight: 600; }
+main { max-width: 1280px; margin: 0 auto; padding: 18px 24px 40px; }
+.grid { display: grid; grid-template-columns: 380px 1fr; gap: 18px; align-items: start; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } header, main { padding-left: 16px; padding-right: 16px; } }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); }
+.panel + .panel { margin-top: 14px; }
+h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 0 0 10px; }
+label { display: block; font-size: 13px; color: var(--muted); margin: 12px 0 4px; }
+textarea, select, input { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+textarea { min-height: 84px; resize: vertical; }
+.seg { display: flex; gap: 6px; flex-wrap: wrap; }
+.seg button { flex: 1; min-width: 70px; padding: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 8px; font: inherit; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.seg button:disabled { opacity: .45; cursor: not-allowed; }
+.hint { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+.primary { width: 100%; margin-top: 16px; padding: 11px; border: 0; border-radius: 8px; background: var(--accent); color: var(--accent-ink); font: inherit; font-weight: 600; cursor: pointer; }
+.primary:disabled { opacity: .6; cursor: wait; }
+.steps { list-style: none; margin: 0; padding: 0; }
+.steps li { display: grid; grid-template-columns: 22px 1fr auto; gap: 8px; padding: 7px 0; border-top: 1px solid var(--line); font-size: 14px; }
+.steps li:first-child { border-top: 0; }
+.steps .detail { color: var(--muted); font-size: 12.5px; }
+.steps .ms { color: var(--muted); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--line); margin-top: 3px; }
+li[data-status="running"] .dot { border-color: var(--accent); border-right-color: transparent; animation: spin .8s linear infinite; }
+li[data-status="done"] .dot { background: var(--ok); border-color: var(--ok); }
+li[data-status="fail"] .dot { background: var(--err); border-color: var(--err); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { li[data-status="running"] .dot { animation: none; } }
+.answer { font-size: 16px; min-height: 2em; white-space: pre-wrap; }
+.answer .cite { display: inline-block; padding: 0 6px; margin: 0 1px; border-radius: 6px; background: var(--cited); color: var(--ink); font-size: 12.5px; font-weight: 600; border: 0; cursor: pointer; }
+.meta { color: var(--muted); font-size: 12.5px; margin-top: 8px; }
+.error { color: var(--err); }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12.5px; color: var(--muted); margin-bottom: 10px; }
+.legend span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 5px; vertical-align: -2px; background: var(--sw); outline: var(--ol, none); }
+.hit { border: 1px solid var(--line); border-radius: 8px; padding: 12px; margin-top: 10px; }
+.hit header { padding: 0; display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 13px; color: var(--muted); max-width: none; }
+.hit header b { color: var(--ink); }
+.score { font-variant-numeric: tabular-nums; }
+.bar { height: 4px; background: var(--line); border-radius: 2px; margin: 6px 0 8px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--accent); }
+.text { font-size: 14px; }
+.s-rel { background: var(--relevant); border-radius: 3px; }
+.s-cited { background: var(--cited); border-radius: 3px; }
+.s-gold { text-decoration: underline 2px var(--gold); text-underline-offset: 3px; }
+.flash { animation: flash 1.2s ease-out; }
+@keyframes flash { 0% { box-shadow: 0 0 0 3px var(--accent); } 100% { box-shadow: 0 0 0 0 transparent; } }
+.badge { display: inline-block; font-size: 11.5px; padding: 1px 7px; border-radius: 10px; border: 1px solid var(--gold); color: var(--gold); }
+.pagetext { font-size: 14px; line-height: 1.75; }
+.pagetext span[data-c] { border-radius: 3px; }
+.chunkcards { display: grid; gap: 10px; margin-top: 12px; }
+.chunkcard { border-left: 6px solid var(--sw); padding: 8px 12px; background: var(--bg); border-radius: 6px; font-size: 13.5px; }
+.chunkcard .head { color: var(--muted); font-size: 12.5px; margin-bottom: 4px; }
+.stats { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.stats b { color: var(--ink); font-size: 16px; display: block; }
+.empty { color: var(--muted); font-size: 14px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+<header>
+  <h1>OpenStax Anatomy &amp; Physiology 2e — RAG demo</h1>
+  <p>Chapters 1–2 · retrieval with qwen3-embedding:4b + pgvector · answers only from retrieved text</p>
+  <nav role="tablist">
+    <button role="tab" aria-selected="true" data-tab="ask">Ask a question</button>
+    <button role="tab" aria-selected="false" data-tab="chunks">See the chunking</button>
+  </nav>
+</header>
+
+<main>
+  <section id="tab-ask" class="grid">
+    <div>
+      <div class="panel">
+        <h2>Question</h2>
+        <label for="example">Example from the dev benchmark</label>
+        <select id="example"><option value="">— type your own —</option></select>
+        <label for="question">Your question</label>
+        <textarea id="question" placeholder="e.g. What is the difference between anatomy and physiology?"></textarea>
+
+        <label>Retrieval strategy</label>
+        <div class="seg" id="strategy"></div>
+        <div class="hint" id="strategy-hint"></div>
+
+        <div id="chapter-wrap">
+          <label for="chapter">Chapter filter (strategy C)</label>
+          <select id="chapter">
+            <option value="">No filter</option>
+            <option value="1">Chapter 1 — An Introduction to the Human Body</option>
+            <option value="2">Chapter 2 — The Chemical Level of Organization</option>
+          </select>
+        </div>
+
+        <label>Answer model</label>
+        <div class="seg" id="model"></div>
+        <div class="hint" id="model-hint"></div>
+
+        <button class="primary" id="ask">Ask</button>
+      </div>
+
+      <div class="panel">
+        <h2>Pipeline</h2>
+        <ol class="steps" id="steps"></ol>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel">
+        <h2>Answer</h2>
+        <div class="answer" id="answer"><span class="empty">Ask a question to see the answer here.</span></div>
+        <div class="meta" id="answer-meta"></div>
+      </div>
+      <div class="panel">
+        <h2>Retrieved text</h2>
+        <div class="legend">
+          <span style="--sw: var(--relevant)">relevant sentence (embedding score)</span>
+          <span style="--sw: var(--cited)">cited in the answer</span>
+          <span style="--sw: transparent; --ol: 2px solid var(--gold)">gold evidence (benchmark)</span>
+        </div>
+        <div id="hits"><div class="empty">The top 3 chunks will appear here.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tab-chunks" hidden>
+    <div class="panel">
+      <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 14px">
+        <div><label>Strategy</label><div class="seg" id="c-strategy"></div></div>
+        <div><label for="c-page">Page</label><select id="c-page"></select></div>
+      </div>
+      <div class="hint" id="c-hint"></div>
+    </div>
+    <div class="panel">
+      <div class="stats" id="c-stats"></div>
+    </div>
+    <div class="panel">
+      <h2>Page text, coloured by chunk</h2>
+      <div class="legend"><span style="--sw: var(--overlap)">text in two chunks (overlap)</span></div>
+      <div class="pagetext" id="c-page-text"></div>
+    </div>
+    <div class="panel">
+      <h2>Chunks covering this page</h2>
+      <div class="chunkcards" id="c-cards"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+const $ = (sel) => document.querySelector(sel);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const flat = (s) => s.replace(/\s+/g, " ").trim();
+const COLORS = ["var(--c0)", "var(--c1)", "var(--c2)", "var(--c3)"];
+const STEP_NAMES = { embed: "Embed the question", search: "Search the vector store", extract: "Pick relevant sentences", answer: "Write the answer" };
+const STRATEGY_TEXT = {
+  A: "A — fixed 500-character windows, 50 overlap, per page. No filter.",
+  B: "B — chunks follow section headings (max 500 chars), may continue onto the next page. No filter.",
+  C: "C — same chunks as B, plus a chapter filter applied before ranking.",
+};
+const state = { strategy: "B", model: "local", config: null, source: null };
+
+function segmented(el, items, current, onPick) {
+  el.innerHTML = "";
+  for (const item of items) {
+    const b = document.createElement("button");
+    b.type = "button"; b.textContent = item.label; b.disabled = !!item.disabled;
+    b.setAttribute("aria-pressed", item.value === current);
+    b.onclick = () => { for (const x of el.children) x.setAttribute("aria-pressed", x === b); onPick(item.value); };
+    el.appendChild(b);
+  }
+}
+
+// ---------- tabs ----------
+for (const tab of document.querySelectorAll("nav button")) {
+  tab.onclick = () => {
+    for (const t of document.querySelectorAll("nav button")) t.setAttribute("aria-selected", t === tab);
+    $("#tab-ask").hidden = tab.dataset.tab !== "ask";
+    $("#tab-chunks").hidden = tab.dataset.tab !== "chunks";
+    if (tab.dataset.tab === "chunks") loadChunks();
+  };
+}
+
+// ---------- ask view ----------
+function setStrategy(s) {
+  state.strategy = s;
+  $("#strategy-hint").textContent = STRATEGY_TEXT[s];
+  $("#chapter-wrap").style.display = s === "C" ? "" : "none";
+}
+
+function renderSteps() {
+  $("#steps").innerHTML = Object.entries(STEP_NAMES).map(([key, name]) =>
+    `<li id="step-${key}" data-status="waiting"><span class="dot" aria-hidden="true"></span>
+      <div>${name}<div class="detail"></div></div><span class="ms"></span></li>`).join("");
+}
+
+function updateStep({ name, status, detail, ms }) {
+  const li = $(`#step-${name}`);
+  if (!li) return;
+  li.dataset.status = status;
+  li.querySelector(".detail").textContent = detail || "";
+  li.querySelector(".ms").textContent = ms != null ? `${ms} ms` : "";
+}
+
+let run = null;  // data of the current answer
+
+function markRanges(text, ranges) {
+  // ranges: [{start, end, cls, attrs}] -> HTML with spans; a char can carry several classes
+  const cls = Array.from({ length: text.length }, () => new Set());
+  const ids = new Array(text.length).fill("");
+  for (const r of ranges) for (let i = r.start; i < r.end; i++) { r.cls.split(" ").forEach((c) => cls[i].add(c)); if (r.id) ids[i] = r.id; }
+  let html = "", i = 0;
+  while (i < text.length) {
+    let j = i + 1;
+    const key = [...cls[i]].sort().join(" ") + "|" + ids[i];
+    while (j < text.length && [...cls[j]].sort().join(" ") + "|" + ids[j] === key) j++;
+    const chunk = esc(text.slice(i, j));
+    html += cls[i].size ? `<span class="${[...cls[i]].join(" ")}"${ids[i] ? ` data-sid="${ids[i]}"` : ""}>${chunk}</span>` : chunk;
+    i = j;
+  }
+  return html;
+}
+
+function renderHits() {
+  if (!run.hits.length) { $("#hits").innerHTML = `<div class="empty">No chunks matched.</div>`; return; }
+  const cited = new Set(run.cited);
+  $("#hits").innerHTML = run.hits.map((h, idx) => {
+    const text = flat(h.text);
+    const ranges = [];
+    let cursor = 0;
+    for (const s of run.sentences.filter((s) => s.hit === idx)) {
+      const at = text.indexOf(s.text, cursor);
+      if (at < 0) continue;
+      cursor = at + s.text.length;
+      const c = cited.has(s.id) ? "s-cited" : s.relevant ? "s-rel" : "";
+      ranges.push({ start: at, end: cursor, cls: c || "s-plain", id: s.id });
+    }
+    let goldHere = false;
+    if (run.gold && h.page <= run.gold.page && run.gold.page <= h.page_end) {
+      const at = text.indexOf(flat(run.gold.quote));
+      if (at >= 0) { goldHere = true; ranges.push({ start: at, end: at + flat(run.gold.quote).length, cls: "s-gold" }); }
+    }
+    const pages = h.page === h.page_end ? `page ${h.page}` : `pages ${h.page}–${h.page_end}`;
+    const where = h.section ? ` · §${h.section} ${esc(h.section_title || "")}` : "";
+    return `<article class="hit"><header><span><b>#${idx + 1}</b> · ${pages} · ch. ${h.chapter}${where}</span>
+        <span class="score">similarity ${h.score.toFixed(3)} ${goldHere ? '<span class="badge">gold evidence</span>' : ""}</span></header>
+      <div class="bar"><i style="width:${Math.max(0, Math.min(1, h.score)) * 100}%"></i></div>
+      <div class="text">${markRanges(text, ranges)}</div></article>`;
+  }).join("");
+}
+
+function renderAnswer(text, final) {
+  const known = new Set(run.sentences.map((s) => s.id));
+  const html = esc(text).replace(/\[?(S\d+)\]?/g, (m, id) => known.has(id) && final
+    ? `<button class="cite" data-sid="${id}" title="Show sentence ${id}">${id}</button>` : esc(m));
+  $("#answer").innerHTML = html || `<span class="empty">…</span>`;
+  for (const b of $("#answer").querySelectorAll(".cite")) {
+    b.onclick = () => {
+      const target = document.querySelector(`#hits [data-sid="${b.dataset.sid}"]`);
+      if (!target) return;
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+      target.classList.remove("flash"); void target.offsetWidth; target.classList.add("flash");
+    };
+  }
+}
+
+function ask() {
+  const q = $("#question").value.trim();
+  if (!q) { $("#question").focus(); return; }
+  if (state.source) state.source.close();
+  run = { hits: [], sentences: [], cited: [], gold: null, text: "" };
+  renderSteps();
+  $("#answer").innerHTML = `<span class="empty">Working…</span>`;
+  $("#answer-meta").textContent = "";
+  $("#hits").innerHTML = `<div class="empty">Searching…</div>`;
+  $("#ask").disabled = true;
+
+  const params = new URLSearchParams({ q, strategy: state.strategy, model: state.model });
+  if (state.strategy === "C" && $("#chapter").value) params.set("chapter", $("#chapter").value);
+  if ($("#example").value && $("#example").selectedOptions[0].text.endsWith(q)) params.set("qid", $("#example").value);
+  const started = performance.now();
+  const es = new EventSource(`/api/ask?${params}`);
+  state.source = es;
+  const on = (name, fn) => es.addEventListener(name, (e) => fn(JSON.parse(e.data)));
+  on("step", updateStep);
+  on("hits", (hits) => { run.hits = hits; renderHits(); });
+  on("sentences", (s) => { run.sentences = s; renderHits(); });
+  on("gold", (g) => { run.gold = g; renderHits(); });
+  on("token", (t) => { run.text += t; renderAnswer(run.text, false); });
+  on("answer", (a) => {
+    run.cited = a.cited; renderAnswer(a.text, true); renderHits();
+    $("#answer-meta").textContent = `${a.model} · strategy ${state.strategy} · cites ${a.cited.join(", ") || "no sentence"}`;
+  });
+  on("fail", (f) => {
+    $("#answer").innerHTML = `<span class="error">${esc(f.message)}</span>`;
+    const running = document.querySelector('#steps li[data-status="running"]');
+    if (running) running.dataset.status = "fail";
+  });
+  on("end", () => {
+    es.close(); $("#ask").disabled = false;
+    $("#answer-meta").textContent += ` · ${((performance.now() - started) / 1000).toFixed(1)} s total`;
+  });
+  es.onerror = () => { es.close(); $("#ask").disabled = false; };
+}
+
+// ---------- chunking view ----------
+let cStrategy = "A";
+
+async function loadChunks() {
+  const page = $("#c-page").value;
+  if (!page) return;
+  $("#c-hint").textContent = STRATEGY_TEXT[cStrategy] + (cStrategy === "C" ? " The filter is used at question time, so the stored chunks are B's." : "");
+  const res = await fetch(`/api/chunks?strategy=${cStrategy}&page=${page}`);
+  const data = await res.json();
+  if (data.error) { $("#c-cards").innerHTML = `<div class="error">${esc(data.error)}</div>`; return; }
+  const text = data.page_text;
+  const owners = Array.from({ length: text.length }, () => []);
+  data.chunks.forEach((c, i) => {
+    const t = flat(c.text), head = t.slice(0, 50), tail = t.slice(-50);
+    let start = text.indexOf(head);
+    let end = text.indexOf(tail, Math.max(start, 0));
+    end = end < 0 ? text.length : end + tail.length;  // chunk continues onto the next page
+    if (start < 0) start = 0;                          // chunk started on the previous page
+    c._color = COLORS[i % COLORS.length];
+    for (let k = start; k < end; k++) owners[k].push(i);
+  });
+  let html = "", k = 0;
+  while (k < text.length) {
+    let j = k + 1;
+    while (j < text.length && owners[j].join() === owners[k].join()) j++;
+    const o = owners[k];
+    const bg = o.length > 1 ? "var(--overlap)" : o.length ? data.chunks[o[0]]._color : "transparent";
+    html += o.length ? `<span data-c="${o.join(",")}" style="background:${bg}" title="chunk ${o.map((x) => x + 1).join(" + ")}">${esc(text.slice(k, j))}</span>` : esc(text.slice(k, j));
+    k = j;
+  }
+  $("#c-page-text").innerHTML = html || `<span class="empty">No text on this page.</span>`;
+  const lens = data.chunks.map((c) => c.text.length);
+  const spanning = data.chunks.filter((c) => c.page_end !== c.page).length;
+  $("#c-stats").innerHTML = `
+    <div><b>${data.chunks.length}</b>chunks on page ${data.page}</div>
+    <div><b>${lens.length ? Math.round(lens.reduce((a, b) => a + b, 0) / lens.length) : 0}</b>average characters</div>
+    <div><b>${lens.length ? Math.min(...lens) : 0}–${lens.length ? Math.max(...lens) : 0}</b>shortest–longest</div>
+    <div><b>${spanning}</b>continue across a page break</div>
+    <div><b>ch. ${data.chapter}</b>chapter metadata</div>`;
+  $("#c-cards").innerHTML = data.chunks.map((c, i) => {
+    const pages = c.page === c.page_end ? `page ${c.page}` : `pages ${c.page}–${c.page_end}`;
+    const sec = c.section ? ` · §${c.section} ${esc(c.section_title || "")}` : "";
+    return `<div class="chunkcard" style="--sw:${c._color}"><div class="head">chunk ${i + 1} · <code>${esc(c.chunk_id)}</code> · ${pages}${sec} · ${c.text.length} chars</div>${esc(flat(c.text))}</div>`;
+  }).join("") || `<div class="empty">No chunks on this page.</div>`;
+}
+
+// ---------- start ----------
+(async function init() {
+  const cfg = await (await fetch("/api/config")).json();
+  state.config = cfg;
+  for (const q of cfg.examples) {
+    const o = document.createElement("option");
+    o.value = q.id; o.textContent = `${q.id} (${q.type}) — ${q.question}`;
+    $("#example").appendChild(o);
+  }
+  $("#example").onchange = () => {
+    const q = cfg.examples.find((x) => x.id === $("#example").value);
+    if (!q) return;
+    $("#question").value = q.question;
+    if (q.filter && q.filter.chapter) {  // a filter question: switch to C with its chapter
+      $("#chapter").value = String(q.filter.chapter);
+      segmented($("#strategy"), ["A", "B", "C"].map((s) => ({ label: s, value: s })), "C", setStrategy);
+      setStrategy("C");
+    }
+  };
+  segmented($("#strategy"), ["A", "B", "C"].map((s) => ({ label: s, value: s })), state.strategy, setStrategy);
+  setStrategy(state.strategy);
+  segmented($("#model"), [
+    { label: `Local · ${cfg.models.local}`, value: "local" },
+    { label: "API · openai/gpt-4o-mini", value: "api", disabled: !cfg.models.api },
+  ], state.model, (m) => { state.model = m; $("#model-hint").textContent = m === "api"
+      ? "The question and retrieved sentences are sent to OpenRouter." : "Runs on this laptop with Ollama."; });
+  $("#model-hint").textContent = cfg.models.api ? "Runs on this laptop with Ollama." : "API disabled: no OPENROUTER_API_KEY in starter/.env.";
+  $("#ask").onclick = ask;
+  $("#question").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) ask(); });
+  renderSteps();
+
+  for (const p of cfg.pages) {
+    const o = document.createElement("option");
+    o.value = p.page; o.textContent = `Page ${p.page} (chapter ${p.chapter})`;
+    $("#c-page").appendChild(o);
+  }
+  $("#c-page").value = "2";
+  segmented($("#c-strategy"), ["A", "B", "C"].map((s) => ({ label: s, value: s })), cStrategy, (s) => { cStrategy = s; loadChunks(); });
+  $("#c-page").onchange = loadChunks;
+})();
+</script>
+</body>
+</html>

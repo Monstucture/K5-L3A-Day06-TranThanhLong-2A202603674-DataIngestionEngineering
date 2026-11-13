@@ -103,6 +103,16 @@ class PgVectorStore:
             cur.execute(f"SELECT count(*) FROM {TABLE} WHERE strategy = %s", (strategy,))
             return cur.fetchone()[0]
 
+    def page_chunks(self, strategy: str, page: int) -> list[dict[str, Any]]:
+        """Stored chunks that cover `page`, in reading order (used by the demo's chunking view)."""
+        with self._conn.cursor() as cur:
+            cur.execute(f"""
+                SELECT chunk_id, page, page_end, chapter, section, section_title, char_start, text
+                FROM {TABLE} WHERE strategy = %s AND page <= %s AND page_end >= %s
+                ORDER BY page, char_start, chunk_id""", (strategy, page, page))
+            columns = [d.name for d in cur.description]
+            return [dict(zip(columns, row)) for row in cur.fetchall()]
+
     def search(self, strategy: str, query_vector: list[float], top_k: int = 3,
                filters: dict[str, Any] | None = None) -> list[dict[str, Any]]:
         if len(query_vector) != self.dimensions:

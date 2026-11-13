@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "rag-demo",
+      "runtimeExecutable": "C:\\Users\\monst\\OneDrive\\Desktop\\Git Repo\\K5-L3A-Day06-TranThanhLong-2A202603674-DataIngestionEngineering\\starter\\.venv\\Scripts\\python.exe",
+      "runtimeArgs": ["-m", "demo.server"],
+      "cwd": "starter",
+      "port": 8000
+    }
+  ]
+}

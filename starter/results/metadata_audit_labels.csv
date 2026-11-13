@@ -1,6 +1,6 @@
 question_id,strategy,rank,chunk_id,source,page,page_end,chapter,section,filter_applied,source_ok,page_ok,chapter_ok,filter_ok,note
-q04,A,1,A:openstax-ap2e-ch1-2:p050:c001,anatomy-and-physiology-2e_70pages.pdf,50,50,2,,null,,,,,
-q04,A,2,A:openstax-ap2e-ch1-2:p050:c000,anatomy-and-physiology-2e_70pages.pdf,50,50,2,,null,,,,,
+q04,A,1,A:openstax-ap2e-ch1-2:p050:c001,anatomy-and-physiology-2e_70pages.pdf,50,50,2,,null,y,y,y,,
+q04,A,2,A:openstax-ap2e-ch1-2:p050:c000,anatomy-and-physiology-2e_70pages.pdf,50,50,2,,null,y,y,y,,
 q04,A,3,A:openstax-ap2e-ch1-2:p049:c003,anatomy-and-physiology-2e_70pages.pdf,49,49,2,,null,,,,,
 q05,A,1,A:openstax-ap2e-ch1-2:p002:c000,anatomy-and-physiology-2e_70pages.pdf,2,2,1,,null,,,,,
 q05,A,2,A:openstax-ap2e-ch1-2:p002:c007,anatomy-and-physiology-2e_70pages.pdf,2,2,1,,null,,,,,
