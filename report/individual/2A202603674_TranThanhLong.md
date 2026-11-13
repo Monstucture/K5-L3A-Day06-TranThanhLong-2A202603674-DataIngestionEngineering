@@ -13,7 +13,7 @@
 ## Kết quả
 | Strategy | Split | Hit@1 (n/N) | Evidence Hit@3 (n/N) | Chunk count | Thời gian | Chi phí |
 |---|---|---|---|---|---|---|
-| A | dev | 13/24 | 18/24 | 368 | 12.8s | local model |
+| A | dev | 13/24 | 18/24 | 368 | 12.6s | local model |
 | B | dev | 19/24 | 20/24 | 390 | 12.0s | local model | 
 | C | dev | 19/24 | 20/24 | 390 | 12.0s | local model |
 

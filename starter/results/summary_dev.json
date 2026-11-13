@@ -1,5 +1,5 @@
 {
-  "run_started_utc": "2026-11-13T09:53:53+00:00",
+  "run_started_utc": "2026-11-13T10:04:59+00:00",
   "split": "dev",
   "questions": 24,
   "embedding": {
@@ -39,8 +39,8 @@
       "mean_chars": 462.5,
       "max_chars": 500,
       "chunk_seconds": 0.001,
-      "embed_seconds": 12.761,
-      "upsert_seconds": 0.364,
+      "embed_seconds": 12.605,
+      "upsert_seconds": 0.342,
       "rows_before_upsert": 368,
       "rows_after_upsert": 368
     },
@@ -52,8 +52,8 @@
       "mean_chars": 396.4,
       "max_chars": 500,
       "chunk_seconds": 0.006,
-      "embed_seconds": 12.042,
-      "upsert_seconds": 0.336,
+      "embed_seconds": 11.993,
+      "upsert_seconds": 0.34,
       "rows_before_upsert": 390,
       "rows_after_upsert": 390
     }
