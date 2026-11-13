@@ -13,9 +13,15 @@
 ## Kết quả
 | Strategy | Split | Hit@1 (n/N) | Evidence Hit@3 (n/N) | Chunk count | Thời gian | Chi phí |
 |---|---|---|---|---|---|---|
-| A | dev | 13/24 | 18/24 | 368 | 12.4s | local model |
-| B | dev | 19/24 | 20/24 | 390 | 11.9s | local model | 
-| C | dev | 19/24 | 20/24 | 390 | 11.9s | local model |
+| A | dev | 13/24 | 18/24 | 368 | 12.8s | local model |
+| B | dev | 19/24 | 20/24 | 390 | 12.0s | local model | 
+| C | dev | 19/24 | 20/24 | 390 | 12.0s | local model |
+
+| Strategy | Split | Hit@1 (n/N) | Evidence Hit@3 (n/N) | Chunk count | Thời gian | Chi phí |
+|---|---|---|---|---|---|---|
+| A | test | 5/10 | 9/10 | 368 | 12.4s | local model |
+| B | test | 8/10 | 10/10 | 390 | 11.9s | local model | 
+| C | test | 8/10 | 10/10 | 390 | 11.9s | local model |
 
 | Strategy | Coherence trung bình /2 (n) | Metadata đủ và đúng (n/N) | Filter tuân thủ (n/N hoặc N/A) | Grounding 0/1/2 (số câu) và trung bình /2 |
 |---|---|---|---|---|
