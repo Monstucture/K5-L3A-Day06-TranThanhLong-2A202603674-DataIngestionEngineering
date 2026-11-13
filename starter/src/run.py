@@ -22,7 +22,7 @@ from pypdf.errors import PdfReadError
 
 from .chunking import by_paragraph, fixed_size
 from .embeddings import MyEmbedder
-from .evaluation import evaluate_query, summarize
+from .evaluation import evaluate_query, flat, summarize
 from .ingestion import load_pdf
 from .models import Chunk, DocumentPage
 from .store import FILTER_COLUMNS, PgVectorStore
@@ -80,13 +80,8 @@ def read_json(path: Path):
         raise SystemExit(f"{path.name} is not valid JSON: line {error.lineno}, column {error.colno}: {error.msg}")
 
 
-def flat(text: str) -> str:
-    return " ".join(text.split())
-
-
-def check_corpus(pages: list[DocumentPage], manifest: dict) -> list[DocumentPage]:
+def check_corpus(pages: list[DocumentPage], counted: set[int]) -> list[DocumentPage]:
     """Keep only the pages the manifest counts as content; require at least 30."""
-    counted = {p["page"] for ch in manifest["chapters"] for p in ch["counted_pages"]}
     kept = [p for p in pages if p.page in counted]
     missing = counted - {p.page for p in kept}
     if missing:
@@ -222,8 +217,8 @@ def coherence_template(pages: list[DocumentPage]) -> list[dict]:
     rows = []
     for n, page in enumerate(chosen, start=1):
         position = len(page.text) // 2
-        for name in STRATEGIES:
-            chunks = build_chunks(name, [page])
+        for name, config in STRATEGIES.items():
+            chunks = build_chunks(config["index"], [page])  # C searches B's stored chunks
             # first chunk that reaches past the position (covers it, or starts right after a gap)
             chunk = next((c for c in chunks if position < c.metadata["char_end"]), chunks[-1])
             rows.append({
@@ -232,11 +227,6 @@ def coherence_template(pages: list[DocumentPage]) -> list[dict]:
                 "score_0_2": "", "reason": "",
             })
     return rows
-
-
-def field(hit: dict, key: str):
-    """Read a hit field whether search() returns it at the top level or under "metadata"."""
-    return hit.get(key, hit.get("metadata", {}).get(key))
 
 
 def audit_templates(traces: list[dict]) -> tuple[list[dict], list[dict]]:
@@ -249,15 +239,15 @@ def audit_templates(traces: list[dict]) -> tuple[list[dict], list[dict]]:
         for rank, hit in enumerate(hits, start=1):
             metadata_rows.append({
                 "question_id": t["question_id"], "strategy": t["strategy"], "rank": rank,
-                "chunk_id": field(hit, "chunk_id"), "source": field(hit, "source"),
-                "page": field(hit, "page"), "chapter": field(hit, "chapter"),
+                "chunk_id": hit["chunk_id"], "source": hit["source"],
+                "page": hit["page"], "chapter": hit["chapter"],
                 "filter_applied": json.dumps(t["filter_applied"]),
                 "source_ok": "", "page_ok": "", "chapter_ok": "", "filter_ok": "", "note": "",
             })
         grounding_rows.append({
             "question_id": t["question_id"], "strategy": t["strategy"],
-            "top3_pages": ", ".join(str(field(h, "page")) for h in hits),
-            "top3_text": "\n---\n".join(field(h, "text") or "" for h in hits),
+            "top3_pages": ", ".join(str(h["page"]) for h in hits),
+            "top3_text": "\n---\n".join(h["text"] for h in hits),
             "score_0_2": "", "reason": "",
         })
     return metadata_rows, grounding_rows
@@ -291,23 +281,17 @@ def run_pipeline(split: str) -> None:
     if not PDF_PATH.is_file():
         raise SystemExit(f"Missing corpus PDF: {PDF_PATH}")
     try:
-        all_pages, problems = load_pdf(PDF_PATH, manifest["source_id"], PDF_PATH.name)
-        pages = check_corpus(all_pages, manifest)
-    except PdfReadError as error:
-        raise SystemExit(f"Cannot read {PDF_PATH.name}: {error}")
+        source_id = manifest["source_id"]
+        counted = {p["page"] for ch in manifest["chapters"] for p in ch["counted_pages"]}
     except (KeyError, TypeError) as error:
         raise SystemExit(f"manifest.json is missing or has a wrong field: {error}")
+    try:
+        all_pages, problems = load_pdf(PDF_PATH, source_id, PDF_PATH.name)
+    except PdfReadError as error:
+        raise SystemExit(f"Cannot read {PDF_PATH.name}: {error}")
+    pages = check_corpus(all_pages, counted)
     check_benchmark(questions, pages)
     run_questions = [q for q in questions if split == "all" or q["split"] == split]
-    (RESULTS / "ingestion_log.json").write_text(json.dumps({
-        "pdf": PDF_PATH.name,
-        "physical_pages": len(all_pages),
-        "content_pages": len(pages),
-        "content_chars": sum(len(p.text) for p in pages),
-        "excluded_pages": sorted({p.page for p in all_pages} - {p.page for p in pages}),
-        "problems": problems,
-        "pages": [{"page": p.page, "chapter": p.metadata.get("chapter"), "chars": len(p.text)} for p in pages],
-    }, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Loaded {len(pages)} content pages of {len(all_pages)}; running {len(run_questions)} {split} questions")
 
     # 2-3. Chunk, embed, store (idempotent upsert: re-running must not add rows)
@@ -334,8 +318,18 @@ def run_pipeline(split: str) -> None:
         "index_stats": index_stats,
         "metrics": summarize(traces),
         "environment": {"python": platform.python_version(),
-                        **{pkg: package_version(pkg) for pkg in ("pypdf", "psycopg", "ollama", "pgvector")}},
+                        **{pkg: package_version(pkg) for pkg in ("pypdf", "psycopg", "ollama")}},
     }
+    # All output files are written together at the end, so a failed run leaves no mix of old and new.
+    (RESULTS / "ingestion_log.json").write_text(json.dumps({
+        "pdf": PDF_PATH.name,
+        "physical_pages": len(all_pages),
+        "content_pages": len(pages),
+        "content_chars": sum(len(p.text) for p in pages),
+        "excluded_pages": sorted({p.page for p in all_pages} - {p.page for p in pages}),
+        "problems": problems,
+        "pages": [{"page": p.page, "chapter": p.metadata.get("chapter"), "chars": len(p.text)} for p in pages],
+    }, indent=2, ensure_ascii=False), encoding="utf-8")
     (RESULTS / f"summary_{split}.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
     write_csv(RESULTS / "coherence_template.csv", coherence_template(pages))
     metadata_rows, grounding_rows = audit_templates(traces)

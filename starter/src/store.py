@@ -72,7 +72,6 @@ class PgVectorStore:
         rows = [(strategy, c.chunk_id, c.document_id, c.source, c.page, c.metadata.get("chapter"),
                  c.metadata.get("chapter_title"), c.metadata.get("char_start"), c.metadata.get("char_end"),
                  c.text, _vector_literal(v)) for c, v in zip(chunks, vectors)]
-        documents = sorted({c.document_id for c in chunks})
         with self._conn.transaction(), self._conn.cursor() as cur:
             cur.executemany(f"""
                 INSERT INTO {TABLE} (strategy, chunk_id, document_id, source, page, chapter, chapter_title,
@@ -83,10 +82,9 @@ class PgVectorStore:
                     chapter = EXCLUDED.chapter, chapter_title = EXCLUDED.chapter_title,
                     char_start = EXCLUDED.char_start, char_end = EXCLUDED.char_end,
                     text = EXCLUDED.text, embedding = EXCLUDED.embedding""", rows)
-            # Re-ingesting a changed document: drop its chunks that no longer exist.
-            cur.execute(f"""DELETE FROM {TABLE}
-                            WHERE strategy = %s AND document_id = ANY(%s) AND NOT (chunk_id = ANY(%s))""",
-                        (strategy, documents, [c.chunk_id for c in chunks]))
+            # A strategy's index holds exactly this chunk set: drop rows from changed or replaced documents.
+            cur.execute(f"DELETE FROM {TABLE} WHERE strategy = %s AND NOT (chunk_id = ANY(%s))",
+                        (strategy, [c.chunk_id for c in chunks]))
 
     def count(self, strategy: str) -> int:
         with self._conn.cursor() as cur:

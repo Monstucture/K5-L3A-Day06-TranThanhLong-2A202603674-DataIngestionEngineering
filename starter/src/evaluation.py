@@ -4,7 +4,7 @@ from collections import defaultdict
 from typing import Any
 
 
-def _flat(text: str) -> str:
+def flat(text: str) -> str:
     """Same normalization on both sides: NFKC + collapse all whitespace."""
     return " ".join(unicodedata.normalize("NFKC", text).split())
 
@@ -21,10 +21,10 @@ def evaluate_query(question: dict[str, Any], hits: list[dict[str, Any]]) -> dict
 
     This is the automatic retrieval metric only; coherence and grounding are labelled by hand.
     """
-    golds = [(page, _flat(quote)) for page, quote in _gold_evidence(question)]
+    golds = [(page, flat(quote)) for page, quote in _gold_evidence(question)]
     checks = []
     for rank, hit in enumerate(hits, start=1):
-        text = _flat(hit["text"])
+        text = flat(hit["text"])
         page_match = any(hit["page"] == page for page, _ in golds)
         evidence_match = any(hit["page"] == page and quote in text for page, quote in golds)
         checks.append({"rank": rank, "chunk_id": hit["chunk_id"], "page": hit["page"],
