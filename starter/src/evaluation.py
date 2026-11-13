@@ -17,17 +17,20 @@ def _gold_evidence(question: dict[str, Any]) -> list[tuple[int, str]]:
 
 
 def evaluate_query(question: dict[str, Any], hits: list[dict[str, Any]]) -> dict[str, Any]:
-    """A hit is a chunk from a gold page that contains the whole gold evidence quote.
+    """A hit is a chunk covering a gold page that contains the whole gold evidence quote.
 
-    This is the automatic retrieval metric only; coherence and grounding are labelled by hand.
+    A chunk covers pages `page`..`page_end` (section chunks may continue onto the next page;
+    other chunks have page_end == page). This is the automatic retrieval metric only;
+    coherence and grounding are labelled by hand.
     """
     golds = [(page, flat(quote)) for page, quote in _gold_evidence(question)]
     checks = []
     for rank, hit in enumerate(hits, start=1):
         text = flat(hit["text"])
-        page_match = any(hit["page"] == page for page, _ in golds)
-        evidence_match = any(hit["page"] == page and quote in text for page, quote in golds)
-        checks.append({"rank": rank, "chunk_id": hit["chunk_id"], "page": hit["page"],
+        first, last = hit["page"], hit.get("page_end") or hit["page"]
+        page_match = any(first <= page <= last for page, _ in golds)
+        evidence_match = any(first <= page <= last and quote in text for page, quote in golds)
+        checks.append({"rank": rank, "chunk_id": hit["chunk_id"], "page": first, "page_end": last,
                        "page_match": page_match, "evidence_match": evidence_match})
 
     hit_ranks = [c["rank"] for c in checks if c["evidence_match"]]

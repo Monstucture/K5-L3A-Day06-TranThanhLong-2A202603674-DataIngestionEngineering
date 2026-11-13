@@ -7,7 +7,7 @@ from .models import Chunk
 
 TABLE = "chunks"
 # Only these metadata columns may be used as filters; values are always passed as SQL parameters.
-FILTER_COLUMNS = {"chapter"}
+FILTER_COLUMNS = {"chapter", "section"}
 
 
 def _vector_literal(vector: list[float]) -> str:
@@ -45,14 +45,23 @@ class PgVectorStore:
                     document_id   TEXT NOT NULL,
                     source        TEXT NOT NULL,
                     page          INT  NOT NULL,
+                    page_end      INT  NOT NULL,
                     chapter       INT,
                     chapter_title TEXT,
+                    section       TEXT,
+                    section_title TEXT,
                     char_start    INT,
                     char_end      INT,
                     text          TEXT NOT NULL,
                     embedding     vector({self.dimensions}) NOT NULL,
                     PRIMARY KEY (strategy, chunk_id)
                 )""")
+            # Tables created before section chunking existed get the new columns added in place.
+            cur.execute(f"""ALTER TABLE {TABLE}
+                            ADD COLUMN IF NOT EXISTS page_end INT,
+                            ADD COLUMN IF NOT EXISTS section TEXT,
+                            ADD COLUMN IF NOT EXISTS section_title TEXT""")
+            cur.execute(f"UPDATE {TABLE} SET page_end = page WHERE page_end IS NULL")
             cur.execute("""SELECT atttypmod FROM pg_attribute
                            WHERE attrelid = %s::regclass AND attname = 'embedding'""", (TABLE,))
             stored = cur.fetchone()[0]
@@ -69,17 +78,20 @@ class PgVectorStore:
         if len({c.chunk_id for c in chunks}) != len(chunks):
             raise ValueError("duplicate chunk_id values in one upsert")
 
-        rows = [(strategy, c.chunk_id, c.document_id, c.source, c.page, c.metadata.get("chapter"),
-                 c.metadata.get("chapter_title"), c.metadata.get("char_start"), c.metadata.get("char_end"),
+        rows = [(strategy, c.chunk_id, c.document_id, c.source, c.page, c.metadata.get("page_end", c.page),
+                 c.metadata.get("chapter"), c.metadata.get("chapter_title"), c.metadata.get("section"),
+                 c.metadata.get("section_title"), c.metadata.get("char_start"), c.metadata.get("char_end"),
                  c.text, _vector_literal(v)) for c, v in zip(chunks, vectors)]
         with self._conn.transaction(), self._conn.cursor() as cur:
             cur.executemany(f"""
-                INSERT INTO {TABLE} (strategy, chunk_id, document_id, source, page, chapter, chapter_title,
-                                     char_start, char_end, text, embedding)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s::vector)
+                INSERT INTO {TABLE} (strategy, chunk_id, document_id, source, page, page_end, chapter,
+                                     chapter_title, section, section_title, char_start, char_end, text, embedding)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s::vector)
                 ON CONFLICT (strategy, chunk_id) DO UPDATE SET
                     document_id = EXCLUDED.document_id, source = EXCLUDED.source, page = EXCLUDED.page,
-                    chapter = EXCLUDED.chapter, chapter_title = EXCLUDED.chapter_title,
+                    page_end = EXCLUDED.page_end, chapter = EXCLUDED.chapter,
+                    chapter_title = EXCLUDED.chapter_title, section = EXCLUDED.section,
+                    section_title = EXCLUDED.section_title,
                     char_start = EXCLUDED.char_start, char_end = EXCLUDED.char_end,
                     text = EXCLUDED.text, embedding = EXCLUDED.embedding""", rows)
             # A strategy's index holds exactly this chunk set: drop rows from changed or replaced documents.
@@ -108,7 +120,8 @@ class PgVectorStore:
         vector = _vector_literal(query_vector)
         with self._conn.cursor() as cur:
             cur.execute(f"""
-                SELECT chunk_id, document_id, source, page, chapter, chapter_title, char_start, char_end, text,
+                SELECT chunk_id, document_id, source, page, page_end, chapter, chapter_title, section,
+                       section_title, char_start, char_end, text,
                        1 - (embedding <=> %s::vector) AS score
                 FROM {TABLE}
                 WHERE {' AND '.join(where)}

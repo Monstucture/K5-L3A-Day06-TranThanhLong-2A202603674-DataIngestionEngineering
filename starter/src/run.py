@@ -20,7 +20,7 @@ import psycopg
 from dotenv import load_dotenv
 from pypdf.errors import PdfReadError
 
-from .chunking import by_paragraph, fixed_size
+from .chunking import by_section, fixed_size
 from .embeddings import MyEmbedder
 from .evaluation import evaluate_query, flat, summarize
 from .ingestion import load_pdf
@@ -37,26 +37,23 @@ DEFAULT_MODEL = "qwen3-embedding:4b"
 TOP_K = 3
 COHERENCE_POSITIONS = 10
 
-# A vs B changes only the chunking (same 500-char budget); B vs C changes only the filter.
-# C reuses B's stored chunks and applies a question's filter when it has one.
+# A vs B changes only the chunking (fixed windows vs section-aware, same 500-char budget);
+# B vs C changes only the filter: C searches B's stored section chunks with a question's filter.
 STRATEGIES = {
     "A": {"chunking": "fixed_size", "size": 500, "overlap": 50, "index": "A", "use_filter": False},
-    "B": {"chunking": "by_paragraph", "max_size": 500, "index": "B", "use_filter": False},
-    "C": {"chunking": "by_paragraph", "max_size": 500, "index": "B", "use_filter": True},
+    "B": {"chunking": "by_section", "max_size": 500, "index": "B", "use_filter": False},
+    "C": {"chunking": "by_section", "max_size": 500, "index": "B", "use_filter": True},
 }
 
 
 def build_chunks(name: str, pages: list[DocumentPage]) -> list[Chunk]:
-    """Chunk every page with the strategy's settings; prefix IDs with the strategy name."""
+    """Chunk the pages with the strategy's settings; prefix IDs with the strategy name."""
     config = STRATEGIES[name]
-    chunks = []
-    for page in pages:
-        if config["chunking"] == "fixed_size":
-            page_chunks = fixed_size(page, config["size"], config["overlap"])
-        else:
-            page_chunks = by_paragraph(page, config["max_size"])
-        chunks.extend(replace(c, chunk_id=f"{name}:{c.chunk_id}") for c in page_chunks)
-    return chunks
+    if config["chunking"] == "fixed_size":
+        chunks = [c for page in pages for c in fixed_size(page, config["size"], config["overlap"])]
+    else:
+        chunks = by_section(pages, config["max_size"])
+    return [replace(c, chunk_id=f"{name}:{c.chunk_id}") for c in chunks]
 
 
 def package_version(name: str) -> str:
@@ -214,13 +211,18 @@ def coherence_template(pages: list[DocumentPage]) -> list[dict]:
     """Fixed positions chosen before any scoring: the middle of 10 evenly spaced counted pages."""
     step = len(pages) / COHERENCE_POSITIONS
     chosen = [pages[int(i * step)] for i in range(COHERENCE_POSITIONS)]
+    indexes = {config["index"]: build_chunks(config["index"], pages) for config in STRATEGIES.values()}
     rows = []
     for n, page in enumerate(chosen, start=1):
-        position = len(page.text) // 2
-        for name, config in STRATEGIES.items():
-            chunks = build_chunks(config["index"], [page])  # C searches B's stored chunks
-            # first chunk that reaches past the position (covers it, or starts right after a gap)
-            chunk = next((c for c in chunks if position < c.metadata["char_end"]), chunks[-1])
+        page_text = flat(page.text)
+        position = len(page_text) // 2
+        snippet = page_text[position:position + 40]
+        for name, config in STRATEGIES.items():  # C searches B's stored chunks
+            covering = [c for c in indexes[config["index"]]
+                        if c.page <= page.page <= c.metadata.get("page_end", c.page)]
+            # the chunk holding the text at the position; a snippet cut by a chunk edge falls back to its start
+            chunk = (next((c for c in covering if snippet in flat(c.text)), None)
+                     or next((c for c in covering if snippet[:15] in flat(c.text)), covering[0]))
             rows.append({
                 "position_id": f"pos{n:02d}", "page": page.page, "char_offset": position,
                 "strategy": name, "chunk_id": chunk.chunk_id, "chunk_text": chunk.text,
@@ -240,13 +242,15 @@ def audit_templates(traces: list[dict]) -> tuple[list[dict], list[dict]]:
             metadata_rows.append({
                 "question_id": t["question_id"], "strategy": t["strategy"], "rank": rank,
                 "chunk_id": hit["chunk_id"], "source": hit["source"],
-                "page": hit["page"], "chapter": hit["chapter"],
+                "page": hit["page"], "page_end": hit["page_end"], "chapter": hit["chapter"],
+                "section": hit["section"],
                 "filter_applied": json.dumps(t["filter_applied"]),
                 "source_ok": "", "page_ok": "", "chapter_ok": "", "filter_ok": "", "note": "",
             })
         grounding_rows.append({
             "question_id": t["question_id"], "strategy": t["strategy"],
-            "top3_pages": ", ".join(str(h["page"]) for h in hits),
+            "top3_pages": ", ".join(f"{h['page']}-{h['page_end']}" if h["page_end"] != h["page"] else str(h["page"])
+                                    for h in hits),
             "top3_text": "\n---\n".join(h["text"] for h in hits),
             "score_0_2": "", "reason": "",
         })

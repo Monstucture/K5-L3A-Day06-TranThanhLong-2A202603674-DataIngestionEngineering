@@ -1,6 +1,6 @@
 Loaded 62 content pages of 78; running 24 dev questions
-Index A: 368 chunks, embedded in 12.5s, rows 368 -> 368
-Index B: 405 chunks, embedded in 12.5s, rows 405 -> 405
+Index A: 368 chunks, embedded in 12.8s, rows 368 -> 368
+Index B: 390 chunks, embedded in 12.3s, rows 390 -> 390
 DB rows after second run (strategy|rows|distinct chunk_ids):
 A|368|368
-B|405|405
+B|390|390

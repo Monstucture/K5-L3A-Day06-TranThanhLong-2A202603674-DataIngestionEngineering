@@ -34,6 +34,13 @@ def test_hit_at_rank_three_counts_for_hit3_not_hit1():
     assert not result["hit@1"] and result["hit@3"] and result["first_hit_rank"] == 3
 
 
+def test_section_chunk_spanning_pages_covers_the_gold_page():
+    spanning = {**hit(1, QUOTE_TEXT), "page_end": 2}
+    assert evaluate_query(QUESTION, [spanning])["hit@1"]
+    ends_before = {**hit(0, QUOTE_TEXT), "page_end": 1}
+    assert not evaluate_query(QUESTION, [ends_before])["hit@3"]
+
+
 def test_summary_counts_as_n_over_n():
     traces = [{"strategy": "B", "split": "dev", "question_id": "q01", **evaluate_query(QUESTION, [hit(2, QUOTE_TEXT)])},
               {"strategy": "B", "split": "dev", "question_id": "q02", **evaluate_query(QUESTION, [hit(5, QUOTE_TEXT)])}]
