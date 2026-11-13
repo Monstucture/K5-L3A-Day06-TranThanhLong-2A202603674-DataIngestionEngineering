@@ -8,7 +8,7 @@
 ## Cấu hình và benchmark
 - A / B / C (tham số cụ thể, khác biệt duy nhất B–C):
 - ≥20 câu: phân chia ≥15 dev / ≥5 test, câu metadata filter và cách kiểm chứng evidence: Chia 24 dev và 10 test
-- Tiêu chí chọn chiến lược đã chốt trước khi xem test: chọn hịt dev nhiều hơn sau đó chọn hit test và nếu thấy ko hit dược thì giảm chunk lại để model không đọc nhiều quá, Sau do thử tăng chunk size lên tới mức cần thiết
+- Tiêu chí chọn chiến lược đã chốt trước khi xem test: Chọn chiến lược có Evidence Hit@3 trên dev cao nhất; nếu bằng nhau thì chọn Hit@1 dev cao hơn; nếu vẫn bằng thì chọn chiến lược đơn giản hơn / ít chunk hơn. Mọi điều chỉnh tham số chỉ dựa trên dev. Test chỉ chạy một lần sau khi đã chốt.
 
 ## Kết quả
 | Strategy | Split | Hit@1 (n/N) | Evidence Hit@3 (n/N) | Chunk count | Thời gian | Chi phí |
