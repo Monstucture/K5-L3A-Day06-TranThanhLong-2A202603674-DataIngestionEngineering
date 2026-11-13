@@ -1,0 +1,91 @@
+question_id,strategy,rank,chunk_id,source,page,page_end,chapter,section,filter_applied,source_ok,page_ok,chapter_ok,filter_ok,note,labeled_by
+q04,A,1,A:openstax-ap2e-ch1-2:p050:c001,anatomy-and-physiology-2e_70pages.pdf,50,50,2,,null,y,y,y,n/a,auto-check vs PDF text,author + auto-check vs PDF text
+q04,A,2,A:openstax-ap2e-ch1-2:p050:c000,anatomy-and-physiology-2e_70pages.pdf,50,50,2,,null,y,y,y,n/a,auto-check vs PDF text,author + auto-check vs PDF text
+q04,A,3,A:openstax-ap2e-ch1-2:p049:c003,anatomy-and-physiology-2e_70pages.pdf,49,49,2,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q05,A,1,A:openstax-ap2e-ch1-2:p002:c000,anatomy-and-physiology-2e_70pages.pdf,2,2,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q05,A,2,A:openstax-ap2e-ch1-2:p002:c007,anatomy-and-physiology-2e_70pages.pdf,2,2,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q05,A,3,A:openstax-ap2e-ch1-2:p001:c000,anatomy-and-physiology-2e_70pages.pdf,1,1,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q06,A,1,A:openstax-ap2e-ch1-2:p002:c003,anatomy-and-physiology-2e_70pages.pdf,2,2,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q06,A,2,A:openstax-ap2e-ch1-2:p002:c004,anatomy-and-physiology-2e_70pages.pdf,2,2,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q06,A,3,A:openstax-ap2e-ch1-2:p002:c000,anatomy-and-physiology-2e_70pages.pdf,2,2,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q09,A,1,A:openstax-ap2e-ch1-2:p003:c005,anatomy-and-physiology-2e_70pages.pdf,3,3,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q09,A,2,A:openstax-ap2e-ch1-2:p004:c000,anatomy-and-physiology-2e_70pages.pdf,4,4,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q09,A,3,A:openstax-ap2e-ch1-2:p001:c000,anatomy-and-physiology-2e_70pages.pdf,1,1,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q15,A,1,A:openstax-ap2e-ch1-2:p014:c005,anatomy-and-physiology-2e_70pages.pdf,14,14,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q15,A,2,A:openstax-ap2e-ch1-2:p014:c003,anatomy-and-physiology-2e_70pages.pdf,14,14,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q15,A,3,A:openstax-ap2e-ch1-2:p015:c000,anatomy-and-physiology-2e_70pages.pdf,15,15,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q16,A,1,A:openstax-ap2e-ch1-2:p017:c005,anatomy-and-physiology-2e_70pages.pdf,17,17,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q16,A,2,A:openstax-ap2e-ch1-2:p017:c004,anatomy-and-physiology-2e_70pages.pdf,17,17,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q16,A,3,A:openstax-ap2e-ch1-2:p018:c000,anatomy-and-physiology-2e_70pages.pdf,18,18,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q19,A,1,A:openstax-ap2e-ch1-2:p023:c006,anatomy-and-physiology-2e_70pages.pdf,23,23,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q19,A,2,A:openstax-ap2e-ch1-2:p024:c000,anatomy-and-physiology-2e_70pages.pdf,24,24,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q19,A,3,A:openstax-ap2e-ch1-2:p023:c005,anatomy-and-physiology-2e_70pages.pdf,23,23,1,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q29,A,1,A:openstax-ap2e-ch1-2:p052:c000,anatomy-and-physiology-2e_70pages.pdf,52,52,2,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q29,A,2,A:openstax-ap2e-ch1-2:p047:c001,anatomy-and-physiology-2e_70pages.pdf,47,47,2,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q29,A,3,A:openstax-ap2e-ch1-2:p047:c002,anatomy-and-physiology-2e_70pages.pdf,47,47,2,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q30,A,1,A:openstax-ap2e-ch1-2:p056:c000,anatomy-and-physiology-2e_70pages.pdf,56,56,2,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q30,A,2,A:openstax-ap2e-ch1-2:p056:c002,anatomy-and-physiology-2e_70pages.pdf,56,56,2,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q30,A,3,A:openstax-ap2e-ch1-2:p056:c001,anatomy-and-physiology-2e_70pages.pdf,56,56,2,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q31,A,1,A:openstax-ap2e-ch1-2:p057:c004,anatomy-and-physiology-2e_70pages.pdf,57,57,2,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q31,A,2,A:openstax-ap2e-ch1-2:p057:c005,anatomy-and-physiology-2e_70pages.pdf,57,57,2,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q31,A,3,A:openstax-ap2e-ch1-2:p035:c001,anatomy-and-physiology-2e_70pages.pdf,35,35,2,,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q04,B,1,B:openstax-ap2e-ch1-2:s2.3:c024,anatomy-and-physiology-2e_70pages.pdf,50,50,2,2.3,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q04,B,2,B:openstax-ap2e-ch1-2:s2.3:c022,anatomy-and-physiology-2e_70pages.pdf,49,50,2,2.3,null,y,y,y,n/a,auto-check vs PDF text; chunk spans pages 49-50,auto-check vs PDF text
+q04,B,3,B:openstax-ap2e-ch1-2:s2.3:c019,anatomy-and-physiology-2e_70pages.pdf,49,49,2,2.3,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q05,B,1,B:openstax-ap2e-ch1-2:s1.1:c000,anatomy-and-physiology-2e_70pages.pdf,2,2,1,1.1,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q05,B,2,B:openstax-ap2e-ch1-2:s1.1:c008,anatomy-and-physiology-2e_70pages.pdf,2,2,1,1.1,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q05,B,3,B:openstax-ap2e-ch1-2:s1.0:c000,anatomy-and-physiology-2e_70pages.pdf,1,1,1,1.0,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q06,B,1,B:openstax-ap2e-ch1-2:s1.1:c004,anatomy-and-physiology-2e_70pages.pdf,2,2,1,1.1,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q06,B,2,B:openstax-ap2e-ch1-2:s1.1:c006,anatomy-and-physiology-2e_70pages.pdf,2,2,1,1.1,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q06,B,3,B:openstax-ap2e-ch1-2:s1.1:c003,anatomy-and-physiology-2e_70pages.pdf,2,2,1,1.1,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q09,B,1,B:openstax-ap2e-ch1-2:s1.2:c002,anatomy-and-physiology-2e_70pages.pdf,4,4,1,1.2,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q09,B,2,B:openstax-ap2e-ch1-2:s1.2:c001,anatomy-and-physiology-2e_70pages.pdf,3,3,1,1.2,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q09,B,3,B:openstax-ap2e-ch1-2:s1.2:c000,anatomy-and-physiology-2e_70pages.pdf,3,3,1,1.2,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q15,B,1,B:openstax-ap2e-ch1-2:s1.5:c002,anatomy-and-physiology-2e_70pages.pdf,14,14,1,1.5,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q15,B,2,B:openstax-ap2e-ch1-2:s1.5:c000,anatomy-and-physiology-2e_70pages.pdf,14,14,1,1.5,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q15,B,3,B:openstax-ap2e-ch1-2:s1.5:c005,anatomy-and-physiology-2e_70pages.pdf,15,15,1,1.5,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q16,B,1,B:openstax-ap2e-ch1-2:s1.6:c004,anatomy-and-physiology-2e_70pages.pdf,17,17,1,1.6,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q16,B,2,B:openstax-ap2e-ch1-2:s1.6:c000,anatomy-and-physiology-2e_70pages.pdf,17,17,1,1.6,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q16,B,3,B:openstax-ap2e-ch1-2:s1.6:c008,anatomy-and-physiology-2e_70pages.pdf,18,18,1,1.6,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q19,B,1,B:openstax-ap2e-ch1-2:s1.7:c006,anatomy-and-physiology-2e_70pages.pdf,23,23,1,1.7,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q19,B,2,B:openstax-ap2e-ch1-2:s1.7:c007,anatomy-and-physiology-2e_70pages.pdf,23,24,1,1.7,null,y,y,y,n/a,auto-check vs PDF text; chunk spans pages 23-24,auto-check vs PDF text
+q19,B,3,B:openstax-ap2e-ch1-2:s1.7:c008,anatomy-and-physiology-2e_70pages.pdf,24,24,1,1.7,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q29,B,1,B:openstax-ap2e-ch1-2:s2.4:c012,anatomy-and-physiology-2e_70pages.pdf,51,52,2,2.4,null,y,y,y,n/a,auto-check vs PDF text; chunk spans pages 51-52,auto-check vs PDF text
+q29,B,2,B:openstax-ap2e-ch1-2:s2.4:c013,anatomy-and-physiology-2e_70pages.pdf,52,52,2,2.4,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q29,B,3,B:openstax-ap2e-ch1-2:s2.2:c029,anatomy-and-physiology-2e_70pages.pdf,47,47,2,2.2,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q30,B,1,B:openstax-ap2e-ch1-2:s2.4:c036,anatomy-and-physiology-2e_70pages.pdf,56,56,2,2.4,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q30,B,2,B:openstax-ap2e-ch1-2:s2.4:c035,anatomy-and-physiology-2e_70pages.pdf,55,56,2,2.4,null,y,y,y,n/a,auto-check vs PDF text; chunk spans pages 55-56,auto-check vs PDF text
+q30,B,3,B:openstax-ap2e-ch1-2:s2.4:c037,anatomy-and-physiology-2e_70pages.pdf,56,56,2,2.4,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q31,B,1,B:openstax-ap2e-ch1-2:s2.5:c002,anatomy-and-physiology-2e_70pages.pdf,57,57,2,2.5,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q31,B,2,B:openstax-ap2e-ch1-2:s2.5:c000,anatomy-and-physiology-2e_70pages.pdf,57,57,2,2.5,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q31,B,3,B:openstax-ap2e-ch1-2:s2.0:c002,anatomy-and-physiology-2e_70pages.pdf,35,35,2,2.0,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q04,C,1,B:openstax-ap2e-ch1-2:s2.3:c024,anatomy-and-physiology-2e_70pages.pdf,50,50,2,2.3,"{""chapter"": 2}",y,y,y,y,auto-check vs PDF text,auto-check vs PDF text
+q04,C,2,B:openstax-ap2e-ch1-2:s2.3:c022,anatomy-and-physiology-2e_70pages.pdf,49,50,2,2.3,"{""chapter"": 2}",y,y,y,y,auto-check vs PDF text; chunk spans pages 49-50,auto-check vs PDF text
+q04,C,3,B:openstax-ap2e-ch1-2:s2.3:c019,anatomy-and-physiology-2e_70pages.pdf,49,49,2,2.3,"{""chapter"": 2}",y,y,y,y,auto-check vs PDF text,auto-check vs PDF text
+q05,C,1,B:openstax-ap2e-ch1-2:s1.1:c000,anatomy-and-physiology-2e_70pages.pdf,2,2,1,1.1,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q05,C,2,B:openstax-ap2e-ch1-2:s1.1:c008,anatomy-and-physiology-2e_70pages.pdf,2,2,1,1.1,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q05,C,3,B:openstax-ap2e-ch1-2:s1.0:c000,anatomy-and-physiology-2e_70pages.pdf,1,1,1,1.0,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q06,C,1,B:openstax-ap2e-ch1-2:s1.1:c004,anatomy-and-physiology-2e_70pages.pdf,2,2,1,1.1,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q06,C,2,B:openstax-ap2e-ch1-2:s1.1:c006,anatomy-and-physiology-2e_70pages.pdf,2,2,1,1.1,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q06,C,3,B:openstax-ap2e-ch1-2:s1.1:c003,anatomy-and-physiology-2e_70pages.pdf,2,2,1,1.1,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q09,C,1,B:openstax-ap2e-ch1-2:s1.2:c002,anatomy-and-physiology-2e_70pages.pdf,4,4,1,1.2,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q09,C,2,B:openstax-ap2e-ch1-2:s1.2:c001,anatomy-and-physiology-2e_70pages.pdf,3,3,1,1.2,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q09,C,3,B:openstax-ap2e-ch1-2:s1.2:c000,anatomy-and-physiology-2e_70pages.pdf,3,3,1,1.2,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q15,C,1,B:openstax-ap2e-ch1-2:s1.5:c002,anatomy-and-physiology-2e_70pages.pdf,14,14,1,1.5,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q15,C,2,B:openstax-ap2e-ch1-2:s1.5:c000,anatomy-and-physiology-2e_70pages.pdf,14,14,1,1.5,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q15,C,3,B:openstax-ap2e-ch1-2:s1.5:c005,anatomy-and-physiology-2e_70pages.pdf,15,15,1,1.5,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q16,C,1,B:openstax-ap2e-ch1-2:s1.6:c004,anatomy-and-physiology-2e_70pages.pdf,17,17,1,1.6,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q16,C,2,B:openstax-ap2e-ch1-2:s1.6:c000,anatomy-and-physiology-2e_70pages.pdf,17,17,1,1.6,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q16,C,3,B:openstax-ap2e-ch1-2:s1.6:c008,anatomy-and-physiology-2e_70pages.pdf,18,18,1,1.6,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q19,C,1,B:openstax-ap2e-ch1-2:s1.7:c006,anatomy-and-physiology-2e_70pages.pdf,23,23,1,1.7,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q19,C,2,B:openstax-ap2e-ch1-2:s1.7:c007,anatomy-and-physiology-2e_70pages.pdf,23,24,1,1.7,null,y,y,y,n/a,auto-check vs PDF text; chunk spans pages 23-24,auto-check vs PDF text
+q19,C,3,B:openstax-ap2e-ch1-2:s1.7:c008,anatomy-and-physiology-2e_70pages.pdf,24,24,1,1.7,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q29,C,1,B:openstax-ap2e-ch1-2:s2.4:c012,anatomy-and-physiology-2e_70pages.pdf,51,52,2,2.4,"{""chapter"": 2}",y,y,y,y,auto-check vs PDF text; chunk spans pages 51-52,auto-check vs PDF text
+q29,C,2,B:openstax-ap2e-ch1-2:s2.4:c013,anatomy-and-physiology-2e_70pages.pdf,52,52,2,2.4,"{""chapter"": 2}",y,y,y,y,auto-check vs PDF text,auto-check vs PDF text
+q29,C,3,B:openstax-ap2e-ch1-2:s2.2:c029,anatomy-and-physiology-2e_70pages.pdf,47,47,2,2.2,"{""chapter"": 2}",y,y,y,y,auto-check vs PDF text,auto-check vs PDF text
+q30,C,1,B:openstax-ap2e-ch1-2:s2.4:c036,anatomy-and-physiology-2e_70pages.pdf,56,56,2,2.4,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q30,C,2,B:openstax-ap2e-ch1-2:s2.4:c035,anatomy-and-physiology-2e_70pages.pdf,55,56,2,2.4,null,y,y,y,n/a,auto-check vs PDF text; chunk spans pages 55-56,auto-check vs PDF text
+q30,C,3,B:openstax-ap2e-ch1-2:s2.4:c037,anatomy-and-physiology-2e_70pages.pdf,56,56,2,2.4,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q31,C,1,B:openstax-ap2e-ch1-2:s2.5:c002,anatomy-and-physiology-2e_70pages.pdf,57,57,2,2.5,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q31,C,2,B:openstax-ap2e-ch1-2:s2.5:c000,anatomy-and-physiology-2e_70pages.pdf,57,57,2,2.5,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text
+q31,C,3,B:openstax-ap2e-ch1-2:s2.0:c002,anatomy-and-physiology-2e_70pages.pdf,35,35,2,2.0,null,y,y,y,n/a,auto-check vs PDF text,auto-check vs PDF text

@@ -63,3 +63,14 @@ docker compose -p day6_student_starter stop
 5. Sau khi hoàn thiện, chạy `python -m src.run` từ thư mục `starter/`. Trước khi làm TODO, lệnh này **chủ động báo `NotImplementedError`**.
 
 Lưu code, cấu hình, kết quả và lệnh chạy để người chấm tái lập; không commit key, dữ liệu mật hoặc dữ liệu không có quyền chia sẻ.
+
+## 4. How to run
+
+```bash
+    # Run embedding for the split
+    python -m src.run --split dev
+    python -m src.run --split test
+
+    # ye
+    python -m demo.server
+```
