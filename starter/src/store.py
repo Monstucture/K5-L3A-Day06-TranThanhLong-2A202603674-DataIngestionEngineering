@@ -25,8 +25,15 @@ class PgVectorStore:
         if dimensions <= 0:
             raise ValueError(f"dimensions must be positive, got {dimensions}")
         self.dimensions = dimensions
-        # autocommit: reads don't open a hidden transaction, and each `transaction()` block commits for real.
-        self._conn = psycopg.connect(database_url, connect_timeout=5, autocommit=True)
+        try:
+            # autocommit: reads don't open a hidden transaction, and each `transaction()` block commits for real.
+            self._conn = psycopg.connect(database_url, connect_timeout=5, autocommit=True)
+        except psycopg.OperationalError as error:
+            # The URL holds the password, so it is not repeated in the message.
+            raise RuntimeError(
+                "Cannot connect to PostgreSQL. Start Docker Desktop, run "
+                "`docker compose -p day6_student_starter up -d --wait` in starter/, "
+                f"and check DATABASE_URL in starter/.env. ({type(error).__name__})") from error
 
     def create_schema(self) -> None:
         with self._conn.transaction(), self._conn.cursor() as cur:

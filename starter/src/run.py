@@ -16,14 +16,16 @@ from datetime import datetime, timezone
 from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
 
+import psycopg
 from dotenv import load_dotenv
+from pypdf.errors import PdfReadError
 
 from .chunking import by_paragraph, fixed_size
 from .embeddings import MyEmbedder
 from .evaluation import evaluate_query, summarize
 from .ingestion import load_pdf
 from .models import Chunk, DocumentPage
-from .store import PgVectorStore
+from .store import FILTER_COLUMNS, PgVectorStore
 
 STARTER = Path(__file__).resolve().parents[1]
 ROOT = STARTER.parent
@@ -64,6 +66,20 @@ def package_version(name: str) -> str:
         return "not installed"
 
 
+REQUIRED_QUESTION_FIELDS = ("id", "split", "question", "expected_answer", "gold_source_id",
+                            "gold_page", "evidence_quote")
+
+
+def read_json(path: Path):
+    """Load an input JSON file, or stop with a message naming the file and the problem."""
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        raise SystemExit(f"Missing input file: {path}")
+    except json.JSONDecodeError as error:
+        raise SystemExit(f"{path.name} is not valid JSON: line {error.lineno}, column {error.colno}: {error.msg}")
+
+
 def flat(text: str) -> str:
     return " ".join(text.split())
 
@@ -82,6 +98,24 @@ def check_corpus(pages: list[DocumentPage], manifest: dict) -> list[DocumentPage
 
 def check_benchmark(questions: list[dict], pages: list[DocumentPage]) -> None:
     """Fail loudly if the benchmark breaks the lab rules or an evidence quote is not on its page."""
+    if not isinstance(questions, list):
+        raise SystemExit("questions.json must contain a list of questions.")
+    malformed = []
+    for i, q in enumerate(questions):
+        missing = [f for f in REQUIRED_QUESTION_FIELDS if not isinstance(q, dict) or f not in q]
+        if missing:
+            malformed.append(f"question #{i + 1} ({q.get('id', '?') if isinstance(q, dict) else '?'}): missing {missing}")
+        elif not isinstance(q["gold_page"], int):
+            malformed.append(f"{q['id']}: gold_page must be a whole number")
+        elif q.get("filter") and (not isinstance(q["filter"], dict) or set(q["filter"]) - FILTER_COLUMNS):
+            malformed.append(f"{q['id']}: filter may only use {sorted(FILTER_COLUMNS)}")
+    ids = [q["id"] for q in questions if isinstance(q, dict) and "id" in q]
+    duplicates = sorted({i for i in ids if ids.count(i) > 1})
+    if duplicates:
+        malformed.append(f"duplicate ids: {duplicates}")
+    if malformed:
+        raise SystemExit("Malformed benchmark:\n  " + "\n  ".join(malformed))
+
     splits = [q["split"] for q in questions]
     filtered = [q for q in questions if q.get("filter")]
     errors = []
@@ -234,7 +268,15 @@ def main() -> None:
     parser.add_argument("--split", choices=["dev", "test", "all"], default="dev",
                         help="which questions to run (choose the strategy on dev before running test)")
     args = parser.parse_args()
+    try:
+        run_pipeline(args.split)
+    except RuntimeError as error:  # Ollama / database problems raised with a readable message
+        raise SystemExit(f"Error: {error}")
+    except psycopg.Error as error:
+        raise SystemExit(f"Database error ({type(error).__name__}): {error}")
 
+
+def run_pipeline(split: str) -> None:
     load_dotenv(STARTER / ".env")
     database_url = os.getenv("DATABASE_URL")
     if not database_url:
@@ -244,12 +286,19 @@ def main() -> None:
     started = datetime.now(timezone.utc)
 
     # 1. Corpus and benchmark
-    manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
-    all_pages, problems = load_pdf(PDF_PATH, manifest["source_id"], PDF_PATH.name)
-    pages = check_corpus(all_pages, manifest)
-    questions = json.loads(QUESTIONS_PATH.read_text(encoding="utf-8"))
+    manifest = read_json(MANIFEST_PATH)
+    questions = read_json(QUESTIONS_PATH)
+    if not PDF_PATH.is_file():
+        raise SystemExit(f"Missing corpus PDF: {PDF_PATH}")
+    try:
+        all_pages, problems = load_pdf(PDF_PATH, manifest["source_id"], PDF_PATH.name)
+        pages = check_corpus(all_pages, manifest)
+    except PdfReadError as error:
+        raise SystemExit(f"Cannot read {PDF_PATH.name}: {error}")
+    except (KeyError, TypeError) as error:
+        raise SystemExit(f"manifest.json is missing or has a wrong field: {error}")
     check_benchmark(questions, pages)
-    run_questions = [q for q in questions if args.split == "all" or q["split"] == args.split]
+    run_questions = [q for q in questions if split == "all" or q["split"] == split]
     (RESULTS / "ingestion_log.json").write_text(json.dumps({
         "pdf": PDF_PATH.name,
         "physical_pages": len(all_pages),
@@ -259,7 +308,7 @@ def main() -> None:
         "problems": problems,
         "pages": [{"page": p.page, "chapter": p.metadata.get("chapter"), "chars": len(p.text)} for p in pages],
     }, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"Loaded {len(pages)} content pages of {len(all_pages)}; running {len(run_questions)} {args.split} questions")
+    print(f"Loaded {len(pages)} content pages of {len(all_pages)}; running {len(run_questions)} {split} questions")
 
     # 2-3. Chunk, embed, store (idempotent upsert: re-running must not add rows)
     embedder = MyEmbedder(model_name)
@@ -269,14 +318,14 @@ def main() -> None:
 
     # 4. Retrieve top-k for every strategy and question, keep full traces
     traces = retrieve(store, embedder, run_questions)
-    with (RESULTS / f"traces_{args.split}.jsonl").open("w", encoding="utf-8") as f:
+    with (RESULTS / f"traces_{split}.jsonl").open("w", encoding="utf-8") as f:
         for trace in traces:
             f.write(json.dumps(trace, ensure_ascii=False) + "\n")
 
     # 5. Metrics, run record and blank templates for the manual checks
     summary = {
         "run_started_utc": started.isoformat(timespec="seconds"),
-        "split": args.split,
+        "split": split,
         "questions": len(run_questions),
         "embedding": {"provider": "ollama (local)", "model": embedder.model_name,
                       "dimensions": embedder.dimensions, "cost_usd": 0},
@@ -287,7 +336,7 @@ def main() -> None:
         "environment": {"python": platform.python_version(),
                         **{pkg: package_version(pkg) for pkg in ("pypdf", "psycopg", "ollama", "pgvector")}},
     }
-    (RESULTS / f"summary_{args.split}.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    (RESULTS / f"summary_{split}.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
     write_csv(RESULTS / "coherence_template.csv", coherence_template(pages))
     metadata_rows, grounding_rows = audit_templates(traces)
     write_csv(RESULTS / "metadata_audit_template.csv", metadata_rows)
