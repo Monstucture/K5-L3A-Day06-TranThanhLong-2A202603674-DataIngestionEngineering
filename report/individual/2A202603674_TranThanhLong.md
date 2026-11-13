@@ -66,4 +66,4 @@ Thời gian = embed toàn bộ chunk của index trên laptop (upsert thêm kho�
   - Viết câu so sánh với nhiều evidence (một quote cho mỗi ý) hoặc tách thành nhiều câu.
   - Có người chấm độc lập thứ hai cho coherence/grounding và tăng test lên ≥ 20 câu.
 
-**Công cụ AI:** dùng Claude Code để hỗ trợ viết và review code pipeline, kiểm tra evidence, viết README/báo cáo và chấm nháp nhãn coherence/grounding; tác giả kiểm tra lại kết quả chạy, nhãn và nội dung báo cáo. Mọi số liệu lấy từ file kết quả đã chạy, không tự tạo.
+**Công cụ AI:** dùng Claude Code để hỗ trợ viết và review code pipeline, kiểm tra evidence, fomat README và chấm nháp nhãn còn lại của coherence/grounding

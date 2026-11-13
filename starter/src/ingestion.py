@@ -18,6 +18,8 @@ _FOOTER_PATTERNS = [
 # OpenStax chapter opening pages carry a line "CHAPTER 2" followed by the chapter title.
 _CHAPTER_HEADING = re.compile(r"^CHAPTER (\d+)$")
 EMPTY_PAGE_CHARS = 50  # pages with less text than this are logged as empty
+END_OF_CHAPTER = "Key Terms"  # from here to the next chapter: glossary, summary, review questions
+BACK_MATTER = {"REFERENCES", "INDEX"}  # first line of the book's closing sections
 
 
 def load_pdf(path: Path, document_id: str, source: str) -> tuple[list[DocumentPage], list[dict]]:
@@ -61,6 +63,26 @@ def load_pdf(path: Path, document_id: str, source: str) -> tuple[list[DocumentPa
             metadata={"chapter": chapter, "chapter_title": chapter_title},
         ))
     return pages, problems
+
+
+def content_pages(pages: list[DocumentPage]) -> list[DocumentPage]:
+    """The manifest's counting rule, applied automatically: chapter body pages only.
+
+    Skips front matter (cover, contents, preface: no chapter yet), each chapter's
+    "Key Terms" page up to the next chapter (glossary, summary, review questions),
+    everything from REFERENCES/INDEX on, and near-empty pages.
+    """
+    kept, chapter, in_review, in_back_matter = [], None, False, False
+    for page in pages:
+        first_line = page.text.split("\n", 1)[0].strip()
+        if page.metadata.get("chapter") != chapter:
+            chapter, in_review = page.metadata.get("chapter"), False
+        in_review = in_review or first_line.startswith(END_OF_CHAPTER)
+        in_back_matter = in_back_matter or first_line.upper() in BACK_MATTER
+        if chapter is None or in_review or in_back_matter or len(page.text) < EMPTY_PAGE_CHARS:
+            continue
+        kept.append(page)
+    return kept
 
 
 def normalize_text(text: str) -> str:

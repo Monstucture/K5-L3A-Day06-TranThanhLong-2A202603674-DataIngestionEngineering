@@ -1,0 +1,403 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "type": "direct",
+    "question": "What is human anatomy?",
+    "expected_answer": "The scientific study of the body's structures.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 24,
+    "evidence_quote": "Human anatomy is the scientific study of the body’s structures.",
+    "filter": null
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Compared with a pH 5 liquid, how much more acidic is a pH 4 liquid?",
+    "expected_answer": "Ten times more acidic.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 77,
+    "evidence_quote": "a solution with a pH of 4 is ten times more acidic than a solution with a pH of 5.",
+    "filter": null
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "type": "condition",
+    "question": "Under what condition is positive feedback normal in the body?",
+    "expected_answer": "Only when there is a definite end point, as in childbirth or the response to blood loss.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 38,
+    "evidence_quote": "Positive feedback in the body is normal only when there is a definite end point.",
+    "filter": null
+  },
+  {
+    "id": "q04",
+    "split": "test",
+    "type": "metadata_filter",
+    "question": "In the chemistry chapter, how does increasing pressure affect reactions?",
+    "expected_answer": "It speeds them up: decreasing the volume raises pressure, so particles collide more often.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 72,
+    "evidence_quote": "by decreasing the volume of the space, which would correspondingly increase the pressure",
+    "filter": {
+      "chapter": 2
+    }
+  },
+  {
+    "id": "q05",
+    "split": "test",
+    "type": "comparison",
+    "question": "What is the difference between anatomy and physiology?",
+    "expected_answer": "Anatomy is the scientific study of the body's structures, while physiology is the scientific study of the chemistry and physics of body structures and how they work together to support life. Anatomy focuses on structure, whereas physiology focuses on function.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 24,
+    "evidence_quote": "Whereas anatomy is about structure, physiology is about function.",
+    "filter": null
+  },
+  {
+    "id": "q06",
+    "split": "test",
+    "type": "comparison",
+    "question": "Differentiate between gross anatomy, microscopic anatomy, cytology, and histology.",
+    "expected_answer": "Gross anatomy studies large body structures visible without magnification. Microscopic anatomy studies structures that require a microscope or magnification. Cytology is the study of cells, while histology is the study of tissues.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 24,
+    "evidence_quote": "Microscopic anatomy includes cytology, the study of cells and histology, the study of tissues.",
+    "filter": null
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "type": "comparison",
+    "question": "What is the difference between regional anatomy and systemic anatomy?",
+    "expected_answer": "Regional anatomy studies the interrelationships of all structures within a particular body region. Systemic anatomy studies the structures belonging to a particular body system. For example, studying all the muscles in the body is systemic anatomy, while studying muscles, nerves, and blood vessels in the abdomen is regional anatomy.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 24,
+    "evidence_quote": "Regional anatomy is the study of the interrelationships of all of the structures in a specific body region, such as the abdomen.",
+    "filter": null
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "type": "direct",
+    "question": "Explain the relationship between form and function in the human body.",
+    "expected_answer": "The structure and physical characteristics of a body part are closely related to the function it performs. For example, the thumb's position opposite the other fingers allows the hand to pinch and grasp objects.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 25,
+    "evidence_quote": "Form is closely related to function in all living things.",
+    "filter": null
+  },
+  {
+    "id": "q09",
+    "split": "test",
+    "type": "direct",
+    "question": "Identify the six levels of structural organization of the human body, from simplest to most complex.",
+    "expected_answer": "The six levels are: 1. Chemical level, 2. Cellular level, 3. Tissue level, 4. Organ level, 5. Organ system level, and 6. Organism level. The chemical level includes subatomic particles, atoms, and molecules.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 26,
+    "evidence_quote": "The organization of the body often is discussed in terms of six distinct levels of increasing complexity, from the smallest chemical building blocks to a unique human organism.",
+    "filter": null
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "type": "comparison",
+    "question": "Differentiate between a cell, tissue, organ, and organ system.",
+    "expected_answer": "A cell is the smallest independently functioning unit of a living organism. A tissue is a group of similar cells working together to perform a specific function. An organ is an anatomically distinct structure composed of two or more tissue types. An organ system is a group of organs working together to perform major functions or meet physiological needs.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 27,
+    "evidence_quote": "A tissue is a group of many similar cells (though sometimes composed of a few related types) that work together to perform a specific function.",
+    "filter": null
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Which traits does the textbook treat as the defining features of human life?",
+    "expected_answer": "The six characteristics are organization, metabolism, responsiveness, movement, development, and reproduction.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 30,
+    "evidence_quote": "These many functions can be summarized in terms of a few that we might consider definitive of human life: organization, metabolism, responsiveness, movement, development, and reproduction.",
+    "filter": null
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "type": "metadata_filter",
+    "question": "In the introductory chapter on the human body, how is metabolism defined in terms of anabolism and catabolism?",
+    "expected_answer": "Anabolism combines smaller, simpler molecules into larger, more complex substances and requires energy. Catabolism breaks larger, more complex substances into smaller molecules and releases energy. Metabolism is the sum of all anabolic and catabolic reactions occurring in the body.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 30,
+    "evidence_quote": "Metabolism is the sum of all anabolic and catabolic reactions that take place in the body",
+    "filter": {
+      "chapter": 1
+    }
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "type": "direct",
+    "question": "What are the four requirements for human survival?",
+    "expected_answer": "The four requirements are oxygen, nutrients, a narrow range of temperature, and a narrow range of atmospheric pressure. Water is included within the nutrient requirement rather than being a separate fifth requirement.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 32,
+    "evidence_quote": "Earth and its atmosphere have provided us with air to breathe, water to drink, and food to eat, but these are not the only requirements for survival.",
+    "filter": null
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "type": "metadata_filter",
+    "question": "In the introductory chapter on the human body, why must body temperature stay within a narrow range?",
+    "expected_answer": "The chemical reactions required for life can only occur within a narrow body temperature range around 37°C (98.6°F). Extreme temperatures can alter the structure of enzymes, preventing them from functioning normally and disrupting metabolic reactions.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 33,
+    "evidence_quote": "When body temperature rises well above or drops well below normal, certain proteins (enzymes) that facilitate chemical reactions lose their normal structure and their ability to function and the chemical reactions of metabolism cannot proceed.",
+    "filter": {
+      "chapter": 1
+    }
+  },
+  {
+    "id": "q15",
+    "split": "test",
+    "type": "comparison",
+    "question": "Explain homeostasis and distinguish between negative and positive feedback mechanisms.",
+    "expected_answer": "Homeostasis is the maintenance of stable internal conditions. Negative feedback reverses a deviation from a set point and returns a physiological condition toward its normal range. Positive feedback intensifies a change and moves the condition further away from its normal range until a definite endpoint is reached. Examples are temperature regulation for negative feedback and childbirth for positive feedback.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 36,
+    "evidence_quote": "Negative feedback is a mechanism that reverses a deviation from the set point.",
+    "filter": null,
+    "supporting_pages": [
+      38
+    ]
+  },
+  {
+    "id": "q16",
+    "split": "test",
+    "type": "direct",
+    "question": "Describe the anatomical position and explain why it is important.",
+    "expected_answer": "The anatomical position is a standardized reference position in which the body stands upright, feet parallel and toes forward, upper limbs extended to the sides, and palms facing forward. It provides a consistent reference for describing body structures and directions.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 39,
+    "evidence_quote": "the standard body “map,” or anatomical position, is that of the body standing upright, with the feet at shoulder width and parallel, toes forward.",
+    "filter": null
+  },
+  {
+    "id": "q17",
+    "split": "dev",
+    "type": "comparison",
+    "question": "Differentiate between anterior, posterior, superior, inferior, medial, lateral, proximal, and distal.",
+    "expected_answer": "Anterior means toward the front; posterior means toward the back; superior means above or higher; inferior means below or lower; medial means toward the body's middle; lateral means toward the body's side; proximal means nearer to the point of attachment or trunk; distal means farther from the point of attachment or trunk.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 40,
+    "evidence_quote": "These terms are essential for describing the relative locations of different body structures.",
+    "filter": null
+  },
+  {
+    "id": "q18",
+    "split": "dev",
+    "type": "direct",
+    "question": "What are the three primary anatomical planes, and how does each divide the body?",
+    "expected_answer": "The sagittal plane divides the body into right and left portions. The frontal or coronal plane divides it into anterior and posterior portions. The transverse plane divides it into upper and lower portions. A midsagittal plane divides the body into equal right and left halves.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 41,
+    "evidence_quote": "The sagittal plane is the plane that divides the body or an organ vertically into right and left sides.",
+    "filter": null
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "type": "paraphrase",
+    "question": "What kinds of body parts show up best on an X-ray, and what is the downside of X-ray exposure?",
+    "expected_answer": "X-rays are best for hard structures such as teeth and bones. Like other high-energy radiation, they can damage cells and cause changes that may lead to cancer.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 45,
+    "evidence_quote": "X-rays are best used to visualize hard body structures such as teeth and bones",
+    "filter": null
+  },
+  {
+    "id": "q20",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "From most to least common, which four elements make up most of the human body?",
+    "expected_answer": "The four most abundant elements are oxygen (O), carbon (C), hydrogen (H), and nitrogen (N).",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 58,
+    "evidence_quote": "The elements in the human body are shown in Figure 2.2, beginning with the most abundant: oxygen (O), carbon (C), hydrogen (H), and nitrogen (N).",
+    "filter": null
+  },
+  {
+    "id": "q21",
+    "split": "dev",
+    "type": "direct",
+    "question": "Describe the structure of an atom and explain the roles of its three major subatomic particles.",
+    "expected_answer": "An atom contains protons, neutrons, and electrons. Protons carry a positive electrical charge and are located in the nucleus. Neutrons have no electrical charge and are also located in the nucleus. Electrons carry a negative electrical charge and occupy regions surrounding the nucleus called electron shells or electron clouds.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 59,
+    "evidence_quote": "Atoms are made up of even smaller subatomic particles, three types of which are important: the proton, neutron, and electron.",
+    "filter": null
+  },
+  {
+    "id": "q22",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "What makes two atoms of the same element isotopes of each other?",
+    "expected_answer": "Isotopes are different forms of the same element that have the same number of protons but different numbers of neutrons. Therefore, they have the same atomic number but different mass numbers.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 61,
+    "evidence_quote": "An isotope is one of the different forms of an element, distinguished from one another by different numbers of neutrons.",
+    "filter": null
+  },
+  {
+    "id": "q23",
+    "split": "dev",
+    "type": "comparison",
+    "question": "Differentiate between cations and anions. How are they formed?",
+    "expected_answer": "A cation is a positively charged ion formed when an atom loses or donates electrons. An anion is a negatively charged ion formed when an atom gains or accepts electrons. The resulting charge depends on the balance between protons and electrons.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 66,
+    "evidence_quote": "The opposite electrical charges of the resulting sodium cation and chloride anion result in the formation of a bond of attraction called an ionic bond.",
+    "filter": null
+  },
+  {
+    "id": "q24",
+    "split": "dev",
+    "type": "comparison",
+    "question": "Compare ionic, covalent, and hydrogen bonds.",
+    "expected_answer": "Ionic bonds are formed through attraction between oppositely charged ions, typically after electron transfer. Covalent bonds form when atoms share electrons. Hydrogen bonds are attractions involving a hydrogen atom in a polar covalent bond and an electronegative region of another molecule or part of a molecule.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 67,
+    "supporting_pages": [
+      66,
+      68
+    ],
+    "evidence_quote": "molecules formed by a covalent bond share electrons in a mutually stabilizing relationship.",
+    "filter": null
+  },
+  {
+    "id": "q25",
+    "split": "dev",
+    "type": "direct",
+    "question": "What is a polar molecule, and why is water considered polar?",
+    "expected_answer": "A polar molecule contains regions with opposite electrical charges because electrons are shared unequally between atoms. Water is polar because oxygen and hydrogen share electrons unequally, creating partial negative and partial positive regions within the molecule.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 68,
+    "evidence_quote": "Polar molecules occur when atoms share electrons unequally, in polar covalent bonds.",
+    "filter": null
+  },
+  {
+    "id": "q26",
+    "split": "dev",
+    "type": "metadata_filter",
+    "question": "In the chemistry chapter, which forms of energy besides chemical energy are important in human functioning?",
+    "expected_answer": "The four forms are chemical energy, mechanical energy, radiant energy, and electrical energy. Chemical energy is stored and released through chemical bonds. Mechanical energy powers movement. Radiant energy is transmitted as waves. Electrical energy contributes to voltage changes that help transmit impulses in nerve and muscle cells.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 70,
+    "evidence_quote": "In addition to chemical energy, mechanical, radiant, and electrical energy are important in human functioning.",
+    "filter": {
+      "chapter": 2
+    }
+  },
+  {
+    "id": "q27",
+    "split": "dev",
+    "type": "comparison",
+    "question": "Differentiate between synthesis, decomposition, and exchange chemical reactions.",
+    "expected_answer": "A synthesis reaction joins two or more components to form a larger product and requires energy. A decomposition reaction breaks a larger substance into smaller components and releases stored energy. An exchange reaction involves both synthesis and decomposition, meaning chemical bonds are both formed and broken.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 71,
+    "evidence_quote": "An exchange reaction is a chemical reaction in which both synthesis and decomposition occur, chemical bonds are both formed and broken, and chemical energy is absorbed, stored, and released",
+    "filter": null
+  },
+  {
+    "id": "q28",
+    "split": "dev",
+    "type": "direct",
+    "question": "What are the most important catalysts in the human body, and how do they speed up chemical reactions?",
+    "expected_answer": "Enzymes. They are catalysts made of protein or RNA that speed up reactions by lowering the activation energy needed, without being consumed.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 72,
+    "evidence_quote": "The most important catalysts in the human body are enzymes.",
+    "filter": null
+  },
+  {
+    "id": "q29",
+    "split": "test",
+    "type": "metadata_filter",
+    "question": "In the chemistry chapter, why is water able to dissolve so many substances?",
+    "expected_answer": "Water is essential because it acts as a lubricant and cushion, helps regulate temperature, provides a medium for chemical reactions, and dissolves and transports many substances. It is called the universal solvent because its polarity allows it to dissolve many ionic and polar covalent compounds. However, it does not readily dissolve nonpolar substances.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 74,
+    "evidence_quote": "Because water molecules are polar, with regions of positive and negative electrical charge, water readily dissolves ionic compounds and polar covalent compounds.",
+    "filter": {
+      "chapter": 2
+    }
+  },
+  {
+    "id": "q30",
+    "split": "test",
+    "type": "direct",
+    "question": "Within what pH range is human blood normally kept, and why is that slightly basic pH useful?",
+    "expected_answer": "Normally 7.35 to 7.45 (typically 7.4). The slightly basic pH lets blood reduce the acidity from carbon dioxide constantly released by cells.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 78,
+    "evidence_quote": "The pH of human blood normally ranges from 7.35 to 7.45, although it is typically identified as pH 7.4.",
+    "filter": null
+  },
+  {
+    "id": "q31",
+    "split": "test",
+    "type": "paraphrase",
+    "question": "Which four families of carbon-based molecules matter most for how the body is built and works?",
+    "expected_answer": "The four major types are carbohydrates, lipids, proteins, and nucleic acids. These are organic compounds that generally contain carbon and hydrogen and are important to human structure and function.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 79,
+    "evidence_quote": "The four types most important to human structure and function are carbohydrates, lipids, proteins, and nucleic acids.",
+    "filter": null
+  },
+  {
+    "id": "q32",
+    "split": "dev",
+    "type": "comparison",
+    "question": "Differentiate between monosaccharides, disaccharides, and polysaccharides. Explain how carbohydrate units are joined and separated.",
+    "expected_answer": "Monosaccharides are the monomers of carbohydrates. Disaccharides consist of two monosaccharides joined through dehydration synthesis, forming a glycosidic bond. Polysaccharides are polymers composed of many monosaccharides. Hydrolysis adds water to break the bonds between carbohydrate units.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 80,
+    "supporting_pages": [
+      81,
+      82,
+      83
+    ],
+    "evidence_quote": "Monosaccharides are the monomers of carbohydrates. Disaccharides (di- = “two”) are made up of two monomers. Polysaccharides are the polymers, and can consist of hundreds to thousands of monomers.",
+    "filter": null
+  },
+  {
+    "id": "q33",
+    "split": "dev",
+    "type": "comparison",
+    "question": "Compare triglycerides, phospholipids, steroids, and proteins in terms of their structures and functions.",
+    "expected_answer": "Triglycerides consist of glycerol bonded to three fatty acids and function mainly in energy storage and fuel supply. Phospholipids consist of glycerol, two fatty acids, and a phosphate-containing polar head; they are important components of cell membranes. Steroids contain four fused hydrocarbon rings, with cholesterol being an important example. Proteins are composed of amino acids linked by peptide bonds and perform structural, catalytic, transport, and regulatory functions.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 86,
+    "supporting_pages": [
+      84,
+      87,
+      89
+    ],
+    "evidence_quote": "A protein is an organic molecule composed of amino acids linked by peptide bonds.",
+    "filter": null
+  },
+  {
+    "id": "q34",
+    "split": "dev",
+    "type": "direct",
+    "question": "What three components make up a molecule of ATP?",
+    "expected_answer": "A ribose sugar, an adenine base, and three phosphate groups.",
+    "gold_source_id": "openstax-ap2e-full",
+    "gold_page": 91,
+    "evidence_quote": "The nucleotide adenosine triphosphate (ATP), is composed of a ribose sugar, an adenine base, and three phosphate groups",
+    "filter": null
+  }
+]

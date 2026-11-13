@@ -29,9 +29,17 @@ from .store import FILTER_COLUMNS, PgVectorStore
 
 STARTER = Path(__file__).resolve().parents[1]
 ROOT = STARTER.parent
-PDF_PATH = ROOT / "data" / "anatomy-and-physiology-2e_70pages.pdf"
-MANIFEST_PATH = ROOT / "data" / "manifest.json"
-QUESTIONS_PATH = ROOT / "benchmark" / "questions.json"
+# Corpus switch: the graded lab corpus (chapters 1-2 extract) or the full textbook.
+# PDF, manifest and questions must change together: page numbers differ by 22 between them.
+FULL_BOOK = True
+if FULL_BOOK:
+    PDF_PATH = ROOT / "data" / "anatomy-and-physiology-2e.pdf"
+    MANIFEST_PATH = ROOT / "data" / "manifest_full_book.json"  # from scripts/make_manifest.py
+    QUESTIONS_PATH = ROOT / "benchmark" / "questions_full_book.json"  # gold_page + 22
+else:
+    PDF_PATH = ROOT / "data" / "anatomy-and-physiology-2e_70pages.pdf"
+    MANIFEST_PATH = ROOT / "data" / "manifest.json"
+    QUESTIONS_PATH = ROOT / "benchmark" / "questions.json"
 RESULTS = STARTER / "results"
 DEFAULT_MODEL = "qwen3-embedding:4b"
 TOP_K = 3

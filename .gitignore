@@ -9,3 +9,6 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 *.sqlite
+
+# Full textbook is 454 MB: over GitHub's 100 MB file limit. Get it from the URL in data/manifest_full_book.json.
+data/anatomy-and-physiology-2e.pdf
