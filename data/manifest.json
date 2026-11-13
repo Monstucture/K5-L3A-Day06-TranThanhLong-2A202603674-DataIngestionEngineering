@@ -1,0 +1,371 @@
+{
+  "source_id": "openstax-ap2e-ch1-2",
+  "title": "Anatomy and Physiology 2e (Chapters 1-2 extract)",
+  "publisher": "OpenStax, Rice University",
+  "source_path_or_url": "data/anatomy-and-physiology-2e_70pages.pdf",
+  "original_source_url": "https://openstax.org/details/books/anatomy-and-physiology-2e",
+  "derivation": "Pages 23-100 of the full OpenStax PDF (1347 pages, PDF ModDate 2026-04-20), extracted unchanged into a 78-page file.",
+  "license_or_permission": "CC BY-NC-SA 4.0 (stated on page 4 of the full OpenStax PDF; that page is not in this extract). Used for non-commercial coursework with attribution; this extract and derived outputs keep the same license.",
+  "accessed_at": "2026-11-13",
+  "snapshot": {
+    "physical_pages": 78,
+    "sha256": "022a4a64fff8e44209022435ba60e20e5f25ea352dc9f610de5a542148765654"
+  },
+  "page_counting_rule": "Physical page numbers of this extract (1-based); original_pdf_page = page + 22. Count a page if it holds chapter body text (sections, figures with captions, tables, boxed features). Exclude end-of-chapter Key Terms, Chapter Review and question pages.",
+  "notes": [
+    "Pages 6 and 7 are figure pages with short captions (174 and 522 chars); counted as content but low-text."
+  ],
+  "char_count_method": "len(pypdf PdfReader.pages[i].extract_text()) before normalization, pypdf 6.21.2",
+  "filter_field": {
+    "name": "chapter",
+    "type": "int",
+    "values": [
+      1,
+      2
+    ],
+    "source": "PDF outline bookmarks and chapter title pages"
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "An Introduction to the Human Body",
+      "pdf_pages": [
+        1,
+        34
+      ],
+      "counted_pages": [
+        {
+          "page": 1,
+          "original_pdf_page": 23,
+          "chars": 2233
+        },
+        {
+          "page": 2,
+          "original_pdf_page": 24,
+          "chars": 4075
+        },
+        {
+          "page": 3,
+          "original_pdf_page": 25,
+          "chars": 2724
+        },
+        {
+          "page": 4,
+          "original_pdf_page": 26,
+          "chars": 1381
+        },
+        {
+          "page": 5,
+          "original_pdf_page": 27,
+          "chars": 1724
+        },
+        {
+          "page": 6,
+          "original_pdf_page": 28,
+          "chars": 174
+        },
+        {
+          "page": 7,
+          "original_pdf_page": 29,
+          "chars": 522
+        },
+        {
+          "page": 8,
+          "original_pdf_page": 30,
+          "chars": 3444
+        },
+        {
+          "page": 9,
+          "original_pdf_page": 31,
+          "chars": 2221
+        },
+        {
+          "page": 10,
+          "original_pdf_page": 32,
+          "chars": 2535
+        },
+        {
+          "page": 11,
+          "original_pdf_page": 33,
+          "chars": 3406
+        },
+        {
+          "page": 12,
+          "original_pdf_page": 34,
+          "chars": 2894
+        },
+        {
+          "page": 13,
+          "original_pdf_page": 35,
+          "chars": 3363
+        },
+        {
+          "page": 14,
+          "original_pdf_page": 36,
+          "chars": 3535
+        },
+        {
+          "page": 15,
+          "original_pdf_page": 37,
+          "chars": 3071
+        },
+        {
+          "page": 16,
+          "original_pdf_page": 38,
+          "chars": 2804
+        },
+        {
+          "page": 17,
+          "original_pdf_page": 39,
+          "chars": 2748
+        },
+        {
+          "page": 18,
+          "original_pdf_page": 40,
+          "chars": 1933
+        },
+        {
+          "page": 19,
+          "original_pdf_page": 41,
+          "chars": 2346
+        },
+        {
+          "page": 20,
+          "original_pdf_page": 42,
+          "chars": 1156
+        },
+        {
+          "page": 21,
+          "original_pdf_page": 43,
+          "chars": 1961
+        },
+        {
+          "page": 22,
+          "original_pdf_page": 44,
+          "chars": 2427
+        },
+        {
+          "page": 23,
+          "original_pdf_page": 45,
+          "chars": 3168
+        },
+        {
+          "page": 24,
+          "original_pdf_page": 46,
+          "chars": 1692
+        },
+        {
+          "page": 25,
+          "original_pdf_page": 47,
+          "chars": 2428
+        },
+        {
+          "page": 26,
+          "original_pdf_page": 48,
+          "chars": 3203
+        }
+      ],
+      "excluded": {
+        "27-34": "Key Terms, Chapter Review, Interactive Link/Review/Critical Thinking Questions"
+      },
+      "counted_page_total": 26,
+      "char_total": 63168
+    },
+    {
+      "chapter": 2,
+      "title": "The Chemical Level of Organization",
+      "pdf_pages": [
+        35,
+        78
+      ],
+      "counted_pages": [
+        {
+          "page": 35,
+          "original_pdf_page": 57,
+          "chars": 2115
+        },
+        {
+          "page": 36,
+          "original_pdf_page": 58,
+          "chars": 3207
+        },
+        {
+          "page": 37,
+          "original_pdf_page": 59,
+          "chars": 2518
+        },
+        {
+          "page": 38,
+          "original_pdf_page": 60,
+          "chars": 2870
+        },
+        {
+          "page": 39,
+          "original_pdf_page": 61,
+          "chars": 1356
+        },
+        {
+          "page": 40,
+          "original_pdf_page": 62,
+          "chars": 3366
+        },
+        {
+          "page": 41,
+          "original_pdf_page": 63,
+          "chars": 2253
+        },
+        {
+          "page": 42,
+          "original_pdf_page": 64,
+          "chars": 2885
+        },
+        {
+          "page": 43,
+          "original_pdf_page": 65,
+          "chars": 4253
+        },
+        {
+          "page": 44,
+          "original_pdf_page": 66,
+          "chars": 1585
+        },
+        {
+          "page": 45,
+          "original_pdf_page": 67,
+          "chars": 2443
+        },
+        {
+          "page": 46,
+          "original_pdf_page": 68,
+          "chars": 2542
+        },
+        {
+          "page": 47,
+          "original_pdf_page": 69,
+          "chars": 3660
+        },
+        {
+          "page": 48,
+          "original_pdf_page": 70,
+          "chars": 4131
+        },
+        {
+          "page": 49,
+          "original_pdf_page": 71,
+          "chars": 3515
+        },
+        {
+          "page": 50,
+          "original_pdf_page": 72,
+          "chars": 3485
+        },
+        {
+          "page": 51,
+          "original_pdf_page": 73,
+          "chars": 4649
+        },
+        {
+          "page": 52,
+          "original_pdf_page": 74,
+          "chars": 4090
+        },
+        {
+          "page": 53,
+          "original_pdf_page": 75,
+          "chars": 1707
+        },
+        {
+          "page": 54,
+          "original_pdf_page": 76,
+          "chars": 1531
+        },
+        {
+          "page": 55,
+          "original_pdf_page": 77,
+          "chars": 2501
+        },
+        {
+          "page": 56,
+          "original_pdf_page": 78,
+          "chars": 1371
+        },
+        {
+          "page": 57,
+          "original_pdf_page": 79,
+          "chars": 4238
+        },
+        {
+          "page": 58,
+          "original_pdf_page": 80,
+          "chars": 3182
+        },
+        {
+          "page": 59,
+          "original_pdf_page": 81,
+          "chars": 695
+        },
+        {
+          "page": 60,
+          "original_pdf_page": 82,
+          "chars": 597
+        },
+        {
+          "page": 61,
+          "original_pdf_page": 83,
+          "chars": 3278
+        },
+        {
+          "page": 62,
+          "original_pdf_page": 84,
+          "chars": 3121
+        },
+        {
+          "page": 63,
+          "original_pdf_page": 85,
+          "chars": 1487
+        },
+        {
+          "page": 64,
+          "original_pdf_page": 86,
+          "chars": 3308
+        },
+        {
+          "page": 65,
+          "original_pdf_page": 87,
+          "chars": 2370
+        },
+        {
+          "page": 66,
+          "original_pdf_page": 88,
+          "chars": 3150
+        },
+        {
+          "page": 67,
+          "original_pdf_page": 89,
+          "chars": 4011
+        },
+        {
+          "page": 68,
+          "original_pdf_page": 90,
+          "chars": 2515
+        },
+        {
+          "page": 69,
+          "original_pdf_page": 91,
+          "chars": 1836
+        },
+        {
+          "page": 70,
+          "original_pdf_page": 92,
+          "chars": 1127
+        }
+      ],
+      "excluded": {
+        "71-78": "Key Terms, Chapter Review, Interactive Link/Review/Critical Thinking Questions"
+      },
+      "counted_page_total": 36,
+      "char_total": 96948
+    }
+  ],
+  "counted_page_total": 62
+}
