@@ -29,7 +29,7 @@ from src.embeddings import MyEmbedder
 from src.evaluation import flat
 from src.run import DEFAULT_MODEL, MANIFEST_PATH, PDF_PATH, QUESTIONS_PATH, STARTER, STRATEGIES, read_json
 from src.ingestion import load_pdf
-from src.store import PgVectorStore
+from src.store import PgVectorStore, filter_from_question
 
 HOST, PORT = "127.0.0.1", 8000  # localhost only
 TOP_K = 3
@@ -117,7 +117,9 @@ def ask(params: dict, send) -> None:
         raise ValueError("OPENROUTER_API_KEY is not set in starter/.env.")
     config = STRATEGIES[strategy]
     chapter = params.get("chapter")
-    filters = {"chapter": int(chapter)} if config["use_filter"] and chapter else None
+    filters = None
+    if config["use_filter"]:  # the chapter picked in the page wins; else one named in the question
+        filters = {"chapter": int(chapter)} if chapter else filter_from_question(question)
     embedder, store = STATE["embedder"], STATE["store"]
 
     def step(name: str, status: str, detail: str = "", started: float | None = None) -> None:
@@ -129,7 +131,8 @@ def ask(params: dict, send) -> None:
     step("embed", "done", f"{len(query_vector)}-dimension vector", t)
 
     t = time.perf_counter()
-    where = f"index {config['index']}" + (f", filter chapter = {filters['chapter']}" if filters else ", no filter")
+    where = f"index {config['index']}, " + (", ".join(f"filter {k} = {v}" for k, v in filters.items())
+                                            if filters else "no filter")
     step("search", "running", f"cosine search in pgvector ({where})")
     hits = store.search(config["index"], query_vector, TOP_K, filters)
     send("hits", [{k: (round(v, 4) if k == "score" else v) for k, v in h.items()
@@ -155,7 +158,11 @@ def ask(params: dict, send) -> None:
     t = time.perf_counter()
     llm = LOCAL_LLM if model == "local" else API_LLM
     step("answer", "running", f"{llm} writes an answer from the retrieved sentences only")
-    listing = "\n".join(f"[{s['id']}]{' (most relevant)' if s['relevant'] else ''} {s['text']}" for s in sentences)
+    # Each sentence says where it comes from, so "what is chapter 20 about?" can be answered.
+    origin = [f"Chapter {h['chapter']}: {h['chapter_title']}" + (f", {h['section']} {h['section_title']}"
+                                                                 if h["section"] else "") for h in hits]
+    listing = "\n".join(f"[{s['id']}]{' (most relevant)' if s['relevant'] else ''} ({origin[s['hit']]}) {s['text']}"
+                        for s in sentences)
     messages = [{"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": f"Sentences:\n{listing}\n\nQuestion: {question}"}]
     answer = ""

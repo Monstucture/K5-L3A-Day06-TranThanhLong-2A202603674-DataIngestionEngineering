@@ -123,6 +123,18 @@ def by_section(pages: list[DocumentPage], max_size: int) -> list[Chunk]:
     return chunks
 
 
+def with_heading(chunk: Chunk) -> str:
+    """The chunk text with its chapter and section heading on top: what B/C embed, so every chunk
+    of chapter 20 matches "chapter 20" and its title. The stored text stays the original."""
+    m = chunk.metadata
+    heading = [f"Chapter {m.get('chapter')}: {m.get('chapter_title')}"]
+    if m.get("section"):
+        heading.append(f"{m['section']} {m.get('section_title')}")
+    if m.get("content_type") == "figure_ocr":
+        heading.append("Figure labels")
+    return "\n".join(heading + [chunk.text])
+
+
 def figure_chunks(page: DocumentPage, figures: list[dict], max_size: int) -> list[Chunk]:
     """One chunk per image's OCR text (split if longer than `max_size`), tagged content_type=figure_ocr.
 

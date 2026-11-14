@@ -47,7 +47,7 @@ def load_pdf(path: Path, document_id: str, source: str) -> tuple[list[DocumentPa
             match = _CHAPTER_HEADING.match(line)
             if match:
                 chapter = int(match.group(1))
-                chapter_title = lines[i + 1] if i + 1 < len(lines) else None
+                chapter_title = chapter_title_after(lines, i)
                 break
 
         if len(text) < EMPTY_PAGE_CHARS:
@@ -63,6 +63,14 @@ def load_pdf(path: Path, document_id: str, source: str) -> tuple[list[DocumentPa
             metadata={"chapter": chapter, "chapter_title": chapter_title},
         ))
     return pages, problems
+
+
+def chapter_title_after(lines: list[str], heading: int) -> str | None:
+    """The title under a "CHAPTER n" line; long titles wrap onto a second line before "Chapter Objectives"."""
+    after = lines[heading + 1:heading + 4]  # titles never wrap past 3 lines
+    end = next((k for k, line in enumerate(after) if line.startswith("Chapter Objectives")), None)
+    title = after[:end] if end else after[:1]  # no marker: trust only the first line
+    return " ".join(title) or None
 
 
 def content_pages(pages: list[DocumentPage]) -> list[DocumentPage]:

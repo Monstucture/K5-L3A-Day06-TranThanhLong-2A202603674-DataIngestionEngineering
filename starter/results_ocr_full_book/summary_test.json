@@ -1,0 +1,112 @@
+{
+  "run_started_utc": "2026-11-14T08:16:11+00:00",
+  "split": "test",
+  "questions": 10,
+  "embedding": {
+    "provider": "ollama (local)",
+    "model": "qwen3-embedding:4b",
+    "dimensions": 2560,
+    "cost_usd": 0
+  },
+  "vector_store": "PostgreSQL + pgvector, cosine distance (<=>), exact search",
+  "ocr": {
+    "enabled": true,
+    "file": "ocr_anatomy-and-physiology-2e.json",
+    "images_with_text": 674
+  },
+  "strategies": {
+    "A": {
+      "chunking": "fixed_size",
+      "size": 500,
+      "overlap": 50,
+      "index": "A",
+      "use_filter": false
+    },
+    "B": {
+      "chunking": "by_section",
+      "max_size": 500,
+      "index": "B",
+      "use_filter": false
+    },
+    "C": {
+      "chunking": "by_section",
+      "max_size": 500,
+      "index": "B",
+      "use_filter": true
+    }
+  },
+  "index_stats": {
+    "A": {
+      "chunks": 7449,
+      "total_chars": 3172828,
+      "min_chars": 1,
+      "median_chars": 500,
+      "mean_chars": 425.9,
+      "max_chars": 500,
+      "chunk_seconds": 0.035,
+      "embed_seconds": 253.707,
+      "upsert_seconds": 7.887,
+      "rows_before_upsert": 7449,
+      "rows_after_upsert": 7449
+    },
+    "B": {
+      "chunks": 7768,
+      "total_chars": 2900835,
+      "min_chars": 1,
+      "median_chars": 414.0,
+      "mean_chars": 373.4,
+      "max_chars": 500,
+      "chunk_seconds": 0.936,
+      "embed_seconds": 271.487,
+      "upsert_seconds": 7.572,
+      "rows_before_upsert": 7768,
+      "rows_after_upsert": 7768
+    }
+  },
+  "metrics": {
+    "A": {
+      "test": {
+        "questions": 10,
+        "hit@1": "5/10",
+        "hit@1_rate": 0.5,
+        "hit@3": "9/10",
+        "hit@3_rate": 0.9,
+        "page_hit@3": "10/10",
+        "page_hit@3_rate": 1.0,
+        "misses@3": [
+          "q06"
+        ]
+      }
+    },
+    "B": {
+      "test": {
+        "questions": 10,
+        "hit@1": "6/10",
+        "hit@1_rate": 0.6,
+        "hit@3": "10/10",
+        "hit@3_rate": 1.0,
+        "page_hit@3": "10/10",
+        "page_hit@3_rate": 1.0,
+        "misses@3": []
+      }
+    },
+    "C": {
+      "test": {
+        "questions": 10,
+        "hit@1": "6/10",
+        "hit@1_rate": 0.6,
+        "hit@3": "10/10",
+        "hit@3_rate": 1.0,
+        "page_hit@3": "10/10",
+        "page_hit@3_rate": 1.0,
+        "misses@3": []
+      }
+    }
+  },
+  "environment": {
+    "python": "3.14.3",
+    "pypdf": "6.21.4",
+    "psycopg": "3.3.8",
+    "ollama": "0.6.3"
+  }
+}

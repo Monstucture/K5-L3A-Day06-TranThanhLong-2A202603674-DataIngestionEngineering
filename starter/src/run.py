@@ -20,12 +20,12 @@ import psycopg
 from dotenv import load_dotenv
 from pypdf.errors import PdfReadError
 
-from .chunking import by_section, figure_chunks, fixed_size
+from .chunking import by_section, figure_chunks, fixed_size, with_heading
 from .embeddings import MyEmbedder
 from .evaluation import evaluate_query, flat, summarize
 from .ingestion import load_pdf
 from .models import Chunk, DocumentPage
-from .store import FILTER_COLUMNS, PgVectorStore
+from .store import FILTER_COLUMNS, PgVectorStore, filter_from_question
 
 STARTER = Path(__file__).resolve().parents[1]
 ROOT = STARTER.parent
@@ -67,8 +67,14 @@ def build_chunks(name: str, pages: list[DocumentPage]) -> list[Chunk]:
     else:
         chunks = by_section(pages, config["max_size"])
     budget = config.get("size") or config["max_size"]
-    chunks += [c for page in pages for c in figure_chunks(page, FIGURES.get(page.page, []), budget)]
-    return [replace(c, chunk_id=f"{name}:{c.chunk_id}") for c in chunks]
+    figures = [c for page in pages for c in figure_chunks(page, FIGURES.get(page.page, []), budget)]
+    if config["chunking"] == "by_section":
+        # A figure gets the section in force at the end of its page (later chunks overwrite earlier ones).
+        # shortcut: a page where a new section starts may give an earlier figure the next section.
+        at_page = {p: {"section": c.metadata["section"], "section_title": c.metadata["section_title"]}
+                   for c in chunks for p in range(c.page, c.metadata["page_end"] + 1)}
+        figures = [replace(f, metadata={**f.metadata, **at_page.get(f.page, {})}) for f in figures]
+    return [replace(c, chunk_id=f"{name}:{c.chunk_id}") for c in chunks + figures]
 
 
 def load_figures(manifest: dict) -> dict[int, list[dict]]:
@@ -173,7 +179,8 @@ def ingest(store: PgVectorStore, embedder: MyEmbedder, pages: list[DocumentPage]
         t0 = time.perf_counter()
         chunks = build_chunks(name, pages)
         t1 = time.perf_counter()
-        vectors = embedder.embed_documents([c.text for c in chunks])
+        section_aware = any(c["index"] == name and c["chunking"] == "by_section" for c in STRATEGIES.values())
+        vectors = embedder.embed_documents([with_heading(c) if section_aware else c.text for c in chunks])
         t2 = time.perf_counter()
         rows_before = store.count(name)
         store.upsert(name, chunks, vectors)
@@ -204,7 +211,7 @@ def retrieve(store: PgVectorStore, embedder: MyEmbedder, questions: list[dict]) 
     for name, config in STRATEGIES.items():
         for q in questions:
             vector, embed_seconds = query_vectors[q["id"]]
-            filters = q.get("filter") if config["use_filter"] else None
+            filters = (q.get("filter") or filter_from_question(q["question"])) if config["use_filter"] else None
             t0 = time.perf_counter()
             hits = store.search(config["index"], vector, top_k=TOP_K, filters=filters or None)
             search_seconds = time.perf_counter() - t0

@@ -1,4 +1,5 @@
 """Store and search chunk vectors in PostgreSQL + pgvector."""
+import re
 from typing import Any
 
 import psycopg
@@ -8,6 +9,19 @@ from .models import Chunk
 TABLE = "chunks"
 # Only these metadata columns may be used as filters; values are always passed as SQL parameters.
 FILTER_COLUMNS = {"chapter", "section"}
+
+
+_SECTION_MENTION = re.compile(r"\bsection\s+(\d+\.\d+)\b", re.IGNORECASE)
+_CHAPTER_MENTION = re.compile(r"\bchapter\s+(\d+)\b", re.IGNORECASE)
+
+
+def filter_from_question(question: str) -> dict[str, Any] | None:
+    """Strategy C's filter when the question names one: "section 20.1" or "chapter 20" (section wins)."""
+    if match := _SECTION_MENTION.search(question):
+        return {"section": match.group(1)}
+    if match := _CHAPTER_MENTION.search(question):
+        return {"chapter": int(match.group(1))}
+    return None
 
 
 def _vector_literal(vector: list[float]) -> str:
