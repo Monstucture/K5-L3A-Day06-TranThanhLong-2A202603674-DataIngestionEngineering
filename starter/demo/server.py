@@ -34,7 +34,7 @@ from src.store import PgVectorStore
 HOST, PORT = "127.0.0.1", 8000  # localhost only
 TOP_K = 3
 TOP_SENTENCES = 4  # sentences marked "relevant" by embedding similarity
-LOCAL_LLM = "llama3.2:3b"
+LOCAL_LLM = "llama3.2-3b-8k:latest"  # same 3B model with an 8k context window
 API_LLM = "openai/gpt-4o-mini"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 NO_ANSWER = "The retrieved text does not contain the answer."
