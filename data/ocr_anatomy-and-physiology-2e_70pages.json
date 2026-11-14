@@ -1,0 +1,10121 @@
+{
+ "pdf": "anatomy-and-physiology-2e_70pages.pdf",
+ "pdf_sha256": "022a4a64fff8e44209022435ba60e20e5f25ea352dc9f610de5a542148765654",
+ "engine": {
+  "paddleocr": "3.7.0",
+  "paddlepaddle": "3.3.1",
+  "det_model": "PP-OCRv6_medium_det",
+  "rec_model": "PP-OCRv6_medium_rec",
+  "device": "cpu",
+  "min_score": 0.5
+ },
+ "pages": {
+  "1": [
+   {
+    "xref": 24,
+    "size": [
+     1144,
+     524
+    ],
+    "rect": [
+     72.0,
+     104.4,
+     622.8,
+     356.7
+    ],
+    "text": "ENTER 2",
+    "lines": [
+     {
+      "text": "ENTER",
+      "score": 0.985
+     },
+     {
+      "text": "2",
+      "score": 0.643
+     }
+    ],
+    "seconds": 4.17
+   }
+  ],
+  "2": [
+   {
+    "xref": 32,
+    "size": [
+     825,
+     351
+    ],
+    "rect": [
+     126.0,
+     361.8,
+     486.0,
+     515.0
+    ],
+    "text": "Neuron cells (a) (b)",
+    "lines": [
+     {
+      "text": "Neuron cells",
+      "score": 1.0
+     },
+     {
+      "text": "(a)",
+      "score": 1.0
+     },
+     {
+      "text": "(b)",
+      "score": 1.0
+     }
+    ],
+    "seconds": 2.17
+   }
+  ],
+  "3": [],
+  "4": [
+   {
+    "xref": 42,
+    "size": [
+     1242,
+     1467
+    ],
+    "rect": [
+     99.8,
+     57.6,
+     512.2,
+     544.8
+    ],
+    "text": "Hydrogen atoms Oxygen atom Chemical level Atoms bond to form molecules with three- dimensional structures. Water molecule Smooth muscle cell Cellular level Organelle A variety of molecules combine to form the Cell fluid fluid and organelles _ of a body cell. Organelle Smooth muscle tissue Tissue level A community of similar cells form a body tissue. Bladder Organ level Two or more different tissues combine to form an organ. Smooth muscle Skeletal muscle Urinary tract system Kidney Organ system level Ureter Two or more organs work closely together to perform Bladder the functions of a body system. Urethra Many organ system work harmoniously Organismal level together to perform the functions of an independent organism.",
+    "lines": [
+     {
+      "text": "Hydrogen",
+      "score": 1.0
+     },
+     {
+      "text": "atoms",
+      "score": 1.0
+     },
+     {
+      "text": "Oxygen atom",
+      "score": 1.0
+     },
+     {
+      "text": "Chemical level",
+      "score": 1.0
+     },
+     {
+      "text": "Atoms bond to form",
+      "score": 0.999
+     },
+     {
+      "text": "molecules with three-",
+      "score": 1.0
+     },
+     {
+      "text": "dimensional structures.",
+      "score": 1.0
+     },
+     {
+      "text": "Water molecule",
+      "score": 1.0
+     },
+     {
+      "text": "Smooth muscle cell",
+      "score": 1.0
+     },
+     {
+      "text": "Cellular level",
+      "score": 1.0
+     },
+     {
+      "text": "Organelle",
+      "score": 1.0
+     },
+     {
+      "text": "A variety of molecules",
+      "score": 0.978
+     },
+     {
+      "text": "combine to form the",
+      "score": 1.0
+     },
+     {
+      "text": "Cell fluid",
+      "score": 1.0
+     },
+     {
+      "text": "fluid and organelles",
+      "score": 1.0
+     },
+     {
+      "text": "_",
+      "score": 0.917
+     },
+     {
+      "text": "of a body cell.",
+      "score": 1.0
+     },
+     {
+      "text": "Organelle",
+      "score": 1.0
+     },
+     {
+      "text": "Smooth muscle tissue",
+      "score": 1.0
+     },
+     {
+      "text": "Tissue level",
+      "score": 0.998
+     },
+     {
+      "text": "A community of similar",
+      "score": 1.0
+     },
+     {
+      "text": "cells form a body tissue.",
+      "score": 1.0
+     },
+     {
+      "text": "Bladder",
+      "score": 1.0
+     },
+     {
+      "text": "Organ level",
+      "score": 1.0
+     },
+     {
+      "text": "Two or more different tissues",
+      "score": 1.0
+     },
+     {
+      "text": "combine to form an organ.",
+      "score": 1.0
+     },
+     {
+      "text": "Smooth",
+      "score": 1.0
+     },
+     {
+      "text": "muscle",
+      "score": 1.0
+     },
+     {
+      "text": "Skeletal",
+      "score": 1.0
+     },
+     {
+      "text": "muscle",
+      "score": 1.0
+     },
+     {
+      "text": "Urinary tract system",
+      "score": 1.0
+     },
+     {
+      "text": "Kidney",
+      "score": 1.0
+     },
+     {
+      "text": "Organ system level",
+      "score": 1.0
+     },
+     {
+      "text": "Ureter",
+      "score": 1.0
+     },
+     {
+      "text": "Two or more organs work",
+      "score": 1.0
+     },
+     {
+      "text": "closely together to perform",
+      "score": 1.0
+     },
+     {
+      "text": "Bladder",
+      "score": 1.0
+     },
+     {
+      "text": "the functions of a body system.",
+      "score": 1.0
+     },
+     {
+      "text": "Urethra",
+      "score": 1.0
+     },
+     {
+      "text": "Many organ system work harmoniously",
+      "score": 0.994
+     },
+     {
+      "text": "Organismal level",
+      "score": 0.999
+     },
+     {
+      "text": "together to perform the functions of an",
+      "score": 0.998
+     },
+     {
+      "text": "independent organism.",
+      "score": 1.0
+     }
+    ],
+    "seconds": 19.17
+   }
+  ],
+  "5": [],
+  "6": [
+   {
+    "xref": 50,
+    "size": [
+     978,
+     1616
+    ],
+    "rect": [
+     118.5,
+     57.6,
+     493.5,
+     677.2
+    ],
+    "text": "Integumentary System Skeletal System Hair • Encloses internal Cartilage • Supports the body body structures • Enables movement • Site of many (with muscular Skin sensory receptors system) Bones Nails Joints Muscular System Brain Nervous System • Enables movement • Detects and (with skeletal system) processes sensory • Helps maintain body information temperature • Activates bodily responses Spinal cord Skeletal muscles Peripheral nerves Tendons Endocrine System Cardiovascular System Pituitary gland • Secretes hormones • Delivers oxygen • Regulates bodily and nutrients to Thyroid processes tissues gland • Equalizes Heart temperature in the body Pancreas Adrenal glands Blood Testes vessels Ovaries",
+    "lines": [
+     {
+      "text": "Integumentary System",
+      "score": 1.0
+     },
+     {
+      "text": "Skeletal System",
+      "score": 1.0
+     },
+     {
+      "text": "Hair",
+      "score": 1.0
+     },
+     {
+      "text": "• Encloses internal",
+      "score": 0.992
+     },
+     {
+      "text": "Cartilage",
+      "score": 1.0
+     },
+     {
+      "text": "• Supports the body",
+      "score": 0.996
+     },
+     {
+      "text": "body structures",
+      "score": 1.0
+     },
+     {
+      "text": "• Enables movement",
+      "score": 0.992
+     },
+     {
+      "text": "• Site of many",
+      "score": 0.966
+     },
+     {
+      "text": "(with muscular",
+      "score": 1.0
+     },
+     {
+      "text": "Skin",
+      "score": 1.0
+     },
+     {
+      "text": "sensory receptors",
+      "score": 1.0
+     },
+     {
+      "text": "system)",
+      "score": 1.0
+     },
+     {
+      "text": "Bones",
+      "score": 1.0
+     },
+     {
+      "text": "Nails",
+      "score": 1.0
+     },
+     {
+      "text": "Joints",
+      "score": 1.0
+     },
+     {
+      "text": "Muscular System",
+      "score": 1.0
+     },
+     {
+      "text": "Brain",
+      "score": 1.0
+     },
+     {
+      "text": "Nervous System",
+      "score": 1.0
+     },
+     {
+      "text": "• Enables movement",
+      "score": 0.991
+     },
+     {
+      "text": "• Detects and",
+      "score": 0.996
+     },
+     {
+      "text": "(with skeletal system)",
+      "score": 1.0
+     },
+     {
+      "text": "processes sensory",
+      "score": 1.0
+     },
+     {
+      "text": "• Helps maintain body",
+      "score": 0.996
+     },
+     {
+      "text": "information",
+      "score": 1.0
+     },
+     {
+      "text": "temperature",
+      "score": 1.0
+     },
+     {
+      "text": "• Activates bodily",
+      "score": 0.997
+     },
+     {
+      "text": "responses",
+      "score": 0.985
+     },
+     {
+      "text": "Spinal",
+      "score": 1.0
+     },
+     {
+      "text": "cord",
+      "score": 1.0
+     },
+     {
+      "text": "Skeletal",
+      "score": 1.0
+     },
+     {
+      "text": "muscles",
+      "score": 1.0
+     },
+     {
+      "text": "Peripheral",
+      "score": 1.0
+     },
+     {
+      "text": "nerves",
+      "score": 1.0
+     },
+     {
+      "text": "Tendons",
+      "score": 1.0
+     },
+     {
+      "text": "Endocrine System",
+      "score": 1.0
+     },
+     {
+      "text": "Cardiovascular System",
+      "score": 1.0
+     },
+     {
+      "text": "Pituitary",
+      "score": 1.0
+     },
+     {
+      "text": "gland",
+      "score": 1.0
+     },
+     {
+      "text": "• Secretes hormones",
+      "score": 0.992
+     },
+     {
+      "text": "• Delivers oxygen",
+      "score": 0.995
+     },
+     {
+      "text": "• Regulates bodily",
+      "score": 0.999
+     },
+     {
+      "text": "and nutrients to",
+      "score": 1.0
+     },
+     {
+      "text": "Thyroid",
+      "score": 1.0
+     },
+     {
+      "text": "processes",
+      "score": 1.0
+     },
+     {
+      "text": "tissues",
+      "score": 1.0
+     },
+     {
+      "text": "gland",
+      "score": 1.0
+     },
+     {
+      "text": "• Equalizes",
+      "score": 0.998
+     },
+     {
+      "text": "Heart",
+      "score": 1.0
+     },
+     {
+      "text": "temperature in",
+      "score": 1.0
+     },
+     {
+      "text": "the body",
+      "score": 0.957
+     },
+     {
+      "text": "Pancreas",
+      "score": 1.0
+     },
+     {
+      "text": "Adrenal",
+      "score": 1.0
+     },
+     {
+      "text": "glands",
+      "score": 1.0
+     },
+     {
+      "text": "Blood",
+      "score": 1.0
+     },
+     {
+      "text": "Testes",
+      "score": 1.0
+     },
+     {
+      "text": "vessels",
+      "score": 1.0
+     },
+     {
+      "text": "Ovaries",
+      "score": 1.0
+     }
+    ],
+    "seconds": 16.96
+   }
+  ],
+  "7": [
+   {
+    "xref": 53,
+    "size": [
+     1309,
+     2164
+    ],
+    "rect": [
+     118.5,
+     57.6,
+     493.5,
+     677.5
+    ],
+    "text": "Lymphatic System Respiratory System Thymus • Returns fluid to Nasal passage • Removes carbon blood dioxide from the • Defends against body Lymph • Delivers oxygen nodes pathogens Trachea to blood Spleen Lungs Lymphatic vessels Digestive System Urinary System • Processes food for • Controls water use by the body balance in the Stomach • Removes wastes body from undigested • Removes wastes food from blood and Kidneys excretes them Liver Gall bladder Urinary bladder Large intestine Small intestine Male Reproductive Female Reproductive System System • Produces sex • Produces sex Mammary hormones and glands hormones gametes and gametes • Delivers gametes • Supports embryo/ to female fetus until birth • Produces milk for infant Epididymis Ovaries Testes Uterus",
+    "lines": [
+     {
+      "text": "Lymphatic System",
+      "score": 1.0
+     },
+     {
+      "text": "Respiratory System",
+      "score": 1.0
+     },
+     {
+      "text": "Thymus",
+      "score": 1.0
+     },
+     {
+      "text": "• Returns fluid to",
+      "score": 0.981
+     },
+     {
+      "text": "Nasal passage",
+      "score": 0.996
+     },
+     {
+      "text": "• Removes carbon",
+      "score": 0.993
+     },
+     {
+      "text": "blood",
+      "score": 1.0
+     },
+     {
+      "text": "dioxide from the",
+      "score": 1.0
+     },
+     {
+      "text": "• Defends against",
+      "score": 0.998
+     },
+     {
+      "text": "body",
+      "score": 1.0
+     },
+     {
+      "text": "Lymph",
+      "score": 0.925
+     },
+     {
+      "text": "• Delivers oxygen",
+      "score": 0.994
+     },
+     {
+      "text": "nodes",
+      "score": 1.0
+     },
+     {
+      "text": "pathogens",
+      "score": 1.0
+     },
+     {
+      "text": "Trachea",
+      "score": 1.0
+     },
+     {
+      "text": "to blood",
+      "score": 0.99
+     },
+     {
+      "text": "Spleen",
+      "score": 1.0
+     },
+     {
+      "text": "Lungs",
+      "score": 1.0
+     },
+     {
+      "text": "Lymphatic",
+      "score": 1.0
+     },
+     {
+      "text": "vessels",
+      "score": 1.0
+     },
+     {
+      "text": "Digestive System",
+      "score": 0.998
+     },
+     {
+      "text": "Urinary System",
+      "score": 1.0
+     },
+     {
+      "text": "• Processes food for",
+      "score": 0.999
+     },
+     {
+      "text": "• Controls water",
+      "score": 0.979
+     },
+     {
+      "text": "use by the body",
+      "score": 1.0
+     },
+     {
+      "text": "balance in the",
+      "score": 1.0
+     },
+     {
+      "text": "Stomach",
+      "score": 1.0
+     },
+     {
+      "text": "• Removes wastes",
+      "score": 0.963
+     },
+     {
+      "text": "body",
+      "score": 1.0
+     },
+     {
+      "text": "from undigested",
+      "score": 1.0
+     },
+     {
+      "text": "• Removes wastes",
+      "score": 0.997
+     },
+     {
+      "text": "food",
+      "score": 1.0
+     },
+     {
+      "text": "from blood and",
+      "score": 1.0
+     },
+     {
+      "text": "Kidneys",
+      "score": 1.0
+     },
+     {
+      "text": "excretes them",
+      "score": 1.0
+     },
+     {
+      "text": "Liver",
+      "score": 1.0
+     },
+     {
+      "text": "Gall",
+      "score": 1.0
+     },
+     {
+      "text": "bladder",
+      "score": 1.0
+     },
+     {
+      "text": "Urinary",
+      "score": 1.0
+     },
+     {
+      "text": "bladder",
+      "score": 1.0
+     },
+     {
+      "text": "Large",
+      "score": 1.0
+     },
+     {
+      "text": "intestine",
+      "score": 1.0
+     },
+     {
+      "text": "Small",
+      "score": 1.0
+     },
+     {
+      "text": "intestine",
+      "score": 1.0
+     },
+     {
+      "text": "Male Reproductive",
+      "score": 0.993
+     },
+     {
+      "text": "Female Reproductive",
+      "score": 1.0
+     },
+     {
+      "text": "System",
+      "score": 1.0
+     },
+     {
+      "text": "System",
+      "score": 1.0
+     },
+     {
+      "text": "• Produces sex",
+      "score": 0.97
+     },
+     {
+      "text": "• Produces sex",
+      "score": 0.969
+     },
+     {
+      "text": "Mammary",
+      "score": 1.0
+     },
+     {
+      "text": "hormones and",
+      "score": 1.0
+     },
+     {
+      "text": "glands",
+      "score": 1.0
+     },
+     {
+      "text": "hormones",
+      "score": 1.0
+     },
+     {
+      "text": "gametes",
+      "score": 1.0
+     },
+     {
+      "text": "and gametes",
+      "score": 1.0
+     },
+     {
+      "text": "• Delivers gametes",
+      "score": 0.99
+     },
+     {
+      "text": "• Supports embryo/",
+      "score": 0.996
+     },
+     {
+      "text": "to female",
+      "score": 0.999
+     },
+     {
+      "text": "fetus until birth",
+      "score": 1.0
+     },
+     {
+      "text": "• Produces milk for",
+      "score": 0.999
+     },
+     {
+      "text": "infant",
+      "score": 1.0
+     },
+     {
+      "text": "Epididymis",
+      "score": 1.0
+     },
+     {
+      "text": "Ovaries",
+      "score": 1.0
+     },
+     {
+      "text": "Testes",
+      "score": 1.0
+     },
+     {
+      "text": "Uterus",
+      "score": 1.0
+     }
+    ],
+    "seconds": 25.83
+   }
+  ],
+  "8": [],
+  "9": [
+   {
+    "xref": 66,
+    "size": [
+     671,
+     590
+    ],
+    "rect": [
+     193.5,
+     57.6,
+     418.5,
+     255.4
+    ],
+    "text": "Catabolism Anabolism Food Releases Requires energy energy",
+    "lines": [
+     {
+      "text": "Catabolism",
+      "score": 1.0
+     },
+     {
+      "text": "Anabolism",
+      "score": 1.0
+     },
+     {
+      "text": "Food",
+      "score": 1.0
+     },
+     {
+      "text": "Releases",
+      "score": 1.0
+     },
+     {
+      "text": "Requires",
+      "score": 1.0
+     },
+     {
+      "text": "energy",
+      "score": 1.0
+     },
+     {
+      "text": "energy",
+      "score": 1.0
+     }
+    ],
+    "seconds": 3.4
+   }
+  ],
+  "10": [
+   {
+    "xref": 73,
+    "size": [
+     825,
+     550
+    ],
+    "rect": [
+     126.0,
+     57.6,
+     486.0,
+     297.6
+    ],
+    "text": "18 Duma Reprographic",
+    "lines": [
+     {
+      "text": "18",
+      "score": 1.0
+     },
+     {
+      "text": "Duma",
+      "score": 0.998
+     },
+     {
+      "text": "Reprographic",
+      "score": 0.908
+     }
+    ],
+    "seconds": 3.02
+   }
+  ],
+  "11": [],
+  "12": [
+   {
+    "xref": 84,
+    "size": [
+     825,
+     550
+    ],
+    "rect": [
+     148.5,
+     57.6,
+     463.5,
+     267.6
+    ],
+    "text": "",
+    "lines": [],
+    "seconds": 2.96
+   }
+  ],
+  "13": [
+   {
+    "xref": 90,
+    "size": [
+     825,
+     549
+    ],
+    "rect": [
+     163.5,
+     253.8,
+     448.5,
+     443.5
+    ],
+    "text": "",
+    "lines": [],
+    "seconds": 2.98
+   }
+  ],
+  "14": [],
+  "15": [
+   {
+    "xref": 100,
+    "size": [
+     1544,
+     1134
+    ],
+    "rect": [
+     137.2,
+     57.6,
+     474.8,
+     305.5
+    ],
+    "text": "Body temperature Stimulus exceeds 37°C Nerve cells in skin Sensor and brain Temperature regulatory Control Center center in brain Sweat glands Effector throughout body Response Increased heat loss (a) Negative feedback loop (b) Body temperature regulation",
+    "lines": [
+     {
+      "text": "Body temperature",
+      "score": 1.0
+     },
+     {
+      "text": "Stimulus",
+      "score": 1.0
+     },
+     {
+      "text": "exceeds 37°C",
+      "score": 0.999
+     },
+     {
+      "text": "Nerve cells in skin",
+      "score": 1.0
+     },
+     {
+      "text": "Sensor",
+      "score": 1.0
+     },
+     {
+      "text": "and brain",
+      "score": 1.0
+     },
+     {
+      "text": "Temperature regulatory",
+      "score": 1.0
+     },
+     {
+      "text": "Control Center",
+      "score": 1.0
+     },
+     {
+      "text": "center in brain",
+      "score": 1.0
+     },
+     {
+      "text": "Sweat glands",
+      "score": 1.0
+     },
+     {
+      "text": "Effector",
+      "score": 1.0
+     },
+     {
+      "text": "throughout body",
+      "score": 1.0
+     },
+     {
+      "text": "Response",
+      "score": 1.0
+     },
+     {
+      "text": "Increased heat loss",
+      "score": 1.0
+     },
+     {
+      "text": "(a) Negative feedback loop",
+      "score": 1.0
+     },
+     {
+      "text": "(b) Body temperature regulation",
+      "score": 1.0
+     }
+    ],
+    "seconds": 12.88
+   }
+  ],
+  "16": [
+   {
+    "xref": 105,
+    "size": [
+     948,
+     914
+    ],
+    "rect": [
+     163.5,
+     275.4,
+     448.5,
+     550.2
+    ],
+    "text": "Nerve impulses from Brain stimulates cervix transmitted pituitary gland to to brain secrete oxytocin Head of baby Oxytocin carried in bloodstream pushes against cervix to uterus Oxytocin stimulates uterine contractions and pushes baby towards cervix",
+    "lines": [
+     {
+      "text": "Nerve impulses from",
+      "score": 1.0
+     },
+     {
+      "text": "Brain stimulates",
+      "score": 1.0
+     },
+     {
+      "text": "cervix transmitted",
+      "score": 1.0
+     },
+     {
+      "text": "pituitary gland to",
+      "score": 1.0
+     },
+     {
+      "text": "to brain",
+      "score": 1.0
+     },
+     {
+      "text": "secrete oxytocin",
+      "score": 0.981
+     },
+     {
+      "text": "Head of baby",
+      "score": 0.992
+     },
+     {
+      "text": "Oxytocin carried",
+      "score": 1.0
+     },
+     {
+      "text": "in bloodstream",
+      "score": 0.987
+     },
+     {
+      "text": "pushes against",
+      "score": 1.0
+     },
+     {
+      "text": "cervix",
+      "score": 1.0
+     },
+     {
+      "text": "to uterus",
+      "score": 1.0
+     },
+     {
+      "text": "Oxytocin stimulates",
+      "score": 1.0
+     },
+     {
+      "text": "uterine contractions",
+      "score": 1.0
+     },
+     {
+      "text": "and pushes baby",
+      "score": 1.0
+     },
+     {
+      "text": "towards cervix",
+      "score": 1.0
+     }
+    ],
+    "seconds": 7.94
+   }
+  ],
+  "17": [],
+  "18": [
+   {
+    "xref": 115,
+    "size": [
+     2347,
+     2065
+    ],
+    "rect": [
+     99.8,
+     57.6,
+     512.2,
+     420.5
+    ],
+    "text": "Frons or forehead (frontal). Oculus or eye (orbital or ocular) Cranium or skull Bucca or cheek (buccal) (cranial) Cephalon or head (cephalic) Facies Auris or ear (otic) Shoulder (acromial) or face Nasus or nose (nasal) (facial) Dorsum Cervicis or neck Cervicis or neck (cervical) Oris or mouth (oral) or back (cervical) (dorsal) Mentis or chin Thorcis or Brachium (mental) thorax, chest or arm (thoracic) Axilla or armpit (brachial) (axillary) Mamma Olecranon or breast or back Brachium or (mammary) of elbow arm (brachial) Trunk (olecranal) Abdomen Antecubitis (abdominal) Lumbus or front of elbow or loin (antecubital) Umbilicus (lumbar) Upper or navel limb Antebrachium (umbilical) Sacrum or forearm (sacral) (antebrachial) Hip Antebrachium (coxal) Carpus or forearm or wrist (antebrachial) (carpal) Manus Pollex or hand Pelvis or thumb (manual) (pelvic) Palma or Inguen or groin Gluteus palm (palmar) (inguinal) or buttock (gluteal) Digits (phalanges) or fingers (digital or Femur phalangeal) Pubis or thigh Patella or (pubic) (femoral) kneecap Femur Lower (patellar) Popliteus or or thigh back of knee limb (femoral) (popliteal) Crus or leg (crural) Sura or calf Tarsus (sural) or ankle Calcaneus or (tarsal) heel of foot Digits (phalanges) (calcaneal) or toes (digital or Pes or foot phalangeal) (pedal) Planta or sole of foot (plantar) Hallux or great toe (a) Anterior view (b) Posterior view",
+    "lines": [
+     {
+      "text": "Frons or forehead (frontal).",
+      "score": 0.986
+     },
+     {
+      "text": "Oculus or eye",
+      "score": 1.0
+     },
+     {
+      "text": "(orbital or ocular)",
+      "score": 0.997
+     },
+     {
+      "text": "Cranium",
+      "score": 1.0
+     },
+     {
+      "text": "or skull",
+      "score": 1.0
+     },
+     {
+      "text": "Bucca or cheek (buccal)",
+      "score": 0.986
+     },
+     {
+      "text": "(cranial)",
+      "score": 1.0
+     },
+     {
+      "text": "Cephalon or head",
+      "score": 1.0
+     },
+     {
+      "text": "(cephalic)",
+      "score": 1.0
+     },
+     {
+      "text": "Facies",
+      "score": 1.0
+     },
+     {
+      "text": "Auris or ear (otic)",
+      "score": 1.0
+     },
+     {
+      "text": "Shoulder",
+      "score": 1.0
+     },
+     {
+      "text": "(acromial)",
+      "score": 1.0
+     },
+     {
+      "text": "or face",
+      "score": 1.0
+     },
+     {
+      "text": "Nasus or nose (nasal)",
+      "score": 1.0
+     },
+     {
+      "text": "(facial)",
+      "score": 1.0
+     },
+     {
+      "text": "Dorsum",
+      "score": 1.0
+     },
+     {
+      "text": "Cervicis or neck",
+      "score": 1.0
+     },
+     {
+      "text": "Cervicis or neck (cervical)",
+      "score": 1.0
+     },
+     {
+      "text": "Oris or mouth (oral)",
+      "score": 1.0
+     },
+     {
+      "text": "or back",
+      "score": 0.931
+     },
+     {
+      "text": "(cervical)",
+      "score": 1.0
+     },
+     {
+      "text": "(dorsal)",
+      "score": 1.0
+     },
+     {
+      "text": "Mentis or chin",
+      "score": 1.0
+     },
+     {
+      "text": "Thorcis or",
+      "score": 0.95
+     },
+     {
+      "text": "Brachium",
+      "score": 1.0
+     },
+     {
+      "text": "(mental)",
+      "score": 1.0
+     },
+     {
+      "text": "thorax, chest",
+      "score": 0.999
+     },
+     {
+      "text": "or arm",
+      "score": 1.0
+     },
+     {
+      "text": "(thoracic)",
+      "score": 1.0
+     },
+     {
+      "text": "Axilla or armpit",
+      "score": 1.0
+     },
+     {
+      "text": "(brachial)",
+      "score": 1.0
+     },
+     {
+      "text": "(axillary)",
+      "score": 1.0
+     },
+     {
+      "text": "Mamma",
+      "score": 1.0
+     },
+     {
+      "text": "Olecranon",
+      "score": 1.0
+     },
+     {
+      "text": "or breast",
+      "score": 1.0
+     },
+     {
+      "text": "or back",
+      "score": 0.93
+     },
+     {
+      "text": "Brachium or",
+      "score": 1.0
+     },
+     {
+      "text": "(mammary)",
+      "score": 0.995
+     },
+     {
+      "text": "of elbow",
+      "score": 1.0
+     },
+     {
+      "text": "arm (brachial)",
+      "score": 1.0
+     },
+     {
+      "text": "Trunk",
+      "score": 1.0
+     },
+     {
+      "text": "(olecranal)",
+      "score": 1.0
+     },
+     {
+      "text": "Abdomen",
+      "score": 1.0
+     },
+     {
+      "text": "Antecubitis",
+      "score": 1.0
+     },
+     {
+      "text": "(abdominal)",
+      "score": 1.0
+     },
+     {
+      "text": "Lumbus",
+      "score": 1.0
+     },
+     {
+      "text": "or front of elbow",
+      "score": 1.0
+     },
+     {
+      "text": "or loin",
+      "score": 1.0
+     },
+     {
+      "text": "(antecubital)",
+      "score": 1.0
+     },
+     {
+      "text": "Umbilicus",
+      "score": 1.0
+     },
+     {
+      "text": "(lumbar)",
+      "score": 1.0
+     },
+     {
+      "text": "Upper",
+      "score": 1.0
+     },
+     {
+      "text": "or navel",
+      "score": 1.0
+     },
+     {
+      "text": "limb",
+      "score": 1.0
+     },
+     {
+      "text": "Antebrachium",
+      "score": 1.0
+     },
+     {
+      "text": "(umbilical)",
+      "score": 1.0
+     },
+     {
+      "text": "Sacrum",
+      "score": 1.0
+     },
+     {
+      "text": "or forearm",
+      "score": 1.0
+     },
+     {
+      "text": "(sacral)",
+      "score": 1.0
+     },
+     {
+      "text": "(antebrachial)",
+      "score": 1.0
+     },
+     {
+      "text": "Hip",
+      "score": 1.0
+     },
+     {
+      "text": "Antebrachium",
+      "score": 1.0
+     },
+     {
+      "text": "(coxal)",
+      "score": 1.0
+     },
+     {
+      "text": "Carpus",
+      "score": 1.0
+     },
+     {
+      "text": "or forearm",
+      "score": 0.983
+     },
+     {
+      "text": "or wrist",
+      "score": 1.0
+     },
+     {
+      "text": "(antebrachial)",
+      "score": 1.0
+     },
+     {
+      "text": "(carpal)",
+      "score": 1.0
+     },
+     {
+      "text": "Manus",
+      "score": 1.0
+     },
+     {
+      "text": "Pollex",
+      "score": 1.0
+     },
+     {
+      "text": "or hand",
+      "score": 1.0
+     },
+     {
+      "text": "Pelvis",
+      "score": 1.0
+     },
+     {
+      "text": "or thumb",
+      "score": 1.0
+     },
+     {
+      "text": "(manual)",
+      "score": 1.0
+     },
+     {
+      "text": "(pelvic)",
+      "score": 1.0
+     },
+     {
+      "text": "Palma or",
+      "score": 1.0
+     },
+     {
+      "text": "Inguen or groin",
+      "score": 0.997
+     },
+     {
+      "text": "Gluteus",
+      "score": 1.0
+     },
+     {
+      "text": "palm (palmar)",
+      "score": 1.0
+     },
+     {
+      "text": "(inguinal)",
+      "score": 1.0
+     },
+     {
+      "text": "or buttock",
+      "score": 1.0
+     },
+     {
+      "text": "(gluteal)",
+      "score": 1.0
+     },
+     {
+      "text": "Digits (phalanges)",
+      "score": 0.999
+     },
+     {
+      "text": "or fingers (digital or",
+      "score": 1.0
+     },
+     {
+      "text": "Femur",
+      "score": 1.0
+     },
+     {
+      "text": "phalangeal)",
+      "score": 1.0
+     },
+     {
+      "text": "Pubis",
+      "score": 1.0
+     },
+     {
+      "text": "or thigh",
+      "score": 1.0
+     },
+     {
+      "text": "Patella or",
+      "score": 1.0
+     },
+     {
+      "text": "(pubic)",
+      "score": 1.0
+     },
+     {
+      "text": "(femoral)",
+      "score": 1.0
+     },
+     {
+      "text": "kneecap",
+      "score": 1.0
+     },
+     {
+      "text": "Femur",
+      "score": 1.0
+     },
+     {
+      "text": "Lower",
+      "score": 1.0
+     },
+     {
+      "text": "(patellar)",
+      "score": 1.0
+     },
+     {
+      "text": "Popliteus or",
+      "score": 1.0
+     },
+     {
+      "text": "or thigh",
+      "score": 1.0
+     },
+     {
+      "text": "back of knee",
+      "score": 1.0
+     },
+     {
+      "text": "limb",
+      "score": 1.0
+     },
+     {
+      "text": "(femoral)",
+      "score": 1.0
+     },
+     {
+      "text": "(popliteal)",
+      "score": 1.0
+     },
+     {
+      "text": "Crus or",
+      "score": 1.0
+     },
+     {
+      "text": "leg (crural)",
+      "score": 0.999
+     },
+     {
+      "text": "Sura",
+      "score": 1.0
+     },
+     {
+      "text": "or calf",
+      "score": 1.0
+     },
+     {
+      "text": "Tarsus",
+      "score": 1.0
+     },
+     {
+      "text": "(sural)",
+      "score": 1.0
+     },
+     {
+      "text": "or ankle",
+      "score": 1.0
+     },
+     {
+      "text": "Calcaneus or",
+      "score": 1.0
+     },
+     {
+      "text": "(tarsal)",
+      "score": 1.0
+     },
+     {
+      "text": "heel of foot",
+      "score": 1.0
+     },
+     {
+      "text": "Digits (phalanges)",
+      "score": 0.999
+     },
+     {
+      "text": "(calcaneal)",
+      "score": 1.0
+     },
+     {
+      "text": "or toes (digital or",
+      "score": 0.988
+     },
+     {
+      "text": "Pes or foot",
+      "score": 1.0
+     },
+     {
+      "text": "phalangeal)",
+      "score": 1.0
+     },
+     {
+      "text": "(pedal)",
+      "score": 1.0
+     },
+     {
+      "text": "Planta or sole",
+      "score": 1.0
+     },
+     {
+      "text": "of foot (plantar)",
+      "score": 1.0
+     },
+     {
+      "text": "Hallux or great toe",
+      "score": 1.0
+     },
+     {
+      "text": "(a) Anterior view",
+      "score": 1.0
+     },
+     {
+      "text": "(b) Posterior view",
+      "score": 1.0
+     }
+    ],
+    "seconds": 44.36
+   }
+  ],
+  "19": [
+   {
+    "xref": 121,
+    "size": [
+     1303,
+     1323
+    ],
+    "rect": [
+     137.2,
+     189.9,
+     474.8,
+     532.6
+    ],
+    "text": "Superior Cranial Right Left Proximal Posterior Anterior or or dorsal ventral Medial Lateral Caudal Proximal Distal Distal Inferior",
+    "lines": [
+     {
+      "text": "Superior",
+      "score": 1.0
+     },
+     {
+      "text": "Cranial",
+      "score": 1.0
+     },
+     {
+      "text": "Right",
+      "score": 1.0
+     },
+     {
+      "text": "Left",
+      "score": 1.0
+     },
+     {
+      "text": "Proximal",
+      "score": 1.0
+     },
+     {
+      "text": "Posterior",
+      "score": 1.0
+     },
+     {
+      "text": "Anterior or",
+      "score": 1.0
+     },
+     {
+      "text": "or dorsal",
+      "score": 1.0
+     },
+     {
+      "text": "ventral",
+      "score": 1.0
+     },
+     {
+      "text": "Medial",
+      "score": 1.0
+     },
+     {
+      "text": "Lateral",
+      "score": 1.0
+     },
+     {
+      "text": "Caudal",
+      "score": 1.0
+     },
+     {
+      "text": "Proximal",
+      "score": 1.0
+     },
+     {
+      "text": "Distal",
+      "score": 1.0
+     },
+     {
+      "text": "Distal",
+      "score": 1.0
+     },
+     {
+      "text": "Inferior",
+      "score": 1.0
+     }
+    ],
+    "seconds": 10.59
+   }
+  ],
+  "20": [
+   {
+    "xref": 126,
+    "size": [
+     1238,
+     1269
+    ],
+    "rect": [
+     174.8,
+     101.7,
+     437.2,
+     370.8
+    ],
+    "text": "Sagittal plane Frontal (coronal) plane Transverse plane Oblique plane",
+    "lines": [
+     {
+      "text": "Sagittal",
+      "score": 1.0
+     },
+     {
+      "text": "plane",
+      "score": 1.0
+     },
+     {
+      "text": "Frontal",
+      "score": 1.0
+     },
+     {
+      "text": "(coronal)",
+      "score": 1.0
+     },
+     {
+      "text": "plane",
+      "score": 1.0
+     },
+     {
+      "text": "Transverse",
+      "score": 1.0
+     },
+     {
+      "text": "plane",
+      "score": 1.0
+     },
+     {
+      "text": "Oblique plane",
+      "score": 1.0
+     }
+    ],
+    "seconds": 10.27
+   }
+  ],
+  "21": [
+   {
+    "xref": 131,
+    "size": [
+     1183,
+     685
+    ],
+    "rect": [
+     99.8,
+     57.6,
+     512.2,
+     296.5
+    ],
+    "text": "Cranial Cranial cavity cavity Vertebral cavity Thoracic cavity: Dorsal Superior body mediastinum cavity Pleural cavity Pericardial cavity within the mediastinum Diaphragm Vertebral cavity Ventral body cavity (both thoracic and Abdominal cavity abdominopelvic Abdomino- cavities) pelvic cavity Pelvic cavity Lateral view Anterior view",
+    "lines": [
+     {
+      "text": "Cranial",
+      "score": 1.0
+     },
+     {
+      "text": "Cranial",
+      "score": 1.0
+     },
+     {
+      "text": "cavity",
+      "score": 1.0
+     },
+     {
+      "text": "cavity",
+      "score": 1.0
+     },
+     {
+      "text": "Vertebral",
+      "score": 1.0
+     },
+     {
+      "text": "cavity",
+      "score": 1.0
+     },
+     {
+      "text": "Thoracic cavity:",
+      "score": 1.0
+     },
+     {
+      "text": "Dorsal",
+      "score": 1.0
+     },
+     {
+      "text": "Superior",
+      "score": 1.0
+     },
+     {
+      "text": "body",
+      "score": 1.0
+     },
+     {
+      "text": "mediastinum",
+      "score": 1.0
+     },
+     {
+      "text": "cavity",
+      "score": 1.0
+     },
+     {
+      "text": "Pleural cavity",
+      "score": 1.0
+     },
+     {
+      "text": "Pericardial",
+      "score": 1.0
+     },
+     {
+      "text": "cavity within",
+      "score": 1.0
+     },
+     {
+      "text": "the mediastinum",
+      "score": 1.0
+     },
+     {
+      "text": "Diaphragm",
+      "score": 1.0
+     },
+     {
+      "text": "Vertebral",
+      "score": 1.0
+     },
+     {
+      "text": "cavity",
+      "score": 1.0
+     },
+     {
+      "text": "Ventral body",
+      "score": 1.0
+     },
+     {
+      "text": "cavity",
+      "score": 1.0
+     },
+     {
+      "text": "(both thoracic and",
+      "score": 0.992
+     },
+     {
+      "text": "Abdominal cavity",
+      "score": 1.0
+     },
+     {
+      "text": "abdominopelvic",
+      "score": 1.0
+     },
+     {
+      "text": "Abdomino-",
+      "score": 0.999
+     },
+     {
+      "text": "cavities)",
+      "score": 1.0
+     },
+     {
+      "text": "pelvic",
+      "score": 1.0
+     },
+     {
+      "text": "cavity",
+      "score": 1.0
+     },
+     {
+      "text": "Pelvic cavity",
+      "score": 1.0
+     },
+     {
+      "text": "Lateral view",
+      "score": 1.0
+     },
+     {
+      "text": "Anterior view",
+      "score": 1.0
+     }
+    ],
+    "seconds": 7.38
+   }
+  ],
+  "22": [
+   {
+    "xref": 137,
+    "size": [
+     2431,
+     1255
+    ],
+    "rect": [
+     99.8,
+     57.6,
+     512.2,
+     270.6
+    ],
+    "text": "Diaphragm Left Right Epigastric hypochondriac hypochondriac region re'gion region Right upper Left upper quadrant quadrant (RUQ) (LUQ) Right Left Umbilical lumbar lumbar region region region Right lower Left lower quadrant quadrant (RLQ) (LLQ) Right Left Hypogastric iliac iliac region region region (a) Abdominopelvic regions (b) Abdominopelvic quadrants",
+    "lines": [
+     {
+      "text": "Diaphragm",
+      "score": 1.0
+     },
+     {
+      "text": "Left",
+      "score": 0.881
+     },
+     {
+      "text": "Right",
+      "score": 1.0
+     },
+     {
+      "text": "Epigastric",
+      "score": 1.0
+     },
+     {
+      "text": "hypochondriac",
+      "score": 1.0
+     },
+     {
+      "text": "hypochondriac",
+      "score": 1.0
+     },
+     {
+      "text": "region",
+      "score": 1.0
+     },
+     {
+      "text": "re'gion",
+      "score": 0.96
+     },
+     {
+      "text": "region",
+      "score": 1.0
+     },
+     {
+      "text": "Right upper",
+      "score": 1.0
+     },
+     {
+      "text": "Left upper",
+      "score": 1.0
+     },
+     {
+      "text": "quadrant",
+      "score": 1.0
+     },
+     {
+      "text": "quadrant",
+      "score": 1.0
+     },
+     {
+      "text": "(RUQ)",
+      "score": 1.0
+     },
+     {
+      "text": "(LUQ)",
+      "score": 1.0
+     },
+     {
+      "text": "Right",
+      "score": 1.0
+     },
+     {
+      "text": "Left",
+      "score": 1.0
+     },
+     {
+      "text": "Umbilical",
+      "score": 1.0
+     },
+     {
+      "text": "lumbar",
+      "score": 0.997
+     },
+     {
+      "text": "lumbar",
+      "score": 0.998
+     },
+     {
+      "text": "region",
+      "score": 1.0
+     },
+     {
+      "text": "region",
+      "score": 1.0
+     },
+     {
+      "text": "region",
+      "score": 1.0
+     },
+     {
+      "text": "Right lower",
+      "score": 0.999
+     },
+     {
+      "text": "Left lower",
+      "score": 0.998
+     },
+     {
+      "text": "quadrant",
+      "score": 1.0
+     },
+     {
+      "text": "quadrant",
+      "score": 1.0
+     },
+     {
+      "text": "(RLQ)",
+      "score": 1.0
+     },
+     {
+      "text": "(LLQ)",
+      "score": 1.0
+     },
+     {
+      "text": "Right",
+      "score": 1.0
+     },
+     {
+      "text": "Left",
+      "score": 1.0
+     },
+     {
+      "text": "Hypogastric",
+      "score": 1.0
+     },
+     {
+      "text": "iliac",
+      "score": 1.0
+     },
+     {
+      "text": "iliac",
+      "score": 1.0
+     },
+     {
+      "text": "region",
+      "score": 1.0
+     },
+     {
+      "text": "region",
+      "score": 1.0
+     },
+     {
+      "text": "region",
+      "score": 1.0
+     },
+     {
+      "text": "(a) Abdominopelvic regions",
+      "score": 1.0
+     },
+     {
+      "text": "(b) Abdominopelvic quadrants",
+      "score": 0.993
+     }
+    ],
+    "seconds": 20.33
+   },
+   {
+    "xref": 138,
+    "size": [
+     883,
+     433
+    ],
+    "rect": [
+     148.5,
+     437.3,
+     463.5,
+     591.8
+    ],
+    "text": "Visceral pericardium Pericardial cavity Parietal pericardium Air space Balloon",
+    "lines": [
+     {
+      "text": "Visceral",
+      "score": 1.0
+     },
+     {
+      "text": "pericardium",
+      "score": 1.0
+     },
+     {
+      "text": "Pericardial",
+      "score": 1.0
+     },
+     {
+      "text": "cavity",
+      "score": 1.0
+     },
+     {
+      "text": "Parietal",
+      "score": 1.0
+     },
+     {
+      "text": "pericardium",
+      "score": 1.0
+     },
+     {
+      "text": "Air space",
+      "score": 1.0
+     },
+     {
+      "text": "Balloon",
+      "score": 1.0
+     }
+    ],
+    "seconds": 3.56
+   }
+  ],
+  "23": [],
+  "24": [
+   {
+    "xref": 147,
+    "size": [
+     750,
+     881
+    ],
+    "rect": [
+     204.8,
+     57.6,
+     407.2,
+     295.5
+    ],
+    "text": "业",
+    "lines": [
+     {
+      "text": "业",
+      "score": 0.949
+     }
+    ],
+    "seconds": 3.36
+   }
+  ],
+  "25": [
+   {
+    "xref": 152,
+    "size": [
+     1041,
+     939
+    ],
+    "rect": [
+     126.0,
+     57.6,
+     486.0,
+     382.3
+    ],
+    "text": "TomoTherapy 〇〇〇〇 (a) (b) Patient: Plan: MRN 18-JUL-05 BG:-12 FR:13 85mm BG:-12 FR:13 85mm IPC:A3344 DIS 09:25:45 DYN:4 ENH:2 SCC:1 DYN:4 ENH:2/1 SCC:1 22:2mm →000 →000 车 PWR:L F1234 3.5M F1234 SM (c) (d)",
+    "lines": [
+     {
+      "text": "TomoTherapy",
+      "score": 0.985
+     },
+     {
+      "text": "〇〇〇〇",
+      "score": 0.63
+     },
+     {
+      "text": "(a)",
+      "score": 1.0
+     },
+     {
+      "text": "(b)",
+      "score": 1.0
+     },
+     {
+      "text": "Patient:",
+      "score": 0.994
+     },
+     {
+      "text": "Plan:",
+      "score": 0.992
+     },
+     {
+      "text": "MRN",
+      "score": 0.994
+     },
+     {
+      "text": "18-JUL-05",
+      "score": 0.956
+     },
+     {
+      "text": "BG:-12",
+      "score": 0.992
+     },
+     {
+      "text": "FR:13",
+      "score": 1.0
+     },
+     {
+      "text": "85mm",
+      "score": 1.0
+     },
+     {
+      "text": "BG:-12",
+      "score": 0.988
+     },
+     {
+      "text": "FR:13",
+      "score": 1.0
+     },
+     {
+      "text": "85mm",
+      "score": 1.0
+     },
+     {
+      "text": "IPC:A3344",
+      "score": 0.996
+     },
+     {
+      "text": "DIS",
+      "score": 0.999
+     },
+     {
+      "text": "09:25:45",
+      "score": 0.993
+     },
+     {
+      "text": "DYN:4",
+      "score": 0.983
+     },
+     {
+      "text": "ENH:2",
+      "score": 0.999
+     },
+     {
+      "text": "SCC:1",
+      "score": 0.807
+     },
+     {
+      "text": "DYN:4",
+      "score": 0.998
+     },
+     {
+      "text": "ENH:2/1",
+      "score": 0.971
+     },
+     {
+      "text": "SCC:1",
+      "score": 0.955
+     },
+     {
+      "text": "22:2mm",
+      "score": 0.924
+     },
+     {
+      "text": "→000",
+      "score": 0.88
+     },
+     {
+      "text": "→000",
+      "score": 0.905
+     },
+     {
+      "text": "车",
+      "score": 0.926
+     },
+     {
+      "text": "PWR:L",
+      "score": 0.978
+     },
+     {
+      "text": "F1234",
+      "score": 0.997
+     },
+     {
+      "text": "3.5M",
+      "score": 0.984
+     },
+     {
+      "text": "F1234",
+      "score": 0.986
+     },
+     {
+      "text": "SM",
+      "score": 0.984
+     },
+     {
+      "text": "(c)",
+      "score": 1.0
+     },
+     {
+      "text": "(d)",
+      "score": 1.0
+     }
+    ],
+    "seconds": 10.94
+   }
+  ],
+  "26": [],
+  "35": [
+   {
+    "xref": 221,
+    "size": [
+     2288,
+     1050
+    ],
+    "rect": [
+     72.0,
+     104.4,
+     622.8,
+     357.2
+    ],
+    "text": "WS",
+    "lines": [
+     {
+      "text": "WS",
+      "score": 0.501
+     }
+    ],
+    "seconds": 10.46
+   }
+  ],
+  "36": [
+   {
+    "xref": 224,
+    "size": [
+     2276,
+     1280
+    ],
+    "rect": [
+     111.0,
+     488.7,
+     501.0,
+     708.0
+    ],
+    "text": "Others Element Symbol Percentage in Body Oxygen O 65.0 3% Nitrogen Carbon C 18.5 10% Hydrogen H 9.5 Hydrogen Nitrogen N 3.2 Calcium Ca 1.5 18% Carbon Phosphorus P 1.0 Potassium K 0.4 65% Sulfur S 0.3 Sodium Na 0.2 Cl Oxygen Chlorine 0.2 Mg Magnesium 0.1 Trace elements include boron (B), chromium (Cr), cobalt (Co), copper (Cu), fluorine (F), iodine (I), iron (Fe), manganese (Mn), molybdenum (Mo), less than 1.0 selenium (Se), silicon (Si), tin (Sn), vanadium (V), and zinc (Zn).",
+    "lines": [
+     {
+      "text": "Others",
+      "score": 1.0
+     },
+     {
+      "text": "Element",
+      "score": 1.0
+     },
+     {
+      "text": "Symbol",
+      "score": 1.0
+     },
+     {
+      "text": "Percentage in",
+      "score": 1.0
+     },
+     {
+      "text": "Body",
+      "score": 1.0
+     },
+     {
+      "text": "Oxygen",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.978
+     },
+     {
+      "text": "65.0",
+      "score": 1.0
+     },
+     {
+      "text": "3%",
+      "score": 0.99
+     },
+     {
+      "text": "Nitrogen",
+      "score": 1.0
+     },
+     {
+      "text": "Carbon",
+      "score": 1.0
+     },
+     {
+      "text": "C",
+      "score": 0.999
+     },
+     {
+      "text": "18.5",
+      "score": 1.0
+     },
+     {
+      "text": "10%",
+      "score": 1.0
+     },
+     {
+      "text": "Hydrogen",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "9.5",
+      "score": 1.0
+     },
+     {
+      "text": "Hydrogen",
+      "score": 1.0
+     },
+     {
+      "text": "Nitrogen",
+      "score": 1.0
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "3.2",
+      "score": 1.0
+     },
+     {
+      "text": "Calcium",
+      "score": 1.0
+     },
+     {
+      "text": "Ca",
+      "score": 1.0
+     },
+     {
+      "text": "1.5",
+      "score": 1.0
+     },
+     {
+      "text": "18%",
+      "score": 0.999
+     },
+     {
+      "text": "Carbon",
+      "score": 1.0
+     },
+     {
+      "text": "Phosphorus",
+      "score": 1.0
+     },
+     {
+      "text": "P",
+      "score": 1.0
+     },
+     {
+      "text": "1.0",
+      "score": 1.0
+     },
+     {
+      "text": "Potassium",
+      "score": 1.0
+     },
+     {
+      "text": "K",
+      "score": 1.0
+     },
+     {
+      "text": "0.4",
+      "score": 1.0
+     },
+     {
+      "text": "65%",
+      "score": 0.998
+     },
+     {
+      "text": "Sulfur",
+      "score": 1.0
+     },
+     {
+      "text": "S",
+      "score": 0.999
+     },
+     {
+      "text": "0.3",
+      "score": 1.0
+     },
+     {
+      "text": "Sodium",
+      "score": 1.0
+     },
+     {
+      "text": "Na",
+      "score": 1.0
+     },
+     {
+      "text": "0.2",
+      "score": 1.0
+     },
+     {
+      "text": "Cl",
+      "score": 0.951
+     },
+     {
+      "text": "Oxygen",
+      "score": 1.0
+     },
+     {
+      "text": "Chlorine",
+      "score": 1.0
+     },
+     {
+      "text": "0.2",
+      "score": 1.0
+     },
+     {
+      "text": "Mg",
+      "score": 1.0
+     },
+     {
+      "text": "Magnesium",
+      "score": 1.0
+     },
+     {
+      "text": "0.1",
+      "score": 1.0
+     },
+     {
+      "text": "Trace elements include boron (B), chromium (Cr),",
+      "score": 0.997
+     },
+     {
+      "text": "cobalt (Co), copper (Cu), fluorine (F), iodine (I),",
+      "score": 0.992
+     },
+     {
+      "text": "iron (Fe), manganese (Mn), molybdenum (Mo),",
+      "score": 0.999
+     },
+     {
+      "text": "less than 1.0",
+      "score": 0.988
+     },
+     {
+      "text": "selenium (Se), silicon (Si), tin (Sn), vanadium (V),",
+      "score": 1.0
+     },
+     {
+      "text": "and zinc (Zn).",
+      "score": 1.0
+     }
+    ],
+    "seconds": 22.54
+   }
+  ],
+  "37": [
+   {
+    "xref": 229,
+    "size": [
+     1012,
+     1537
+    ],
+    "rect": [
+     199.1,
+     342.9,
+     412.9,
+     667.5
+    ],
+    "text": "e⁻ Electron He e⁻ (a) Planetary model Nucleus Cloud of negative charge (2 electrons) (b) Electron cloud model",
+    "lines": [
+     {
+      "text": "e⁻",
+      "score": 0.992
+     },
+     {
+      "text": "Electron",
+      "score": 1.0
+     },
+     {
+      "text": "He",
+      "score": 1.0
+     },
+     {
+      "text": "e⁻",
+      "score": 0.994
+     },
+     {
+      "text": "(a) Planetary model",
+      "score": 1.0
+     },
+     {
+      "text": "Nucleus",
+      "score": 1.0
+     },
+     {
+      "text": "Cloud of negative",
+      "score": 0.999
+     },
+     {
+      "text": "charge (2 electrons)",
+      "score": 1.0
+     },
+     {
+      "text": "(b) Electron cloud model",
+      "score": 1.0
+     }
+    ],
+    "seconds": 10.21
+   }
+  ],
+  "38": [],
+  "39": [
+   {
+    "xref": 238,
+    "size": [
+     3045,
+     2365
+    ],
+    "rect": [
+     72.0,
+     57.6,
+     559.5,
+     436.2
+    ],
+    "text": "NIST PＥＲＩＯＤＩC TＡＢＬE Group Atomic Properties of the Elements National Institute of 1 Standards and Technology 18 IA U.S. Department of Commerce VIIIA 1 2S Physics Standard 2 1So 1/2 Frequently used fundamental physical constants H Laboratory Reference Data He For the most accurate values of these and other constants, visit physics.nist.gov/constants 1 physics.nist.gov www.nist.gov/srd Hydrogen 1 second = 9 192 631 770 periods of radiation corresponding to the transition Helium between the two hyperfine levels of the ground state of 133Cs 1.00794 2 Solids 13 14 15 16 17 4.002602 1s speed of light in vacuum C 299 792 458 m s1 (exact) 1s 2 IIA Planck constant h 6.6261 x 10-³⁴ J s (ħ = h/2π) IIIA IVA VA VIA VIIA 13.5984 Liquids 24.5874 3 2S12 4 elementary charge e 1.6022 × 10-19C 5 2Po 6 7 4S  o 8 9 2Po 10 9.1094 x10-³1  Gases 1/2 3/2 3/2 Li Be electron mass me kg B C N O F Ne mec² 0.5110 MeV Artificially 2 Lithium Beryllium proton mass mp 1.6726×10-27 kg Prepared Boron Carbon Nitrogen Oxygen Fluorine Neon 6.941 9.012182 10.811 12.0107 14.0067 15.9994 18.9984032 20.1797 1s{2{2} fine-structure constant α 1/137.036 1s{²2s²2 1s²2s²2^² 1s²2s²2p³ 1s²2s²2p⁵² 1s²2s²2p³ 1s²2s Rydberg constant R。 10 973 732 m⁻1 1s²2s²2p⁴ 5.3917 9.3227 8 8.2980 11.2603 14.5341 13.6181 17.4228 21.5645 1S0 Roc 3.289 842× 101⁵Hz 11 2S 12 13 2P° 14 15 4S° 16 3P 17 2Po 18 1S0 1/2 Rohc 13.6057 eV 1/2 3/2 2 3/2 Na Mg 1.3807 x 10⁻²³ JK⁻1 AI Si P S Cl Ar Boltzmann constant k 3 Sodium Magnesium Aluminum Silicon Phosphorus Sulfur Chlorine Argon 22.98976928 24.3050 3 4 5 6 7 8 9 10 11 12 26.9815386 28.0855 30.973762 32.065 35.453 39.948 2 2 3 4 5 6 [Ne]3s [Ne]3s2 IlIB IVB VB VIB VIIB VIII IB IIB [Ne]3s²3p [Ne]3s²3p² [Ne]3s²3p [Ne]3s²3p [Ne]3s²3p [Ne]3s²3p 5.1391 7.6462 5.9858 8.1517 10.4867 10.3600 12.9676 15.7596 1S0 7S3 2S 3P0 4S{/ 1S0 19 2S 20 21 2 D 22 23 4F 24 25 6S 26 27 4F 28 29 30 1S0 31 2P 32 33 34 3P 35 2P 36 1/2 Ca Sc 3/2 Ti 3/2 Cr Mn 5/2 Fe Co 9/2 Ni Cu 1/2 Zn Ga 1/2 Ge As 3/2 Se 2 Br 3/2 Kr Period K V 4 Potassium Calcium Scandium Titanium Vanadium Chromium Manganese Iron Cobalt Nickel Copper Zinc Gallium Germanium Arsenic Selenium Bromine Krypton 39.0983 40.078 44.955912 47.867 50.9415 51.9961 54.938045 55.845 58.933195 58.6934 63.546 65.38 69.723 72.64 74.92160 78.96 79.904 83.798 [Ar]4s² 2 2 [Ar]3d²4s² [Ar]3d³34s{² 2 [Ar]3d54s [Ar]3d 4s² [Ar]3d6}4s{²} 2 [Ar]3d74s2} 2 [Ar]3d4s² [Ar]3d104s²} 2 [Ar]3d 2 2 10 2 3 10 4 10 5 [Ar]3d1º4s²4p 10 6 [Ar]4s [Ar]3d4s [Ar]3d [Ar]3d 104s²4p [Ar]3d1 [Ar]3d1º4s²4p 4.3407 6.1132 6.5615 6.8281 6.7462 6.7665 7.4340 7.9024 7.8810 7.6399 7.7264 9.3942 5.9993 7.8994 9.7886 9.7524 11.8138 13.9996 37 38 1S0 2D 40 6D 7S3 43 6S 44 5F 4F 46 1S0 47 2S 48 1S0 49 2P0 50 3P0 4S{3/2 52 53 2P0 2S 39 3F 41 1/2 42 5/2 45 51 54 1So Rb 1/2 Sr Y 3/2 Zr 2 Nb Mo Tc Ru 5 Rh 9/2 Pd Ag 1/2 Cd In 1/2 Sn Sb 3/2 Te I 3/2 Xe 5 Rubidium Strontium Yttrium Zirconium Niobium Molybdenum Technetium Ruthenium Rhodium Palladium Silver Cadmium Indium Tin Antimony Tellurium lodine Xenon 85.4678 87.62 88.90585 91.224 92.90638 95.96 (98) 101.07 102.90550 106.42 107.8682 112.411 114.818 118.710 121.760 127.60 126.90447 131.293 [Kr]5s [Kr]5s² 2 [Kr]4d5s 2 [Kr]4d²5s² [Kr]4d45s [Kr]4d55s [Kr]4d⁵5s² [Kr]4d75s [Kr]4d85s [Kr]4d 10 [Kr]4d105s² 2 [Kr]4d105s²5p³ 3 4 [Kr]4d105s²5p 5 [Kr]4d1º5s²5p 6 4.1771 5.6949 6.2173 6.6339 6.7589 7.0924 7.28 7.3605 7.4589 8.3369 7.5762 8.9938 5.7864 7.3439 8.6084 9.0096 10.4513 12.1298 55 2S 56 1S0 72 3F 73 4F 74 5D0 75 6S 76 77 4F 78 3D3 79 2S 80 1S0 81 2P° 82 3P0 83 4S3/ 84 3P 85 2P° 86 1So 1/2 2 3/2 5/2 9/2 1/2 1/2 3/2 2 3/2 Cs Ba Hf Ta W Re Os Ir Pt Au Hg TI Pb Bi Po At Rn 6 Cesium Barium Hafnium Tantalum Tungsten Rhenium Osmium Iridium Platinum Gold Mercury Thallium Lead Bismuth Polonium Astatine Radon 132.9054519 137.327 178.49 183.84 186.207 190.23 192.217 195.084 196.966569 200.59 204.3833 207.2 (209) (210) (222) 180.94788 [Xe]4^{145d5}6s2 208.98040 [Xe]6s [Xe]6s²2 2 [Xe]4f{145d²6s² 2 [Xe]4f145d36s² 2 [Xe]4f145d46s² 2 [Xe]4f145d66s² 6 2 [Xe]4f145d′6s² 2 [Xe]4f145d96s [Xe]4f145d106s 10 [Xe]4f145d106s² 14 10 2 [Hg]6p [Hg]6p 2 [Hg]6p3 3 [Hg]6p^ 8 [Hg]6p^ 5 [Hg]6p 6 3.8939 5.2117 6.8251 7.5496 7.8640 7.8335 8.4382 9.2255 6.1082 7.4167 7.2855 8.9670 8.9588 10.4375 8.414 10.7485 87 2S 88 1S0 104 3F2? 105 106 107 108 109 110 111 112 113 114 115 116 117 118 1/2 Fr Ra Rf Db Sg Bh Hs Mt Ds Rg Cn Uut Uuq Uup Uuh Uus Uuo 7 Francium Radium Rutherfordium Dubnium Seaborgium Bohrium Hassium Meitnerium Darmstadtium Roentgenium Copernicium Ununtrium Ununquadium Ununpentium Ununhexium Ununseptium Ununoctium (223) (226) (265) (268) (271) (272) (277) (276) (281) (280) (285) (284) (289) (288) (293) (294) (294) [Rn]7s2 [Rn]5f146d²7s²? [Rn]7s 4.0727 5.2784 6.0? Atomic Ground-state 57 2D 58 1G4 59 4To 60 61 62 7F0 63 64 9D2 65 6H° 66 510 67 4I05 68 3H6 69 2Fo 70 S0 71 2D Number Level antes 3/2 9/2 5/2 7/2 15/2 15/2 7/2 3/2 La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu 58 Symbol Lanthanum Cerium Praseodymium Neodymium Promethium Samarium Europium Gadolinium Terbium Dysprosium Holmium Erbium Thulium Ytterbium Lutetium Ce 138.90547 140.116 140.90765 144.242 (145) 150.36 151.964 157.25 158.92535 162.500 164.93032 167.259 168.93421 173.054 174.9668 [Xe]4f{³6s² [Xe]4f46s² [Xe]4f56s² [Xe]4^{6s²} [Xe]4f76s}} [Xe]4f7}5d6s² [Xe]4f96s² [Xe]4f{106s²2} [Xe]4f{116s2} [Xe]4f{126s{2} [Xe]4f{136s2} [Xe]4f146s² [Xe]4f{145d6s²2} [Xe]5d6s² [Xe]4f5d6s² 2 Name 5.5769 5.5387 5.473 5.5250 5.582 5.6437 5.6704 6.1498 5.8638 5.9389 6.0215 6.1077 6.1843 6.2542 5.4259 Cerium 3H 89 2D 90 3F 91 4K} 92 510 93 61 94 7F{0 95 8S7/ 96 97 6Ho 98 99 4I°5 100 101 2Fo 102 1S0 103 ²P° Atomic 140.116 ctdes 3/2 2 11/2 -11/2 7/2 15/2 15/2 7/2 [Xe]4f5d6s² Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Weight 5.5387 Actinium Thorium Protactinium Uranium Neptunium Plutonium Americium Curium Berkelium Californium Einsteinium Fermium Mendelevium Nobelium Lawrencium (227) 232.03806 231.03588 238.02891 (237) (244) (243) (247) (247) (251) (252) (257) (258) (259) (262) Ground-state lonization [Rn]6d²7s² [Rn]5f²6d7s² [Rn]5f46d7s² [Rn]5f{7s² [Rn]5f7{ [Rn]5f76d7s² [Rn]5f107s² [Rn]5f117s² [Rn]5f127s² [Rn]5f137s² [Rn]5f147s² [Rn]6d7s² 2 [Rn]5f³6d7s² 2 [Rn]5f97s² [Rn]5f147s²7p? Configuration Energy (eV) 5.3807 6.3067 5.89 6.1939 6.2657 6.0260 5.9738 5.9914 6.1979 6.2817 6.3676 6.50 6.58 6.65 4.9 ? 1²C. () indicates the mass number of the longest-lived isotope. NIST SP 966 (September 2010) Based upon For a description of the data, visit physics.nist.gov/data",
+    "lines": [
+     {
+      "text": "NIST",
+      "score": 0.969
+     },
+     {
+      "text": "PＥＲＩＯＤＩC",
+      "score": 0.764
+     },
+     {
+      "text": "TＡＢＬE",
+      "score": 0.647
+     },
+     {
+      "text": "Group",
+      "score": 1.0
+     },
+     {
+      "text": "Atomic Properties of the",
+      "score": 0.984
+     },
+     {
+      "text": "Elements",
+      "score": 1.0
+     },
+     {
+      "text": "National Institute of",
+      "score": 1.0
+     },
+     {
+      "text": "1",
+      "score": 1.0
+     },
+     {
+      "text": "Standards and Technology",
+      "score": 0.984
+     },
+     {
+      "text": "18",
+      "score": 1.0
+     },
+     {
+      "text": "IA",
+      "score": 0.977
+     },
+     {
+      "text": "U.S. Department of Commerce",
+      "score": 1.0
+     },
+     {
+      "text": "VIIIA",
+      "score": 0.966
+     },
+     {
+      "text": "1",
+      "score": 1.0
+     },
+     {
+      "text": "2S",
+      "score": 0.747
+     },
+     {
+      "text": "Physics",
+      "score": 1.0
+     },
+     {
+      "text": "Standard",
+      "score": 1.0
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "1So",
+      "score": 0.893
+     },
+     {
+      "text": "1/2",
+      "score": 0.999
+     },
+     {
+      "text": "Frequently used fundamental physical constants",
+      "score": 0.998
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "Laboratory",
+      "score": 1.0
+     },
+     {
+      "text": "Reference Data",
+      "score": 1.0
+     },
+     {
+      "text": "He",
+      "score": 1.0
+     },
+     {
+      "text": "For the most accurate values of these and other constants, visit physics.nist.gov/constants",
+      "score": 1.0
+     },
+     {
+      "text": "1",
+      "score": 0.995
+     },
+     {
+      "text": "physics.nist.gov",
+      "score": 1.0
+     },
+     {
+      "text": "www.nist.gov/srd",
+      "score": 1.0
+     },
+     {
+      "text": "Hydrogen",
+      "score": 1.0
+     },
+     {
+      "text": "1 second = 9 192 631 770 periods of radiation corresponding to the transition",
+      "score": 1.0
+     },
+     {
+      "text": "Helium",
+      "score": 1.0
+     },
+     {
+      "text": "between the two hyperfine levels of the ground state of 133Cs",
+      "score": 0.986
+     },
+     {
+      "text": "1.00794",
+      "score": 1.0
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "Solids",
+      "score": 1.0
+     },
+     {
+      "text": "13",
+      "score": 1.0
+     },
+     {
+      "text": "14",
+      "score": 1.0
+     },
+     {
+      "text": "15",
+      "score": 1.0
+     },
+     {
+      "text": "16",
+      "score": 1.0
+     },
+     {
+      "text": "17",
+      "score": 1.0
+     },
+     {
+      "text": "4.002602",
+      "score": 1.0
+     },
+     {
+      "text": "1s",
+      "score": 0.999
+     },
+     {
+      "text": "speed of light in vacuum",
+      "score": 0.999
+     },
+     {
+      "text": "C",
+      "score": 0.993
+     },
+     {
+      "text": "299 792 458 m s1",
+      "score": 0.959
+     },
+     {
+      "text": "(exact)",
+      "score": 1.0
+     },
+     {
+      "text": "1s",
+      "score": 0.999
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "IIA",
+      "score": 0.93
+     },
+     {
+      "text": "Planck constant",
+      "score": 1.0
+     },
+     {
+      "text": "h",
+      "score": 0.998
+     },
+     {
+      "text": "6.6261 x 10-³⁴ J s",
+      "score": 0.886
+     },
+     {
+      "text": "(ħ = h/2π)",
+      "score": 0.961
+     },
+     {
+      "text": "IIIA",
+      "score": 0.924
+     },
+     {
+      "text": "IVA",
+      "score": 0.997
+     },
+     {
+      "text": "VA",
+      "score": 0.999
+     },
+     {
+      "text": "VIA",
+      "score": 0.996
+     },
+     {
+      "text": "VIIA",
+      "score": 0.998
+     },
+     {
+      "text": "13.5984",
+      "score": 1.0
+     },
+     {
+      "text": "Liquids",
+      "score": 1.0
+     },
+     {
+      "text": "24.5874",
+      "score": 1.0
+     },
+     {
+      "text": "3",
+      "score": 1.0
+     },
+     {
+      "text": "2S12",
+      "score": 0.969
+     },
+     {
+      "text": "4",
+      "score": 1.0
+     },
+     {
+      "text": "elementary charge",
+      "score": 1.0
+     },
+     {
+      "text": "e",
+      "score": 1.0
+     },
+     {
+      "text": "1.6022 × 10-19C",
+      "score": 0.892
+     },
+     {
+      "text": "5",
+      "score": 1.0
+     },
+     {
+      "text": "2Po",
+      "score": 0.777
+     },
+     {
+      "text": "6",
+      "score": 1.0
+     },
+     {
+      "text": "7",
+      "score": 1.0
+     },
+     {
+      "text": "4S",
+      "score": 0.988
+     },
+     {
+      "text": " o",
+      "score": 0.658
+     },
+     {
+      "text": "8",
+      "score": 1.0
+     },
+     {
+      "text": "9",
+      "score": 1.0
+     },
+     {
+      "text": "2Po",
+      "score": 0.791
+     },
+     {
+      "text": "10",
+      "score": 1.0
+     },
+     {
+      "text": "9.1094 x10-³1 ",
+      "score": 0.837
+     },
+     {
+      "text": "Gases",
+      "score": 1.0
+     },
+     {
+      "text": "1/2",
+      "score": 1.0
+     },
+     {
+      "text": "3/2",
+      "score": 1.0
+     },
+     {
+      "text": "3/2",
+      "score": 0.999
+     },
+     {
+      "text": "Li",
+      "score": 1.0
+     },
+     {
+      "text": "Be",
+      "score": 1.0
+     },
+     {
+      "text": "electron mass",
+      "score": 0.998
+     },
+     {
+      "text": "me",
+      "score": 0.995
+     },
+     {
+      "text": "kg",
+      "score": 1.0
+     },
+     {
+      "text": "B",
+      "score": 1.0
+     },
+     {
+      "text": "C",
+      "score": 0.999
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.533
+     },
+     {
+      "text": "F",
+      "score": 0.999
+     },
+     {
+      "text": "Ne",
+      "score": 1.0
+     },
+     {
+      "text": "mec²",
+      "score": 0.717
+     },
+     {
+      "text": "0.5110 MeV",
+      "score": 1.0
+     },
+     {
+      "text": "Artificially",
+      "score": 1.0
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "Lithium",
+      "score": 1.0
+     },
+     {
+      "text": "Beryllium",
+      "score": 1.0
+     },
+     {
+      "text": "proton mass",
+      "score": 1.0
+     },
+     {
+      "text": "mp",
+      "score": 0.996
+     },
+     {
+      "text": "1.6726×10-27",
+      "score": 0.9
+     },
+     {
+      "text": "kg",
+      "score": 1.0
+     },
+     {
+      "text": "Prepared",
+      "score": 1.0
+     },
+     {
+      "text": "Boron",
+      "score": 1.0
+     },
+     {
+      "text": "Carbon",
+      "score": 1.0
+     },
+     {
+      "text": "Nitrogen",
+      "score": 1.0
+     },
+     {
+      "text": "Oxygen",
+      "score": 1.0
+     },
+     {
+      "text": "Fluorine",
+      "score": 1.0
+     },
+     {
+      "text": "Neon",
+      "score": 1.0
+     },
+     {
+      "text": "6.941",
+      "score": 1.0
+     },
+     {
+      "text": "9.012182",
+      "score": 1.0
+     },
+     {
+      "text": "10.811",
+      "score": 1.0
+     },
+     {
+      "text": "12.0107",
+      "score": 1.0
+     },
+     {
+      "text": "14.0067",
+      "score": 1.0
+     },
+     {
+      "text": "15.9994",
+      "score": 1.0
+     },
+     {
+      "text": "18.9984032",
+      "score": 1.0
+     },
+     {
+      "text": "20.1797",
+      "score": 1.0
+     },
+     {
+      "text": "1s{2{2}",
+      "score": 0.628
+     },
+     {
+      "text": "fine-structure constant",
+      "score": 1.0
+     },
+     {
+      "text": "α",
+      "score": 1.0
+     },
+     {
+      "text": "1/137.036",
+      "score": 1.0
+     },
+     {
+      "text": "1s{²2s²2",
+      "score": 0.66
+     },
+     {
+      "text": "1s²2s²2^²",
+      "score": 0.798
+     },
+     {
+      "text": "1s²2s²2p³",
+      "score": 0.933
+     },
+     {
+      "text": "1s²2s²2p⁵²",
+      "score": 0.818
+     },
+     {
+      "text": "1s²2s²2p³",
+      "score": 0.889
+     },
+     {
+      "text": "1s²2s",
+      "score": 0.92
+     },
+     {
+      "text": "Rydberg constant",
+      "score": 1.0
+     },
+     {
+      "text": "R。",
+      "score": 0.88
+     },
+     {
+      "text": "10 973 732 m⁻1",
+      "score": 0.951
+     },
+     {
+      "text": "1s²2s²2p⁴",
+      "score": 0.968
+     },
+     {
+      "text": "5.3917",
+      "score": 1.0
+     },
+     {
+      "text": "9.3227",
+      "score": 1.0
+     },
+     {
+      "text": "8",
+      "score": 0.886
+     },
+     {
+      "text": "8.2980",
+      "score": 1.0
+     },
+     {
+      "text": "11.2603",
+      "score": 1.0
+     },
+     {
+      "text": "14.5341",
+      "score": 1.0
+     },
+     {
+      "text": "13.6181",
+      "score": 1.0
+     },
+     {
+      "text": "17.4228",
+      "score": 1.0
+     },
+     {
+      "text": "21.5645",
+      "score": 1.0
+     },
+     {
+      "text": "1S0",
+      "score": 0.892
+     },
+     {
+      "text": "Roc",
+      "score": 0.68
+     },
+     {
+      "text": "3.289 842× 101⁵Hz",
+      "score": 0.953
+     },
+     {
+      "text": "11",
+      "score": 1.0
+     },
+     {
+      "text": "2S",
+      "score": 0.961
+     },
+     {
+      "text": "12",
+      "score": 1.0
+     },
+     {
+      "text": "13",
+      "score": 1.0
+     },
+     {
+      "text": "2P°",
+      "score": 0.729
+     },
+     {
+      "text": "14",
+      "score": 1.0
+     },
+     {
+      "text": "15",
+      "score": 1.0
+     },
+     {
+      "text": "4S°",
+      "score": 0.757
+     },
+     {
+      "text": "16",
+      "score": 1.0
+     },
+     {
+      "text": "3P",
+      "score": 0.957
+     },
+     {
+      "text": "17",
+      "score": 1.0
+     },
+     {
+      "text": "2Po",
+      "score": 0.669
+     },
+     {
+      "text": "18",
+      "score": 1.0
+     },
+     {
+      "text": "1S0",
+      "score": 0.822
+     },
+     {
+      "text": "1/2",
+      "score": 0.999
+     },
+     {
+      "text": "Rohc",
+      "score": 0.764
+     },
+     {
+      "text": "13.6057 eV",
+      "score": 1.0
+     },
+     {
+      "text": "1/2",
+      "score": 1.0
+     },
+     {
+      "text": "3/2",
+      "score": 0.999
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "3/2",
+      "score": 0.999
+     },
+     {
+      "text": "Na",
+      "score": 1.0
+     },
+     {
+      "text": "Mg",
+      "score": 1.0
+     },
+     {
+      "text": "1.3807 x 10⁻²³ JK⁻1",
+      "score": 0.893
+     },
+     {
+      "text": "AI",
+      "score": 0.88
+     },
+     {
+      "text": "Si",
+      "score": 1.0
+     },
+     {
+      "text": "P",
+      "score": 1.0
+     },
+     {
+      "text": "S",
+      "score": 0.999
+     },
+     {
+      "text": "Cl",
+      "score": 0.941
+     },
+     {
+      "text": "Ar",
+      "score": 0.999
+     },
+     {
+      "text": "Boltzmann constant",
+      "score": 1.0
+     },
+     {
+      "text": "k",
+      "score": 1.0
+     },
+     {
+      "text": "3",
+      "score": 1.0
+     },
+     {
+      "text": "Sodium",
+      "score": 1.0
+     },
+     {
+      "text": "Magnesium",
+      "score": 1.0
+     },
+     {
+      "text": "Aluminum",
+      "score": 1.0
+     },
+     {
+      "text": "Silicon",
+      "score": 0.958
+     },
+     {
+      "text": "Phosphorus",
+      "score": 1.0
+     },
+     {
+      "text": "Sulfur",
+      "score": 1.0
+     },
+     {
+      "text": "Chlorine",
+      "score": 1.0
+     },
+     {
+      "text": "Argon",
+      "score": 1.0
+     },
+     {
+      "text": "22.98976928",
+      "score": 1.0
+     },
+     {
+      "text": "24.3050",
+      "score": 1.0
+     },
+     {
+      "text": "3",
+      "score": 1.0
+     },
+     {
+      "text": "4",
+      "score": 1.0
+     },
+     {
+      "text": "5",
+      "score": 1.0
+     },
+     {
+      "text": "6",
+      "score": 1.0
+     },
+     {
+      "text": "7",
+      "score": 1.0
+     },
+     {
+      "text": "8",
+      "score": 1.0
+     },
+     {
+      "text": "9",
+      "score": 1.0
+     },
+     {
+      "text": "10",
+      "score": 1.0
+     },
+     {
+      "text": "11",
+      "score": 1.0
+     },
+     {
+      "text": "12",
+      "score": 1.0
+     },
+     {
+      "text": "26.9815386",
+      "score": 1.0
+     },
+     {
+      "text": "28.0855",
+      "score": 1.0
+     },
+     {
+      "text": "30.973762",
+      "score": 1.0
+     },
+     {
+      "text": "32.065",
+      "score": 1.0
+     },
+     {
+      "text": "35.453",
+      "score": 1.0
+     },
+     {
+      "text": "39.948",
+      "score": 1.0
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "3",
+      "score": 1.0
+     },
+     {
+      "text": "4",
+      "score": 1.0
+     },
+     {
+      "text": "5",
+      "score": 1.0
+     },
+     {
+      "text": "6",
+      "score": 1.0
+     },
+     {
+      "text": "[Ne]3s",
+      "score": 1.0
+     },
+     {
+      "text": "[Ne]3s2",
+      "score": 0.912
+     },
+     {
+      "text": "IlIB",
+      "score": 0.579
+     },
+     {
+      "text": "IVB",
+      "score": 0.997
+     },
+     {
+      "text": "VB",
+      "score": 1.0
+     },
+     {
+      "text": "VIB",
+      "score": 1.0
+     },
+     {
+      "text": "VIIB",
+      "score": 0.999
+     },
+     {
+      "text": "VIII",
+      "score": 0.996
+     },
+     {
+      "text": "IB",
+      "score": 1.0
+     },
+     {
+      "text": "IIB",
+      "score": 0.986
+     },
+     {
+      "text": "[Ne]3s²3p",
+      "score": 0.958
+     },
+     {
+      "text": "[Ne]3s²3p²",
+      "score": 0.939
+     },
+     {
+      "text": "[Ne]3s²3p",
+      "score": 0.946
+     },
+     {
+      "text": "[Ne]3s²3p",
+      "score": 0.953
+     },
+     {
+      "text": "[Ne]3s²3p",
+      "score": 0.978
+     },
+     {
+      "text": "[Ne]3s²3p",
+      "score": 0.954
+     },
+     {
+      "text": "5.1391",
+      "score": 1.0
+     },
+     {
+      "text": "7.6462",
+      "score": 1.0
+     },
+     {
+      "text": "5.9858",
+      "score": 1.0
+     },
+     {
+      "text": "8.1517",
+      "score": 1.0
+     },
+     {
+      "text": "10.4867",
+      "score": 1.0
+     },
+     {
+      "text": "10.3600",
+      "score": 1.0
+     },
+     {
+      "text": "12.9676",
+      "score": 1.0
+     },
+     {
+      "text": "15.7596",
+      "score": 1.0
+     },
+     {
+      "text": "1S0",
+      "score": 0.925
+     },
+     {
+      "text": "7S3",
+      "score": 0.899
+     },
+     {
+      "text": "2S",
+      "score": 0.989
+     },
+     {
+      "text": "3P0",
+      "score": 0.887
+     },
+     {
+      "text": "4S{/",
+      "score": 0.858
+     },
+     {
+      "text": "1S0",
+      "score": 0.78
+     },
+     {
+      "text": "19",
+      "score": 1.0
+     },
+     {
+      "text": "2S",
+      "score": 0.965
+     },
+     {
+      "text": "20",
+      "score": 1.0
+     },
+     {
+      "text": "21",
+      "score": 1.0
+     },
+     {
+      "text": "2",
+      "score": 0.999
+     },
+     {
+      "text": "D",
+      "score": 0.999
+     },
+     {
+      "text": "22",
+      "score": 1.0
+     },
+     {
+      "text": "23",
+      "score": 1.0
+     },
+     {
+      "text": "4F",
+      "score": 0.999
+     },
+     {
+      "text": "24",
+      "score": 1.0
+     },
+     {
+      "text": "25",
+      "score": 1.0
+     },
+     {
+      "text": "6S",
+      "score": 0.977
+     },
+     {
+      "text": "26",
+      "score": 1.0
+     },
+     {
+      "text": "27",
+      "score": 1.0
+     },
+     {
+      "text": "4F",
+      "score": 0.997
+     },
+     {
+      "text": "28",
+      "score": 1.0
+     },
+     {
+      "text": "29",
+      "score": 1.0
+     },
+     {
+      "text": "30",
+      "score": 1.0
+     },
+     {
+      "text": "1S0",
+      "score": 0.762
+     },
+     {
+      "text": "31",
+      "score": 1.0
+     },
+     {
+      "text": "2P",
+      "score": 0.968
+     },
+     {
+      "text": "32",
+      "score": 1.0
+     },
+     {
+      "text": "33",
+      "score": 1.0
+     },
+     {
+      "text": "34",
+      "score": 0.999
+     },
+     {
+      "text": "3P",
+      "score": 0.819
+     },
+     {
+      "text": "35",
+      "score": 1.0
+     },
+     {
+      "text": "2P",
+      "score": 0.967
+     },
+     {
+      "text": "36",
+      "score": 1.0
+     },
+     {
+      "text": "1/2",
+      "score": 1.0
+     },
+     {
+      "text": "Ca",
+      "score": 1.0
+     },
+     {
+      "text": "Sc",
+      "score": 1.0
+     },
+     {
+      "text": "3/2",
+      "score": 1.0
+     },
+     {
+      "text": "Ti",
+      "score": 1.0
+     },
+     {
+      "text": "3/2",
+      "score": 1.0
+     },
+     {
+      "text": "Cr",
+      "score": 1.0
+     },
+     {
+      "text": "Mn",
+      "score": 1.0
+     },
+     {
+      "text": "5/2",
+      "score": 0.999
+     },
+     {
+      "text": "Fe",
+      "score": 1.0
+     },
+     {
+      "text": "Co",
+      "score": 1.0
+     },
+     {
+      "text": "9/2",
+      "score": 1.0
+     },
+     {
+      "text": "Ni",
+      "score": 1.0
+     },
+     {
+      "text": "Cu",
+      "score": 1.0
+     },
+     {
+      "text": "1/2",
+      "score": 1.0
+     },
+     {
+      "text": "Zn",
+      "score": 0.998
+     },
+     {
+      "text": "Ga",
+      "score": 1.0
+     },
+     {
+      "text": "1/2",
+      "score": 1.0
+     },
+     {
+      "text": "Ge",
+      "score": 1.0
+     },
+     {
+      "text": "As",
+      "score": 1.0
+     },
+     {
+      "text": "3/2",
+      "score": 0.999
+     },
+     {
+      "text": "Se",
+      "score": 0.999
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "Br",
+      "score": 1.0
+     },
+     {
+      "text": "3/2",
+      "score": 0.993
+     },
+     {
+      "text": "Kr",
+      "score": 1.0
+     },
+     {
+      "text": "Period",
+      "score": 0.922
+     },
+     {
+      "text": "K",
+      "score": 1.0
+     },
+     {
+      "text": "V",
+      "score": 0.995
+     },
+     {
+      "text": "4",
+      "score": 1.0
+     },
+     {
+      "text": "Potassium",
+      "score": 1.0
+     },
+     {
+      "text": "Calcium",
+      "score": 1.0
+     },
+     {
+      "text": "Scandium",
+      "score": 1.0
+     },
+     {
+      "text": "Titanium",
+      "score": 1.0
+     },
+     {
+      "text": "Vanadium",
+      "score": 1.0
+     },
+     {
+      "text": "Chromium",
+      "score": 1.0
+     },
+     {
+      "text": "Manganese",
+      "score": 1.0
+     },
+     {
+      "text": "Iron",
+      "score": 0.999
+     },
+     {
+      "text": "Cobalt",
+      "score": 1.0
+     },
+     {
+      "text": "Nickel",
+      "score": 1.0
+     },
+     {
+      "text": "Copper",
+      "score": 1.0
+     },
+     {
+      "text": "Zinc",
+      "score": 1.0
+     },
+     {
+      "text": "Gallium",
+      "score": 1.0
+     },
+     {
+      "text": "Germanium",
+      "score": 1.0
+     },
+     {
+      "text": "Arsenic",
+      "score": 1.0
+     },
+     {
+      "text": "Selenium",
+      "score": 1.0
+     },
+     {
+      "text": "Bromine",
+      "score": 1.0
+     },
+     {
+      "text": "Krypton",
+      "score": 1.0
+     },
+     {
+      "text": "39.0983",
+      "score": 1.0
+     },
+     {
+      "text": "40.078",
+      "score": 1.0
+     },
+     {
+      "text": "44.955912",
+      "score": 1.0
+     },
+     {
+      "text": "47.867",
+      "score": 1.0
+     },
+     {
+      "text": "50.9415",
+      "score": 1.0
+     },
+     {
+      "text": "51.9961",
+      "score": 1.0
+     },
+     {
+      "text": "54.938045",
+      "score": 1.0
+     },
+     {
+      "text": "55.845",
+      "score": 1.0
+     },
+     {
+      "text": "58.933195",
+      "score": 1.0
+     },
+     {
+      "text": "58.6934",
+      "score": 1.0
+     },
+     {
+      "text": "63.546",
+      "score": 1.0
+     },
+     {
+      "text": "65.38",
+      "score": 1.0
+     },
+     {
+      "text": "69.723",
+      "score": 1.0
+     },
+     {
+      "text": "72.64",
+      "score": 1.0
+     },
+     {
+      "text": "74.92160",
+      "score": 1.0
+     },
+     {
+      "text": "78.96",
+      "score": 1.0
+     },
+     {
+      "text": "79.904",
+      "score": 1.0
+     },
+     {
+      "text": "83.798",
+      "score": 1.0
+     },
+     {
+      "text": "[Ar]4s²",
+      "score": 0.93
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Ar]3d²4s²",
+      "score": 0.729
+     },
+     {
+      "text": "[Ar]3d³34s{²",
+      "score": 0.739
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Ar]3d54s",
+      "score": 0.986
+     },
+     {
+      "text": "[Ar]3d 4s²",
+      "score": 0.808
+     },
+     {
+      "text": "[Ar]3d6}4s{²}",
+      "score": 0.671
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Ar]3d74s2}",
+      "score": 0.785
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Ar]3d4s²",
+      "score": 0.928
+     },
+     {
+      "text": "[Ar]3d104s²}",
+      "score": 0.815
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Ar]3d",
+      "score": 1.0
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "10",
+      "score": 1.0
+     },
+     {
+      "text": "2",
+      "score": 0.999
+     },
+     {
+      "text": "3",
+      "score": 1.0
+     },
+     {
+      "text": "10",
+      "score": 1.0
+     },
+     {
+      "text": "4",
+      "score": 1.0
+     },
+     {
+      "text": "10",
+      "score": 1.0
+     },
+     {
+      "text": "5",
+      "score": 1.0
+     },
+     {
+      "text": "[Ar]3d1º4s²4p",
+      "score": 0.917
+     },
+     {
+      "text": "10",
+      "score": 0.998
+     },
+     {
+      "text": "6",
+      "score": 0.998
+     },
+     {
+      "text": "[Ar]4s",
+      "score": 1.0
+     },
+     {
+      "text": "[Ar]3d4s",
+      "score": 0.942
+     },
+     {
+      "text": "[Ar]3d",
+      "score": 1.0
+     },
+     {
+      "text": "[Ar]3d",
+      "score": 1.0
+     },
+     {
+      "text": "104s²4p",
+      "score": 0.763
+     },
+     {
+      "text": "[Ar]3d1",
+      "score": 0.868
+     },
+     {
+      "text": "[Ar]3d1º4s²4p",
+      "score": 0.953
+     },
+     {
+      "text": "4.3407",
+      "score": 1.0
+     },
+     {
+      "text": "6.1132",
+      "score": 1.0
+     },
+     {
+      "text": "6.5615",
+      "score": 1.0
+     },
+     {
+      "text": "6.8281",
+      "score": 1.0
+     },
+     {
+      "text": "6.7462",
+      "score": 1.0
+     },
+     {
+      "text": "6.7665",
+      "score": 1.0
+     },
+     {
+      "text": "7.4340",
+      "score": 1.0
+     },
+     {
+      "text": "7.9024",
+      "score": 1.0
+     },
+     {
+      "text": "7.8810",
+      "score": 1.0
+     },
+     {
+      "text": "7.6399",
+      "score": 1.0
+     },
+     {
+      "text": "7.7264",
+      "score": 1.0
+     },
+     {
+      "text": "9.3942",
+      "score": 1.0
+     },
+     {
+      "text": "5.9993",
+      "score": 1.0
+     },
+     {
+      "text": "7.8994",
+      "score": 1.0
+     },
+     {
+      "text": "9.7886",
+      "score": 1.0
+     },
+     {
+      "text": "9.7524",
+      "score": 1.0
+     },
+     {
+      "text": "11.8138",
+      "score": 1.0
+     },
+     {
+      "text": "13.9996",
+      "score": 1.0
+     },
+     {
+      "text": "37",
+      "score": 1.0
+     },
+     {
+      "text": "38",
+      "score": 1.0
+     },
+     {
+      "text": "1S0",
+      "score": 0.982
+     },
+     {
+      "text": "2D",
+      "score": 0.965
+     },
+     {
+      "text": "40",
+      "score": 1.0
+     },
+     {
+      "text": "6D",
+      "score": 0.973
+     },
+     {
+      "text": "7S3",
+      "score": 0.988
+     },
+     {
+      "text": "43",
+      "score": 1.0
+     },
+     {
+      "text": "6S",
+      "score": 0.904
+     },
+     {
+      "text": "44",
+      "score": 1.0
+     },
+     {
+      "text": "5F",
+      "score": 0.996
+     },
+     {
+      "text": "4F",
+      "score": 0.997
+     },
+     {
+      "text": "46",
+      "score": 1.0
+     },
+     {
+      "text": "1S0",
+      "score": 0.968
+     },
+     {
+      "text": "47",
+      "score": 1.0
+     },
+     {
+      "text": "2S",
+      "score": 0.941
+     },
+     {
+      "text": "48",
+      "score": 1.0
+     },
+     {
+      "text": "1S0",
+      "score": 0.969
+     },
+     {
+      "text": "49",
+      "score": 1.0
+     },
+     {
+      "text": "2P0",
+      "score": 0.559
+     },
+     {
+      "text": "50",
+      "score": 1.0
+     },
+     {
+      "text": "3P0",
+      "score": 0.907
+     },
+     {
+      "text": "4S{3/2",
+      "score": 0.792
+     },
+     {
+      "text": "52",
+      "score": 1.0
+     },
+     {
+      "text": "53",
+      "score": 1.0
+     },
+     {
+      "text": "2P0",
+      "score": 0.807
+     },
+     {
+      "text": "2S",
+      "score": 0.885
+     },
+     {
+      "text": "39",
+      "score": 1.0
+     },
+     {
+      "text": "3F",
+      "score": 0.994
+     },
+     {
+      "text": "41",
+      "score": 1.0
+     },
+     {
+      "text": "1/2",
+      "score": 1.0
+     },
+     {
+      "text": "42",
+      "score": 1.0
+     },
+     {
+      "text": "5/2",
+      "score": 0.921
+     },
+     {
+      "text": "45",
+      "score": 1.0
+     },
+     {
+      "text": "51",
+      "score": 1.0
+     },
+     {
+      "text": "54",
+      "score": 1.0
+     },
+     {
+      "text": "1So",
+      "score": 0.738
+     },
+     {
+      "text": "Rb",
+      "score": 1.0
+     },
+     {
+      "text": "1/2",
+      "score": 0.999
+     },
+     {
+      "text": "Sr",
+      "score": 1.0
+     },
+     {
+      "text": "Y",
+      "score": 1.0
+     },
+     {
+      "text": "3/2",
+      "score": 1.0
+     },
+     {
+      "text": "Zr",
+      "score": 1.0
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "Nb",
+      "score": 1.0
+     },
+     {
+      "text": "Mo",
+      "score": 1.0
+     },
+     {
+      "text": "Tc",
+      "score": 1.0
+     },
+     {
+      "text": "Ru",
+      "score": 1.0
+     },
+     {
+      "text": "5",
+      "score": 1.0
+     },
+     {
+      "text": "Rh",
+      "score": 1.0
+     },
+     {
+      "text": "9/2",
+      "score": 0.999
+     },
+     {
+      "text": "Pd",
+      "score": 1.0
+     },
+     {
+      "text": "Ag",
+      "score": 0.999
+     },
+     {
+      "text": "1/2",
+      "score": 1.0
+     },
+     {
+      "text": "Cd",
+      "score": 1.0
+     },
+     {
+      "text": "In",
+      "score": 0.999
+     },
+     {
+      "text": "1/2",
+      "score": 1.0
+     },
+     {
+      "text": "Sn",
+      "score": 0.999
+     },
+     {
+      "text": "Sb",
+      "score": 0.999
+     },
+     {
+      "text": "3/2",
+      "score": 1.0
+     },
+     {
+      "text": "Te",
+      "score": 1.0
+     },
+     {
+      "text": "I",
+      "score": 0.994
+     },
+     {
+      "text": "3/2",
+      "score": 1.0
+     },
+     {
+      "text": "Xe",
+      "score": 1.0
+     },
+     {
+      "text": "5",
+      "score": 1.0
+     },
+     {
+      "text": "Rubidium",
+      "score": 1.0
+     },
+     {
+      "text": "Strontium",
+      "score": 1.0
+     },
+     {
+      "text": "Yttrium",
+      "score": 1.0
+     },
+     {
+      "text": "Zirconium",
+      "score": 1.0
+     },
+     {
+      "text": "Niobium",
+      "score": 1.0
+     },
+     {
+      "text": "Molybdenum",
+      "score": 1.0
+     },
+     {
+      "text": "Technetium",
+      "score": 1.0
+     },
+     {
+      "text": "Ruthenium",
+      "score": 1.0
+     },
+     {
+      "text": "Rhodium",
+      "score": 1.0
+     },
+     {
+      "text": "Palladium",
+      "score": 1.0
+     },
+     {
+      "text": "Silver",
+      "score": 1.0
+     },
+     {
+      "text": "Cadmium",
+      "score": 1.0
+     },
+     {
+      "text": "Indium",
+      "score": 1.0
+     },
+     {
+      "text": "Tin",
+      "score": 1.0
+     },
+     {
+      "text": "Antimony",
+      "score": 1.0
+     },
+     {
+      "text": "Tellurium",
+      "score": 1.0
+     },
+     {
+      "text": "lodine",
+      "score": 0.996
+     },
+     {
+      "text": "Xenon",
+      "score": 1.0
+     },
+     {
+      "text": "85.4678",
+      "score": 1.0
+     },
+     {
+      "text": "87.62",
+      "score": 1.0
+     },
+     {
+      "text": "88.90585",
+      "score": 1.0
+     },
+     {
+      "text": "91.224",
+      "score": 1.0
+     },
+     {
+      "text": "92.90638",
+      "score": 1.0
+     },
+     {
+      "text": "95.96",
+      "score": 1.0
+     },
+     {
+      "text": "(98)",
+      "score": 1.0
+     },
+     {
+      "text": "101.07",
+      "score": 1.0
+     },
+     {
+      "text": "102.90550",
+      "score": 1.0
+     },
+     {
+      "text": "106.42",
+      "score": 1.0
+     },
+     {
+      "text": "107.8682",
+      "score": 1.0
+     },
+     {
+      "text": "112.411",
+      "score": 1.0
+     },
+     {
+      "text": "114.818",
+      "score": 1.0
+     },
+     {
+      "text": "118.710",
+      "score": 1.0
+     },
+     {
+      "text": "121.760",
+      "score": 1.0
+     },
+     {
+      "text": "127.60",
+      "score": 1.0
+     },
+     {
+      "text": "126.90447",
+      "score": 1.0
+     },
+     {
+      "text": "131.293",
+      "score": 1.0
+     },
+     {
+      "text": "[Kr]5s",
+      "score": 1.0
+     },
+     {
+      "text": "[Kr]5s²",
+      "score": 0.922
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Kr]4d5s",
+      "score": 0.996
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Kr]4d²5s²",
+      "score": 0.882
+     },
+     {
+      "text": "[Kr]4d45s",
+      "score": 0.942
+     },
+     {
+      "text": "[Kr]4d55s",
+      "score": 0.97
+     },
+     {
+      "text": "[Kr]4d⁵5s²",
+      "score": 0.878
+     },
+     {
+      "text": "[Kr]4d75s",
+      "score": 0.977
+     },
+     {
+      "text": "[Kr]4d85s",
+      "score": 0.97
+     },
+     {
+      "text": "[Kr]4d",
+      "score": 0.999
+     },
+     {
+      "text": "10",
+      "score": 0.999
+     },
+     {
+      "text": "[Kr]4d105s²",
+      "score": 0.89
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Kr]4d105s²5p³",
+      "score": 0.753
+     },
+     {
+      "text": "3",
+      "score": 1.0
+     },
+     {
+      "text": "4",
+      "score": 1.0
+     },
+     {
+      "text": "[Kr]4d105s²5p",
+      "score": 0.927
+     },
+     {
+      "text": "5",
+      "score": 1.0
+     },
+     {
+      "text": "[Kr]4d1º5s²5p",
+      "score": 0.943
+     },
+     {
+      "text": "6",
+      "score": 0.999
+     },
+     {
+      "text": "4.1771",
+      "score": 1.0
+     },
+     {
+      "text": "5.6949",
+      "score": 1.0
+     },
+     {
+      "text": "6.2173",
+      "score": 1.0
+     },
+     {
+      "text": "6.6339",
+      "score": 1.0
+     },
+     {
+      "text": "6.7589",
+      "score": 1.0
+     },
+     {
+      "text": "7.0924",
+      "score": 1.0
+     },
+     {
+      "text": "7.28",
+      "score": 1.0
+     },
+     {
+      "text": "7.3605",
+      "score": 1.0
+     },
+     {
+      "text": "7.4589",
+      "score": 1.0
+     },
+     {
+      "text": "8.3369",
+      "score": 1.0
+     },
+     {
+      "text": "7.5762",
+      "score": 1.0
+     },
+     {
+      "text": "8.9938",
+      "score": 1.0
+     },
+     {
+      "text": "5.7864",
+      "score": 1.0
+     },
+     {
+      "text": "7.3439",
+      "score": 1.0
+     },
+     {
+      "text": "8.6084",
+      "score": 1.0
+     },
+     {
+      "text": "9.0096",
+      "score": 1.0
+     },
+     {
+      "text": "10.4513",
+      "score": 1.0
+     },
+     {
+      "text": "12.1298",
+      "score": 1.0
+     },
+     {
+      "text": "55",
+      "score": 1.0
+     },
+     {
+      "text": "2S",
+      "score": 0.928
+     },
+     {
+      "text": "56",
+      "score": 1.0
+     },
+     {
+      "text": "1S0",
+      "score": 0.93
+     },
+     {
+      "text": "72",
+      "score": 1.0
+     },
+     {
+      "text": "3F",
+      "score": 0.998
+     },
+     {
+      "text": "73",
+      "score": 1.0
+     },
+     {
+      "text": "4F",
+      "score": 0.999
+     },
+     {
+      "text": "74",
+      "score": 1.0
+     },
+     {
+      "text": "5D0",
+      "score": 0.879
+     },
+     {
+      "text": "75",
+      "score": 1.0
+     },
+     {
+      "text": "6S",
+      "score": 0.934
+     },
+     {
+      "text": "76",
+      "score": 1.0
+     },
+     {
+      "text": "77",
+      "score": 1.0
+     },
+     {
+      "text": "4F",
+      "score": 0.999
+     },
+     {
+      "text": "78",
+      "score": 1.0
+     },
+     {
+      "text": "3D3",
+      "score": 0.997
+     },
+     {
+      "text": "79",
+      "score": 1.0
+     },
+     {
+      "text": "2S",
+      "score": 0.973
+     },
+     {
+      "text": "80",
+      "score": 1.0
+     },
+     {
+      "text": "1S0",
+      "score": 0.841
+     },
+     {
+      "text": "81",
+      "score": 1.0
+     },
+     {
+      "text": "2P°",
+      "score": 0.704
+     },
+     {
+      "text": "82",
+      "score": 1.0
+     },
+     {
+      "text": "3P0",
+      "score": 0.841
+     },
+     {
+      "text": "83",
+      "score": 1.0
+     },
+     {
+      "text": "4S3/",
+      "score": 0.73
+     },
+     {
+      "text": "84",
+      "score": 1.0
+     },
+     {
+      "text": "3P",
+      "score": 0.983
+     },
+     {
+      "text": "85",
+      "score": 1.0
+     },
+     {
+      "text": "2P°",
+      "score": 0.759
+     },
+     {
+      "text": "86",
+      "score": 1.0
+     },
+     {
+      "text": "1So",
+      "score": 0.811
+     },
+     {
+      "text": "1/2",
+      "score": 0.999
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "3/2",
+      "score": 1.0
+     },
+     {
+      "text": "5/2",
+      "score": 0.997
+     },
+     {
+      "text": "9/2",
+      "score": 0.987
+     },
+     {
+      "text": "1/2",
+      "score": 1.0
+     },
+     {
+      "text": "1/2",
+      "score": 1.0
+     },
+     {
+      "text": "3/2",
+      "score": 0.999
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "3/2",
+      "score": 1.0
+     },
+     {
+      "text": "Cs",
+      "score": 1.0
+     },
+     {
+      "text": "Ba",
+      "score": 1.0
+     },
+     {
+      "text": "Hf",
+      "score": 1.0
+     },
+     {
+      "text": "Ta",
+      "score": 1.0
+     },
+     {
+      "text": "W",
+      "score": 0.929
+     },
+     {
+      "text": "Re",
+      "score": 1.0
+     },
+     {
+      "text": "Os",
+      "score": 0.999
+     },
+     {
+      "text": "Ir",
+      "score": 0.999
+     },
+     {
+      "text": "Pt",
+      "score": 1.0
+     },
+     {
+      "text": "Au",
+      "score": 0.978
+     },
+     {
+      "text": "Hg",
+      "score": 1.0
+     },
+     {
+      "text": "TI",
+      "score": 0.992
+     },
+     {
+      "text": "Pb",
+      "score": 1.0
+     },
+     {
+      "text": "Bi",
+      "score": 1.0
+     },
+     {
+      "text": "Po",
+      "score": 1.0
+     },
+     {
+      "text": "At",
+      "score": 1.0
+     },
+     {
+      "text": "Rn",
+      "score": 1.0
+     },
+     {
+      "text": "6",
+      "score": 1.0
+     },
+     {
+      "text": "Cesium",
+      "score": 1.0
+     },
+     {
+      "text": "Barium",
+      "score": 1.0
+     },
+     {
+      "text": "Hafnium",
+      "score": 1.0
+     },
+     {
+      "text": "Tantalum",
+      "score": 1.0
+     },
+     {
+      "text": "Tungsten",
+      "score": 1.0
+     },
+     {
+      "text": "Rhenium",
+      "score": 1.0
+     },
+     {
+      "text": "Osmium",
+      "score": 1.0
+     },
+     {
+      "text": "Iridium",
+      "score": 0.999
+     },
+     {
+      "text": "Platinum",
+      "score": 1.0
+     },
+     {
+      "text": "Gold",
+      "score": 1.0
+     },
+     {
+      "text": "Mercury",
+      "score": 1.0
+     },
+     {
+      "text": "Thallium",
+      "score": 1.0
+     },
+     {
+      "text": "Lead",
+      "score": 1.0
+     },
+     {
+      "text": "Bismuth",
+      "score": 1.0
+     },
+     {
+      "text": "Polonium",
+      "score": 1.0
+     },
+     {
+      "text": "Astatine",
+      "score": 1.0
+     },
+     {
+      "text": "Radon",
+      "score": 1.0
+     },
+     {
+      "text": "132.9054519",
+      "score": 1.0
+     },
+     {
+      "text": "137.327",
+      "score": 1.0
+     },
+     {
+      "text": "178.49",
+      "score": 1.0
+     },
+     {
+      "text": "183.84",
+      "score": 1.0
+     },
+     {
+      "text": "186.207",
+      "score": 1.0
+     },
+     {
+      "text": "190.23",
+      "score": 1.0
+     },
+     {
+      "text": "192.217",
+      "score": 1.0
+     },
+     {
+      "text": "195.084",
+      "score": 1.0
+     },
+     {
+      "text": "196.966569",
+      "score": 1.0
+     },
+     {
+      "text": "200.59",
+      "score": 1.0
+     },
+     {
+      "text": "204.3833",
+      "score": 1.0
+     },
+     {
+      "text": "207.2",
+      "score": 1.0
+     },
+     {
+      "text": "(209)",
+      "score": 1.0
+     },
+     {
+      "text": "(210)",
+      "score": 1.0
+     },
+     {
+      "text": "(222)",
+      "score": 0.974
+     },
+     {
+      "text": "180.94788",
+      "score": 1.0
+     },
+     {
+      "text": "[Xe]4^{145d5}6s2",
+      "score": 0.693
+     },
+     {
+      "text": "208.98040",
+      "score": 1.0
+     },
+     {
+      "text": "[Xe]6s",
+      "score": 0.998
+     },
+     {
+      "text": "[Xe]6s²2",
+      "score": 0.879
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Xe]4f{145d²6s²",
+      "score": 0.814
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Xe]4f145d36s²",
+      "score": 0.884
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Xe]4f145d46s²",
+      "score": 0.923
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Xe]4f145d66s²",
+      "score": 0.859
+     },
+     {
+      "text": "6",
+      "score": 0.999
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Xe]4f145d′6s²",
+      "score": 0.885
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Xe]4f145d96s",
+      "score": 0.975
+     },
+     {
+      "text": "[Xe]4f145d106s",
+      "score": 0.956
+     },
+     {
+      "text": "10",
+      "score": 1.0
+     },
+     {
+      "text": "[Xe]4f145d106s²",
+      "score": 0.924
+     },
+     {
+      "text": "14",
+      "score": 1.0
+     },
+     {
+      "text": "10",
+      "score": 0.999
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Hg]6p",
+      "score": 1.0
+     },
+     {
+      "text": "[Hg]6p",
+      "score": 0.999
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Hg]6p3",
+      "score": 0.936
+     },
+     {
+      "text": "3",
+      "score": 1.0
+     },
+     {
+      "text": "[Hg]6p^",
+      "score": 0.943
+     },
+     {
+      "text": "8",
+      "score": 0.972
+     },
+     {
+      "text": "[Hg]6p^",
+      "score": 0.945
+     },
+     {
+      "text": "5",
+      "score": 1.0
+     },
+     {
+      "text": "[Hg]6p",
+      "score": 1.0
+     },
+     {
+      "text": "6",
+      "score": 0.999
+     },
+     {
+      "text": "3.8939",
+      "score": 1.0
+     },
+     {
+      "text": "5.2117",
+      "score": 1.0
+     },
+     {
+      "text": "6.8251",
+      "score": 1.0
+     },
+     {
+      "text": "7.5496",
+      "score": 1.0
+     },
+     {
+      "text": "7.8640",
+      "score": 1.0
+     },
+     {
+      "text": "7.8335",
+      "score": 1.0
+     },
+     {
+      "text": "8.4382",
+      "score": 1.0
+     },
+     {
+      "text": "9.2255",
+      "score": 0.937
+     },
+     {
+      "text": "6.1082",
+      "score": 1.0
+     },
+     {
+      "text": "7.4167",
+      "score": 1.0
+     },
+     {
+      "text": "7.2855",
+      "score": 1.0
+     },
+     {
+      "text": "8.9670",
+      "score": 1.0
+     },
+     {
+      "text": "8.9588",
+      "score": 1.0
+     },
+     {
+      "text": "10.4375",
+      "score": 1.0
+     },
+     {
+      "text": "8.414",
+      "score": 1.0
+     },
+     {
+      "text": "10.7485",
+      "score": 1.0
+     },
+     {
+      "text": "87",
+      "score": 1.0
+     },
+     {
+      "text": "2S",
+      "score": 0.898
+     },
+     {
+      "text": "88",
+      "score": 1.0
+     },
+     {
+      "text": "1S0",
+      "score": 0.979
+     },
+     {
+      "text": "104",
+      "score": 1.0
+     },
+     {
+      "text": "3F2?",
+      "score": 0.839
+     },
+     {
+      "text": "105",
+      "score": 1.0
+     },
+     {
+      "text": "106",
+      "score": 1.0
+     },
+     {
+      "text": "107",
+      "score": 1.0
+     },
+     {
+      "text": "108",
+      "score": 1.0
+     },
+     {
+      "text": "109",
+      "score": 1.0
+     },
+     {
+      "text": "110",
+      "score": 1.0
+     },
+     {
+      "text": "111",
+      "score": 1.0
+     },
+     {
+      "text": "112",
+      "score": 1.0
+     },
+     {
+      "text": "113",
+      "score": 1.0
+     },
+     {
+      "text": "114",
+      "score": 1.0
+     },
+     {
+      "text": "115",
+      "score": 1.0
+     },
+     {
+      "text": "116",
+      "score": 1.0
+     },
+     {
+      "text": "117",
+      "score": 1.0
+     },
+     {
+      "text": "118",
+      "score": 1.0
+     },
+     {
+      "text": "1/2",
+      "score": 1.0
+     },
+     {
+      "text": "Fr",
+      "score": 1.0
+     },
+     {
+      "text": "Ra",
+      "score": 1.0
+     },
+     {
+      "text": "Rf",
+      "score": 1.0
+     },
+     {
+      "text": "Db",
+      "score": 1.0
+     },
+     {
+      "text": "Sg",
+      "score": 0.784
+     },
+     {
+      "text": "Bh",
+      "score": 1.0
+     },
+     {
+      "text": "Hs",
+      "score": 1.0
+     },
+     {
+      "text": "Mt",
+      "score": 1.0
+     },
+     {
+      "text": "Ds",
+      "score": 1.0
+     },
+     {
+      "text": "Rg",
+      "score": 1.0
+     },
+     {
+      "text": "Cn",
+      "score": 1.0
+     },
+     {
+      "text": "Uut",
+      "score": 0.995
+     },
+     {
+      "text": "Uuq",
+      "score": 0.996
+     },
+     {
+      "text": "Uup",
+      "score": 0.999
+     },
+     {
+      "text": "Uuh",
+      "score": 0.998
+     },
+     {
+      "text": "Uus",
+      "score": 0.999
+     },
+     {
+      "text": "Uuo",
+      "score": 0.998
+     },
+     {
+      "text": "7",
+      "score": 1.0
+     },
+     {
+      "text": "Francium",
+      "score": 1.0
+     },
+     {
+      "text": "Radium",
+      "score": 1.0
+     },
+     {
+      "text": "Rutherfordium",
+      "score": 1.0
+     },
+     {
+      "text": "Dubnium",
+      "score": 1.0
+     },
+     {
+      "text": "Seaborgium",
+      "score": 1.0
+     },
+     {
+      "text": "Bohrium",
+      "score": 1.0
+     },
+     {
+      "text": "Hassium",
+      "score": 1.0
+     },
+     {
+      "text": "Meitnerium",
+      "score": 1.0
+     },
+     {
+      "text": "Darmstadtium",
+      "score": 1.0
+     },
+     {
+      "text": "Roentgenium",
+      "score": 1.0
+     },
+     {
+      "text": "Copernicium",
+      "score": 1.0
+     },
+     {
+      "text": "Ununtrium",
+      "score": 1.0
+     },
+     {
+      "text": "Ununquadium",
+      "score": 1.0
+     },
+     {
+      "text": "Ununpentium",
+      "score": 1.0
+     },
+     {
+      "text": "Ununhexium",
+      "score": 1.0
+     },
+     {
+      "text": "Ununseptium",
+      "score": 1.0
+     },
+     {
+      "text": "Ununoctium",
+      "score": 1.0
+     },
+     {
+      "text": "(223)",
+      "score": 1.0
+     },
+     {
+      "text": "(226)",
+      "score": 1.0
+     },
+     {
+      "text": "(265)",
+      "score": 1.0
+     },
+     {
+      "text": "(268)",
+      "score": 1.0
+     },
+     {
+      "text": "(271)",
+      "score": 1.0
+     },
+     {
+      "text": "(272)",
+      "score": 1.0
+     },
+     {
+      "text": "(277)",
+      "score": 1.0
+     },
+     {
+      "text": "(276)",
+      "score": 1.0
+     },
+     {
+      "text": "(281)",
+      "score": 1.0
+     },
+     {
+      "text": "(280)",
+      "score": 1.0
+     },
+     {
+      "text": "(285)",
+      "score": 1.0
+     },
+     {
+      "text": "(284)",
+      "score": 1.0
+     },
+     {
+      "text": "(289)",
+      "score": 1.0
+     },
+     {
+      "text": "(288)",
+      "score": 1.0
+     },
+     {
+      "text": "(293)",
+      "score": 1.0
+     },
+     {
+      "text": "(294)",
+      "score": 1.0
+     },
+     {
+      "text": "(294)",
+      "score": 1.0
+     },
+     {
+      "text": "[Rn]7s2",
+      "score": 0.613
+     },
+     {
+      "text": "[Rn]5f146d²7s²?",
+      "score": 0.992
+     },
+     {
+      "text": "[Rn]7s",
+      "score": 1.0
+     },
+     {
+      "text": "4.0727",
+      "score": 0.938
+     },
+     {
+      "text": "5.2784",
+      "score": 1.0
+     },
+     {
+      "text": "6.0?",
+      "score": 0.998
+     },
+     {
+      "text": "Atomic",
+      "score": 1.0
+     },
+     {
+      "text": "Ground-state",
+      "score": 1.0
+     },
+     {
+      "text": "57",
+      "score": 1.0
+     },
+     {
+      "text": "2D",
+      "score": 0.955
+     },
+     {
+      "text": "58",
+      "score": 1.0
+     },
+     {
+      "text": "1G4",
+      "score": 0.797
+     },
+     {
+      "text": "59",
+      "score": 1.0
+     },
+     {
+      "text": "4To",
+      "score": 0.761
+     },
+     {
+      "text": "60",
+      "score": 1.0
+     },
+     {
+      "text": "61",
+      "score": 1.0
+     },
+     {
+      "text": "62",
+      "score": 1.0
+     },
+     {
+      "text": "7F0",
+      "score": 0.889
+     },
+     {
+      "text": "63",
+      "score": 1.0
+     },
+     {
+      "text": "64",
+      "score": 1.0
+     },
+     {
+      "text": "9D2",
+      "score": 0.93
+     },
+     {
+      "text": "65",
+      "score": 1.0
+     },
+     {
+      "text": "6H°",
+      "score": 0.888
+     },
+     {
+      "text": "66",
+      "score": 1.0
+     },
+     {
+      "text": "510",
+      "score": 0.697
+     },
+     {
+      "text": "67",
+      "score": 1.0
+     },
+     {
+      "text": "4I05",
+      "score": 0.858
+     },
+     {
+      "text": "68",
+      "score": 1.0
+     },
+     {
+      "text": "3H6",
+      "score": 0.968
+     },
+     {
+      "text": "69",
+      "score": 1.0
+     },
+     {
+      "text": "2Fo",
+      "score": 0.828
+     },
+     {
+      "text": "70",
+      "score": 1.0
+     },
+     {
+      "text": "S0",
+      "score": 0.659
+     },
+     {
+      "text": "71",
+      "score": 1.0
+     },
+     {
+      "text": "2D",
+      "score": 0.991
+     },
+     {
+      "text": "Number",
+      "score": 1.0
+     },
+     {
+      "text": "Level",
+      "score": 1.0
+     },
+     {
+      "text": "antes",
+      "score": 0.889
+     },
+     {
+      "text": "3/2",
+      "score": 0.995
+     },
+     {
+      "text": "9/2",
+      "score": 1.0
+     },
+     {
+      "text": "5/2",
+      "score": 0.993
+     },
+     {
+      "text": "7/2",
+      "score": 0.998
+     },
+     {
+      "text": "15/2",
+      "score": 0.999
+     },
+     {
+      "text": "15/2",
+      "score": 0.999
+     },
+     {
+      "text": "7/2",
+      "score": 0.999
+     },
+     {
+      "text": "3/2",
+      "score": 0.999
+     },
+     {
+      "text": "La",
+      "score": 1.0
+     },
+     {
+      "text": "Ce",
+      "score": 1.0
+     },
+     {
+      "text": "Pr",
+      "score": 1.0
+     },
+     {
+      "text": "Nd",
+      "score": 0.998
+     },
+     {
+      "text": "Pm",
+      "score": 1.0
+     },
+     {
+      "text": "Sm",
+      "score": 1.0
+     },
+     {
+      "text": "Eu",
+      "score": 1.0
+     },
+     {
+      "text": "Gd",
+      "score": 1.0
+     },
+     {
+      "text": "Tb",
+      "score": 1.0
+     },
+     {
+      "text": "Dy",
+      "score": 1.0
+     },
+     {
+      "text": "Ho",
+      "score": 1.0
+     },
+     {
+      "text": "Er",
+      "score": 1.0
+     },
+     {
+      "text": "Tm",
+      "score": 1.0
+     },
+     {
+      "text": "Yb",
+      "score": 1.0
+     },
+     {
+      "text": "Lu",
+      "score": 1.0
+     },
+     {
+      "text": "58",
+      "score": 1.0
+     },
+     {
+      "text": "Symbol",
+      "score": 1.0
+     },
+     {
+      "text": "Lanthanum",
+      "score": 1.0
+     },
+     {
+      "text": "Cerium",
+      "score": 1.0
+     },
+     {
+      "text": "Praseodymium",
+      "score": 1.0
+     },
+     {
+      "text": "Neodymium",
+      "score": 1.0
+     },
+     {
+      "text": "Promethium",
+      "score": 1.0
+     },
+     {
+      "text": "Samarium",
+      "score": 1.0
+     },
+     {
+      "text": "Europium",
+      "score": 1.0
+     },
+     {
+      "text": "Gadolinium",
+      "score": 1.0
+     },
+     {
+      "text": "Terbium",
+      "score": 1.0
+     },
+     {
+      "text": "Dysprosium",
+      "score": 1.0
+     },
+     {
+      "text": "Holmium",
+      "score": 1.0
+     },
+     {
+      "text": "Erbium",
+      "score": 1.0
+     },
+     {
+      "text": "Thulium",
+      "score": 1.0
+     },
+     {
+      "text": "Ytterbium",
+      "score": 1.0
+     },
+     {
+      "text": "Lutetium",
+      "score": 1.0
+     },
+     {
+      "text": "Ce",
+      "score": 1.0
+     },
+     {
+      "text": "138.90547",
+      "score": 1.0
+     },
+     {
+      "text": "140.116",
+      "score": 1.0
+     },
+     {
+      "text": "140.90765",
+      "score": 1.0
+     },
+     {
+      "text": "144.242",
+      "score": 1.0
+     },
+     {
+      "text": "(145)",
+      "score": 1.0
+     },
+     {
+      "text": "150.36",
+      "score": 1.0
+     },
+     {
+      "text": "151.964",
+      "score": 1.0
+     },
+     {
+      "text": "157.25",
+      "score": 1.0
+     },
+     {
+      "text": "158.92535",
+      "score": 1.0
+     },
+     {
+      "text": "162.500",
+      "score": 1.0
+     },
+     {
+      "text": "164.93032",
+      "score": 1.0
+     },
+     {
+      "text": "167.259",
+      "score": 1.0
+     },
+     {
+      "text": "168.93421",
+      "score": 1.0
+     },
+     {
+      "text": "173.054",
+      "score": 1.0
+     },
+     {
+      "text": "174.9668",
+      "score": 1.0
+     },
+     {
+      "text": "[Xe]4f{³6s²",
+      "score": 0.825
+     },
+     {
+      "text": "[Xe]4f46s²",
+      "score": 0.763
+     },
+     {
+      "text": "[Xe]4f56s²",
+      "score": 0.956
+     },
+     {
+      "text": "[Xe]4^{6s²}",
+      "score": 0.7
+     },
+     {
+      "text": "[Xe]4f76s}}",
+      "score": 0.561
+     },
+     {
+      "text": "[Xe]4f7}5d6s²",
+      "score": 0.658
+     },
+     {
+      "text": "[Xe]4f96s²",
+      "score": 0.731
+     },
+     {
+      "text": "[Xe]4f{106s²2}",
+      "score": 0.724
+     },
+     {
+      "text": "[Xe]4f{116s2}",
+      "score": 0.662
+     },
+     {
+      "text": "[Xe]4f{126s{2}",
+      "score": 0.621
+     },
+     {
+      "text": "[Xe]4f{136s2}",
+      "score": 0.669
+     },
+     {
+      "text": "[Xe]4f146s²",
+      "score": 0.802
+     },
+     {
+      "text": "[Xe]4f{145d6s²2}",
+      "score": 0.636
+     },
+     {
+      "text": "[Xe]5d6s²",
+      "score": 0.977
+     },
+     {
+      "text": "[Xe]4f5d6s²",
+      "score": 0.969
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "Name",
+      "score": 1.0
+     },
+     {
+      "text": "5.5769",
+      "score": 0.984
+     },
+     {
+      "text": "5.5387",
+      "score": 1.0
+     },
+     {
+      "text": "5.473",
+      "score": 1.0
+     },
+     {
+      "text": "5.5250",
+      "score": 1.0
+     },
+     {
+      "text": "5.582",
+      "score": 1.0
+     },
+     {
+      "text": "5.6437",
+      "score": 1.0
+     },
+     {
+      "text": "5.6704",
+      "score": 1.0
+     },
+     {
+      "text": "6.1498",
+      "score": 1.0
+     },
+     {
+      "text": "5.8638",
+      "score": 1.0
+     },
+     {
+      "text": "5.9389",
+      "score": 1.0
+     },
+     {
+      "text": "6.0215",
+      "score": 1.0
+     },
+     {
+      "text": "6.1077",
+      "score": 1.0
+     },
+     {
+      "text": "6.1843",
+      "score": 1.0
+     },
+     {
+      "text": "6.2542",
+      "score": 1.0
+     },
+     {
+      "text": "5.4259",
+      "score": 1.0
+     },
+     {
+      "text": "Cerium",
+      "score": 1.0
+     },
+     {
+      "text": "3H",
+      "score": 0.999
+     },
+     {
+      "text": "89",
+      "score": 1.0
+     },
+     {
+      "text": "2D",
+      "score": 0.992
+     },
+     {
+      "text": "90",
+      "score": 1.0
+     },
+     {
+      "text": "3F",
+      "score": 0.957
+     },
+     {
+      "text": "91",
+      "score": 1.0
+     },
+     {
+      "text": "4K}",
+      "score": 0.802
+     },
+     {
+      "text": "92",
+      "score": 1.0
+     },
+     {
+      "text": "510",
+      "score": 0.765
+     },
+     {
+      "text": "93",
+      "score": 1.0
+     },
+     {
+      "text": "61",
+      "score": 0.786
+     },
+     {
+      "text": "94",
+      "score": 1.0
+     },
+     {
+      "text": "7F{0",
+      "score": 0.743
+     },
+     {
+      "text": "95",
+      "score": 1.0
+     },
+     {
+      "text": "8S7/",
+      "score": 0.806
+     },
+     {
+      "text": "96",
+      "score": 1.0
+     },
+     {
+      "text": "97",
+      "score": 1.0
+     },
+     {
+      "text": "6Ho",
+      "score": 0.838
+     },
+     {
+      "text": "98",
+      "score": 1.0
+     },
+     {
+      "text": "99",
+      "score": 1.0
+     },
+     {
+      "text": "4I°5",
+      "score": 0.611
+     },
+     {
+      "text": "100",
+      "score": 1.0
+     },
+     {
+      "text": "101",
+      "score": 1.0
+     },
+     {
+      "text": "2Fo",
+      "score": 0.695
+     },
+     {
+      "text": "102",
+      "score": 1.0
+     },
+     {
+      "text": "1S0",
+      "score": 0.937
+     },
+     {
+      "text": "103 ²P°",
+      "score": 0.9
+     },
+     {
+      "text": "Atomic",
+      "score": 1.0
+     },
+     {
+      "text": "140.116",
+      "score": 1.0
+     },
+     {
+      "text": "ctdes",
+      "score": 0.876
+     },
+     {
+      "text": "3/2",
+      "score": 0.996
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "11/2",
+      "score": 1.0
+     },
+     {
+      "text": "-11/2",
+      "score": 0.945
+     },
+     {
+      "text": "7/2",
+      "score": 0.979
+     },
+     {
+      "text": "15/2",
+      "score": 0.999
+     },
+     {
+      "text": "15/2",
+      "score": 1.0
+     },
+     {
+      "text": "7/2",
+      "score": 0.88
+     },
+     {
+      "text": "[Xe]4f5d6s²",
+      "score": 0.858
+     },
+     {
+      "text": "Ac",
+      "score": 0.999
+     },
+     {
+      "text": "Th",
+      "score": 1.0
+     },
+     {
+      "text": "Pa",
+      "score": 1.0
+     },
+     {
+      "text": "U",
+      "score": 0.995
+     },
+     {
+      "text": "Np",
+      "score": 0.999
+     },
+     {
+      "text": "Pu",
+      "score": 1.0
+     },
+     {
+      "text": "Am",
+      "score": 1.0
+     },
+     {
+      "text": "Cm",
+      "score": 0.997
+     },
+     {
+      "text": "Bk",
+      "score": 1.0
+     },
+     {
+      "text": "Cf",
+      "score": 1.0
+     },
+     {
+      "text": "Es",
+      "score": 0.999
+     },
+     {
+      "text": "Fm",
+      "score": 0.995
+     },
+     {
+      "text": "Md",
+      "score": 1.0
+     },
+     {
+      "text": "No",
+      "score": 1.0
+     },
+     {
+      "text": "Lr",
+      "score": 0.999
+     },
+     {
+      "text": "Weight",
+      "score": 0.998
+     },
+     {
+      "text": "5.5387",
+      "score": 1.0
+     },
+     {
+      "text": "Actinium",
+      "score": 1.0
+     },
+     {
+      "text": "Thorium",
+      "score": 1.0
+     },
+     {
+      "text": "Protactinium",
+      "score": 1.0
+     },
+     {
+      "text": "Uranium",
+      "score": 1.0
+     },
+     {
+      "text": "Neptunium",
+      "score": 0.978
+     },
+     {
+      "text": "Plutonium",
+      "score": 1.0
+     },
+     {
+      "text": "Americium",
+      "score": 1.0
+     },
+     {
+      "text": "Curium",
+      "score": 1.0
+     },
+     {
+      "text": "Berkelium",
+      "score": 1.0
+     },
+     {
+      "text": "Californium",
+      "score": 1.0
+     },
+     {
+      "text": "Einsteinium",
+      "score": 1.0
+     },
+     {
+      "text": "Fermium",
+      "score": 1.0
+     },
+     {
+      "text": "Mendelevium",
+      "score": 1.0
+     },
+     {
+      "text": "Nobelium",
+      "score": 1.0
+     },
+     {
+      "text": "Lawrencium",
+      "score": 1.0
+     },
+     {
+      "text": "(227)",
+      "score": 1.0
+     },
+     {
+      "text": "232.03806",
+      "score": 1.0
+     },
+     {
+      "text": "231.03588",
+      "score": 1.0
+     },
+     {
+      "text": "238.02891",
+      "score": 1.0
+     },
+     {
+      "text": "(237)",
+      "score": 1.0
+     },
+     {
+      "text": "(244)",
+      "score": 1.0
+     },
+     {
+      "text": "(243)",
+      "score": 1.0
+     },
+     {
+      "text": "(247)",
+      "score": 0.97
+     },
+     {
+      "text": "(247)",
+      "score": 1.0
+     },
+     {
+      "text": "(251)",
+      "score": 1.0
+     },
+     {
+      "text": "(252)",
+      "score": 1.0
+     },
+     {
+      "text": "(257)",
+      "score": 1.0
+     },
+     {
+      "text": "(258)",
+      "score": 1.0
+     },
+     {
+      "text": "(259)",
+      "score": 1.0
+     },
+     {
+      "text": "(262)",
+      "score": 1.0
+     },
+     {
+      "text": "Ground-state",
+      "score": 1.0
+     },
+     {
+      "text": "lonization",
+      "score": 0.998
+     },
+     {
+      "text": "[Rn]6d²7s²",
+      "score": 0.848
+     },
+     {
+      "text": "[Rn]5f²6d7s²",
+      "score": 0.853
+     },
+     {
+      "text": "[Rn]5f46d7s²",
+      "score": 0.869
+     },
+     {
+      "text": "[Rn]5f{7s²",
+      "score": 0.938
+     },
+     {
+      "text": "[Rn]5f7{",
+      "score": 0.726
+     },
+     {
+      "text": "[Rn]5f76d7s²",
+      "score": 0.839
+     },
+     {
+      "text": "[Rn]5f107s²",
+      "score": 0.852
+     },
+     {
+      "text": "[Rn]5f117s²",
+      "score": 0.884
+     },
+     {
+      "text": "[Rn]5f127s²",
+      "score": 0.764
+     },
+     {
+      "text": "[Rn]5f137s²",
+      "score": 0.866
+     },
+     {
+      "text": "[Rn]5f147s²",
+      "score": 0.892
+     },
+     {
+      "text": "[Rn]6d7s²",
+      "score": 0.914
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Rn]5f³6d7s²",
+      "score": 0.903
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "[Rn]5f97s²",
+      "score": 0.944
+     },
+     {
+      "text": "[Rn]5f147s²7p?",
+      "score": 0.954
+     },
+     {
+      "text": "Configuration",
+      "score": 1.0
+     },
+     {
+      "text": "Energy (eV)",
+      "score": 1.0
+     },
+     {
+      "text": "5.3807",
+      "score": 1.0
+     },
+     {
+      "text": "6.3067",
+      "score": 1.0
+     },
+     {
+      "text": "5.89",
+      "score": 1.0
+     },
+     {
+      "text": "6.1939",
+      "score": 1.0
+     },
+     {
+      "text": "6.2657",
+      "score": 1.0
+     },
+     {
+      "text": "6.0260",
+      "score": 1.0
+     },
+     {
+      "text": "5.9738",
+      "score": 1.0
+     },
+     {
+      "text": "5.9914",
+      "score": 1.0
+     },
+     {
+      "text": "6.1979",
+      "score": 1.0
+     },
+     {
+      "text": "6.2817",
+      "score": 1.0
+     },
+     {
+      "text": "6.3676",
+      "score": 1.0
+     },
+     {
+      "text": "6.50",
+      "score": 1.0
+     },
+     {
+      "text": "6.58",
+      "score": 1.0
+     },
+     {
+      "text": "6.65",
+      "score": 1.0
+     },
+     {
+      "text": "4.9 ?",
+      "score": 0.892
+     },
+     {
+      "text": "1²C. () indicates the mass number of the longest-lived isotope.",
+      "score": 0.978
+     },
+     {
+      "text": "NIST SP 966 (September 2010)",
+      "score": 1.0
+     },
+     {
+      "text": "Based upon",
+      "score": 1.0
+     },
+     {
+      "text": "For a description of the data, visit physics.nist.gov/data",
+      "score": 0.997
+     }
+    ],
+    "seconds": 194.88
+   }
+  ],
+  "40": [
+   {
+    "xref": 246,
+    "size": [
+     1500,
+     523
+    ],
+    "rect": [
+     163.5,
+     57.6,
+     448.5,
+     157.0
+    ],
+    "text": "Protium (1H) Deuterium (²H) Tritium (3H)",
+    "lines": [
+     {
+      "text": "Protium (1H)",
+      "score": 0.965
+     },
+     {
+      "text": "Deuterium (²H)",
+      "score": 0.996
+     },
+     {
+      "text": "Tritium (3H)",
+      "score": 0.959
+     }
+    ],
+    "seconds": 4.14
+   }
+  ],
+  "41": [
+   {
+    "xref": 251,
+    "size": [
+     2709,
+     2251
+    ],
+    "rect": [
+     126.0,
+     57.6,
+     486.0,
+     356.7
+    ],
+    "text": "Patient: File Options Utilities View Plan: MRN: Setup Fusion Contours Help undo S1c 36: Z = 49.750 mm mTTn AL Slc 233: Y = =2.754 Slc 233: Y = -2.754 Slice 66: Local Y = -2.443 (2) I Primary Render: Yes No Slice 43: Local Z = 31.915 (2) skin Surface Secondary Render:  Yes No skin MIP Render MIP Options. ITTTT ynchronize Windows S1c 36: Z = 49.750 De-Synchronize Windows Slc 316: X = 6.973 Slice 89: Local X = 6.570 (2) Slc 316: X = 6.973",
+    "lines": [
+     {
+      "text": "Patient:",
+      "score": 1.0
+     },
+     {
+      "text": "File",
+      "score": 1.0
+     },
+     {
+      "text": "Options Utilities",
+      "score": 0.986
+     },
+     {
+      "text": "View",
+      "score": 1.0
+     },
+     {
+      "text": "Plan:",
+      "score": 1.0
+     },
+     {
+      "text": "MRN:",
+      "score": 1.0
+     },
+     {
+      "text": "Setup",
+      "score": 0.998
+     },
+     {
+      "text": "Fusion",
+      "score": 0.996
+     },
+     {
+      "text": "Contours",
+      "score": 1.0
+     },
+     {
+      "text": "Help",
+      "score": 1.0
+     },
+     {
+      "text": "undo",
+      "score": 1.0
+     },
+     {
+      "text": "S1c 36: Z = 49.750",
+      "score": 0.993
+     },
+     {
+      "text": "mm",
+      "score": 0.564
+     },
+     {
+      "text": "mTTn",
+      "score": 0.627
+     },
+     {
+      "text": "AL",
+      "score": 0.761
+     },
+     {
+      "text": "Slc 233: Y = =2.754",
+      "score": 0.953
+     },
+     {
+      "text": "Slc 233: Y = -2.754",
+      "score": 0.953
+     },
+     {
+      "text": "Slice 66: Local Y = -2.443 (2)",
+      "score": 0.974
+     },
+     {
+      "text": "I",
+      "score": 0.995
+     },
+     {
+      "text": "Primary Render:",
+      "score": 1.0
+     },
+     {
+      "text": "Yes",
+      "score": 1.0
+     },
+     {
+      "text": "No",
+      "score": 1.0
+     },
+     {
+      "text": "Slice 43: Local Z = 31.915 (2)",
+      "score": 0.97
+     },
+     {
+      "text": "skin",
+      "score": 1.0
+     },
+     {
+      "text": "Surface",
+      "score": 1.0
+     },
+     {
+      "text": "Secondary Render:",
+      "score": 1.0
+     },
+     {
+      "text": " Yes",
+      "score": 0.936
+     },
+     {
+      "text": "No",
+      "score": 1.0
+     },
+     {
+      "text": "skin",
+      "score": 0.999
+     },
+     {
+      "text": "MIP",
+      "score": 0.998
+     },
+     {
+      "text": "Render",
+      "score": 1.0
+     },
+     {
+      "text": "MIP Options.",
+      "score": 0.977
+     },
+     {
+      "text": "ITTTT",
+      "score": 0.632
+     },
+     {
+      "text": "ynchronize Windows",
+      "score": 0.96
+     },
+     {
+      "text": "S1c 36: Z = 49.750",
+      "score": 0.964
+     },
+     {
+      "text": "De-Synchronize Windows",
+      "score": 0.999
+     },
+     {
+      "text": "Slc 316: X = 6.973",
+      "score": 0.915
+     },
+     {
+      "text": "Slice 89: Local X = 6.570",
+      "score": 0.958
+     },
+     {
+      "text": "(2)",
+      "score": 0.847
+     },
+     {
+      "text": "Slc 316: X = 6.973",
+      "score": 0.978
+     }
+    ],
+    "seconds": 34.75
+   }
+  ],
+  "42": [
+   {
+    "xref": 256,
+    "size": [
+     1983,
+     1846
+    ],
+    "rect": [
+     148.5,
+     57.6,
+     463.5,
+     350.8
+    ],
+    "text": "Electron H He Electron (a) C Ne (b) (c)",
+    "lines": [
+     {
+      "text": "Electron",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "He",
+      "score": 1.0
+     },
+     {
+      "text": "Electron",
+      "score": 1.0
+     },
+     {
+      "text": "(a)",
+      "score": 1.0
+     },
+     {
+      "text": "C",
+      "score": 0.998
+     },
+     {
+      "text": "Ne",
+      "score": 1.0
+     },
+     {
+      "text": "(b)",
+      "score": 1.0
+     },
+     {
+      "text": "(c)",
+      "score": 1.0
+     }
+    ],
+    "seconds": 21.35
+   }
+  ],
+  "43": [],
+  "44": [
+   {
+    "xref": 263,
+    "size": [
+     1488,
+     2280
+    ],
+    "rect": [
+     148.5,
+     183.6,
+     463.5,
+     666.3
+    ],
+    "text": "V Na Cl (a) Na+ Cl⁻ (b) Net Net Cl⁻ Na (c)",
+    "lines": [
+     {
+      "text": "V",
+      "score": 0.663
+     },
+     {
+      "text": "Na",
+      "score": 1.0
+     },
+     {
+      "text": "Cl",
+      "score": 0.96
+     },
+     {
+      "text": "(a)",
+      "score": 1.0
+     },
+     {
+      "text": "Na+",
+      "score": 0.895
+     },
+     {
+      "text": "Cl⁻",
+      "score": 0.8
+     },
+     {
+      "text": "(b)",
+      "score": 1.0
+     },
+     {
+      "text": "Net",
+      "score": 1.0
+     },
+     {
+      "text": "Net",
+      "score": 1.0
+     },
+     {
+      "text": "Cl⁻",
+      "score": 0.907
+     },
+     {
+      "text": "Na",
+      "score": 1.0
+     },
+     {
+      "text": "(c)",
+      "score": 1.0
+     }
+    ],
+    "seconds": 18.54
+   }
+  ],
+  "45": [
+   {
+    "xref": 268,
+    "size": [
+     2217,
+     1636
+    ],
+    "rect": [
+     99.8,
+     311.4,
+     512.2,
+     615.8
+    ],
+    "text": "(a) A single covalent bond: hydrogen gas (H—H). Two atoms of hydrogen each share their solitary electron in a single covalent bond. H H (b) A double covalent bond: oxygen gas (OO). An atom of oxygen has six electrons in its valence shell; thus, two more would make it stable. Two atoms of oxygen achieve stability by sharing two pairs of electrons in a double covalent bond. Molecule of oxygen gas (O2) (c) Two double covalent bonds: carbon dioxide (OCO). An atom of carbon has four electrons in its valence shell; thus, four more would make it stable. An atom of carbon and two atoms of oxygen achieve stability by sharing two electron pairs each, in two double covalent bonds.",
+    "lines": [
+     {
+      "text": "(a) A single covalent bond: hydrogen gas (H—H). Two atoms of hydrogen each share their solitary electron in a single covalent bond.",
+      "score": 0.991
+     },
+     {
+      "text": "H",
+      "score": 0.998
+     },
+     {
+      "text": "H",
+      "score": 0.998
+     },
+     {
+      "text": "(b) A double covalent bond: oxygen gas (OO). An atom of oxygen has six electrons in its valence shell; thus, two more would",
+      "score": 0.992
+     },
+     {
+      "text": "make it stable. Two atoms of oxygen achieve stability by sharing two pairs of electrons in a double covalent bond.",
+      "score": 1.0
+     },
+     {
+      "text": "Molecule of oxygen gas (O2)",
+      "score": 0.998
+     },
+     {
+      "text": "(c) Two double covalent bonds: carbon dioxide (OCO). An atom of carbon has four electrons in its valence shell; thus, four more",
+      "score": 1.0
+     },
+     {
+      "text": "would make it stable. An atom of carbon and two atoms of oxygen achieve stability by sharing two electron pairs each, in two",
+      "score": 0.995
+     },
+     {
+      "text": "double covalent bonds.",
+      "score": 1.0
+     }
+    ],
+    "seconds": 28.01
+   }
+  ],
+  "46": [
+   {
+    "xref": 278,
+    "size": [
+     1221,
+     1313
+    ],
+    "rect": [
+     163.5,
+     171.0,
+     448.5,
+     477.5
+    ],
+    "text": "Weakly negative δ− δ− 8p 8n 十 δ⁺ δ+ Weakly positive (a) Planetary model of a water molecule δ− H H δ+ δ+ (b) Three-dimensional model (c) Structural formula for of a water molecule water molecule",
+    "lines": [
+     {
+      "text": "Weakly negative",
+      "score": 1.0
+     },
+     {
+      "text": "δ−",
+      "score": 0.816
+     },
+     {
+      "text": "δ−",
+      "score": 0.848
+     },
+     {
+      "text": "8p",
+      "score": 1.0
+     },
+     {
+      "text": "8n",
+      "score": 1.0
+     },
+     {
+      "text": "十",
+      "score": 0.813
+     },
+     {
+      "text": "δ⁺",
+      "score": 0.772
+     },
+     {
+      "text": "δ+",
+      "score": 0.956
+     },
+     {
+      "text": "Weakly positive",
+      "score": 1.0
+     },
+     {
+      "text": "(a) Planetary model of a water molecule",
+      "score": 0.999
+     },
+     {
+      "text": "δ−",
+      "score": 0.766
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "δ+",
+      "score": 0.944
+     },
+     {
+      "text": "δ+",
+      "score": 0.885
+     },
+     {
+      "text": "(b) Three-dimensional model",
+      "score": 1.0
+     },
+     {
+      "text": "(c) Structural formula for",
+      "score": 1.0
+     },
+     {
+      "text": "of a water molecule",
+      "score": 1.0
+     },
+     {
+      "text": "water molecule",
+      "score": 1.0
+     }
+    ],
+    "seconds": 11.57
+   }
+  ],
+  "47": [
+   {
+    "xref": 285,
+    "size": [
+     906,
+     542
+    ],
+    "rect": [
+     201.0,
+     101.7,
+     411.0,
+     227.3
+    ],
+    "text": "Covalent bond O H H H H Hydrogen bond H H",
+    "lines": [
+     {
+      "text": "Covalent bond",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.511
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "Hydrogen bond",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     }
+    ],
+    "seconds": 3.89
+   }
+  ],
+  "48": [],
+  "49": [
+   {
+    "xref": 294,
+    "size": [
+     1873,
+     725
+    ],
+    "rect": [
+     109.1,
+     57.6,
+     502.9,
+     210.0
+    ],
+    "text": "a) In a synthesis reaction, two components bond to make a larger molecule. Energy is required and is stored in the bond: NOTE + BOOK→NOTEBOOK b) In a decomposition reaction, bonds between components of a larger molecule are broken, resulting in smaller products: BOOKWORM  BOOK + WORM c) In an exchange reaction, bonds are both formed and broken such that the components of the reactants are rearranged: NOTEBOOK + WORM NOTE + BOOKWORM",
+    "lines": [
+     {
+      "text": "a) In a synthesis reaction, two components bond to make a larger molecule. Energy is required and is stored in",
+      "score": 0.997
+     },
+     {
+      "text": "the bond:",
+      "score": 1.0
+     },
+     {
+      "text": "NOTE + BOOK→NOTEBOOK",
+      "score": 0.958
+     },
+     {
+      "text": "b) In a decomposition reaction, bonds between components of a larger molecule are broken, resulting in smaller",
+      "score": 0.998
+     },
+     {
+      "text": "products:",
+      "score": 1.0
+     },
+     {
+      "text": "BOOKWORM  BOOK + WORM",
+      "score": 0.969
+     },
+     {
+      "text": "c) In an exchange reaction, bonds are both formed and broken such that the components of the reactants are",
+      "score": 0.995
+     },
+     {
+      "text": "rearranged:",
+      "score": 1.0
+     },
+     {
+      "text": "NOTEBOOK + WORM NOTE + BOOKWORM",
+      "score": 0.964
+     }
+    ],
+    "seconds": 11.27
+   }
+  ],
+  "50": [
+   {
+    "xref": 300,
+    "size": [
+     2140,
+     863
+    ],
+    "rect": [
+     107.2,
+     387.0,
+     504.8,
+     547.3
+    ],
+    "text": "Activation energy Less activation required energy required Énrgy Enrgy Reactants Reactants Product Product Progress of reaction without enzyme Progress of reaction with enzyme (a) (b)",
+    "lines": [
+     {
+      "text": "Activation",
+      "score": 1.0
+     },
+     {
+      "text": "energy",
+      "score": 1.0
+     },
+     {
+      "text": "Less activation",
+      "score": 1.0
+     },
+     {
+      "text": "required",
+      "score": 1.0
+     },
+     {
+      "text": "energy required",
+      "score": 1.0
+     },
+     {
+      "text": "Énrgy",
+      "score": 0.795
+     },
+     {
+      "text": "Enrgy",
+      "score": 0.701
+     },
+     {
+      "text": "Reactants",
+      "score": 1.0
+     },
+     {
+      "text": "Reactants",
+      "score": 1.0
+     },
+     {
+      "text": "Product",
+      "score": 1.0
+     },
+     {
+      "text": "Product",
+      "score": 1.0
+     },
+     {
+      "text": "Progress of reaction without enzyme",
+      "score": 1.0
+     },
+     {
+      "text": "Progress of reaction with enzyme",
+      "score": 1.0
+     },
+     {
+      "text": "(a)",
+      "score": 1.0
+     },
+     {
+      "text": "(b)",
+      "score": 1.0
+     }
+    ],
+    "seconds": 11.65
+   }
+  ],
+  "51": [],
+  "52": [],
+  "53": [
+   {
+    "xref": 311,
+    "size": [
+     2028,
+     1053
+    ],
+    "rect": [
+     111.0,
+     57.6,
+     501.0,
+     260.1
+    ],
+    "text": "(a) Dehydration synthesis Monomers are joined by removal of OH from one monomer and removal of H from the other at the site of bond formation. H2O Monomer 1 Monomer 2 OH HO Monomers linked by covalent bond (b) Hydrolysis Monomers are released by the addition of a water molecule, adding OH to one monomer and H to the other. H2O Monomer 1 Monomer 2 OH HO Monomers linked by covalent bond",
+    "lines": [
+     {
+      "text": "(a) Dehydration synthesis",
+      "score": 1.0
+     },
+     {
+      "text": "Monomers are joined by removal of OH from one monomer and removal of H from the other at the site of bond formation.",
+      "score": 1.0
+     },
+     {
+      "text": "H2O",
+      "score": 0.991
+     },
+     {
+      "text": "Monomer 1",
+      "score": 0.998
+     },
+     {
+      "text": "Monomer 2",
+      "score": 1.0
+     },
+     {
+      "text": "OH HO",
+      "score": 0.901
+     },
+     {
+      "text": "Monomers linked by covalent bond",
+      "score": 0.989
+     },
+     {
+      "text": "(b) Hydrolysis",
+      "score": 0.999
+     },
+     {
+      "text": "Monomers are released by the addition of a water molecule, adding OH to one monomer and H to the other.",
+      "score": 0.995
+     },
+     {
+      "text": "H2O",
+      "score": 0.924
+     },
+     {
+      "text": "Monomer 1",
+      "score": 0.997
+     },
+     {
+      "text": "Monomer 2",
+      "score": 1.0
+     },
+     {
+      "text": "OH HO",
+      "score": 0.983
+     },
+     {
+      "text": "Monomers linked by covalent bond",
+      "score": 1.0
+     }
+    ],
+    "seconds": 14.52
+   }
+  ],
+  "54": [
+   {
+    "xref": 316,
+    "size": [
+     1761,
+     1769
+    ],
+    "rect": [
+     126.0,
+     57.6,
+     486.0,
+     419.2
+    ],
+    "text": "δ+ δ 十 H H H H O δ− δ− δ− Na Water molecule δ− δ Hydrated sodium ion Cl⁻ Na+ H H Crystal of NaCl δ+ δ X Cl⁻ δ+ δ⁺ δ+ δ+ Hydrated chloride ion",
+    "lines": [
+     {
+      "text": "δ+",
+      "score": 0.886
+     },
+     {
+      "text": "δ",
+      "score": 0.998
+     },
+     {
+      "text": "十",
+      "score": 0.834
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.548
+     },
+     {
+      "text": "δ−",
+      "score": 0.867
+     },
+     {
+      "text": "δ−",
+      "score": 0.945
+     },
+     {
+      "text": "δ−",
+      "score": 0.901
+     },
+     {
+      "text": "Na",
+      "score": 1.0
+     },
+     {
+      "text": "Water molecule",
+      "score": 1.0
+     },
+     {
+      "text": "δ−",
+      "score": 0.834
+     },
+     {
+      "text": "δ",
+      "score": 0.998
+     },
+     {
+      "text": "Hydrated sodium ion",
+      "score": 1.0
+     },
+     {
+      "text": "Cl⁻",
+      "score": 0.964
+     },
+     {
+      "text": "Na+",
+      "score": 0.986
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "Crystal of NaCl",
+      "score": 0.994
+     },
+     {
+      "text": "δ+",
+      "score": 0.85
+     },
+     {
+      "text": "δ",
+      "score": 0.968
+     },
+     {
+      "text": "X",
+      "score": 0.899
+     },
+     {
+      "text": "Cl⁻",
+      "score": 0.95
+     },
+     {
+      "text": "δ+",
+      "score": 0.916
+     },
+     {
+      "text": "δ⁺",
+      "score": 0.77
+     },
+     {
+      "text": "δ+",
+      "score": 0.776
+     },
+     {
+      "text": "δ+",
+      "score": 0.945
+     },
+     {
+      "text": "Hydrated chloride ion",
+      "score": 1.0
+     }
+    ],
+    "seconds": 19.03
+   }
+  ],
+  "55": [
+   {
+    "xref": 321,
+    "size": [
+     1928,
+     1719
+    ],
+    "rect": [
+     148.5,
+     57.6,
+     463.5,
+     338.5
+    ],
+    "text": "Acid H⁺ Water (a) Water H⁺ H+ H⁺ H⁺ Base OH⁻ Water Water (b) OH⁻ OH⁻ OH⁻",
+    "lines": [
+     {
+      "text": "Acid",
+      "score": 1.0
+     },
+     {
+      "text": "H⁺",
+      "score": 0.75
+     },
+     {
+      "text": "Water",
+      "score": 1.0
+     },
+     {
+      "text": "(a)",
+      "score": 1.0
+     },
+     {
+      "text": "Water",
+      "score": 1.0
+     },
+     {
+      "text": "H⁺",
+      "score": 0.862
+     },
+     {
+      "text": "H+",
+      "score": 0.801
+     },
+     {
+      "text": "H⁺",
+      "score": 0.888
+     },
+     {
+      "text": "H⁺",
+      "score": 0.89
+     },
+     {
+      "text": "Base",
+      "score": 1.0
+     },
+     {
+      "text": "OH⁻",
+      "score": 0.995
+     },
+     {
+      "text": "Water",
+      "score": 1.0
+     },
+     {
+      "text": "Water",
+      "score": 1.0
+     },
+     {
+      "text": "(b)",
+      "score": 1.0
+     },
+     {
+      "text": "OH⁻",
+      "score": 0.942
+     },
+     {
+      "text": "OH⁻",
+      "score": 0.99
+     },
+     {
+      "text": "OH⁻",
+      "score": 0.998
+     }
+    ],
+    "seconds": 20.52
+   }
+  ],
+  "56": [
+   {
+    "xref": 327,
+    "size": [
+     1153,
+     2339
+    ],
+    "rect": [
+     186.0,
+     57.6,
+     426.0,
+     544.5
+    ],
+    "text": "BASE pH Examples Liquid drain cleaner 14 (pH=14) DRAIN AING 13 Bleaches, oven cleaner, lye (pH=13.5) 12 Lye Ammonia solution 11 (pH=10.5-11.5) Ammonia 10 Baking soda (pH=9.5) 9 Sea water 8 (pH=8) Blood 7 Neutral (pH=7.4) Milk, urine, saliva 6 (pH=6.3–6.6) 5 Black coffee (pH=5) 4 Grapefruit juice, soda, tomato juice 3 (pH=2.5–3.5) 2 Lemon juice, vinegar (pH=2) Battery acid, hydrochloric acid 0 (pH=0) ACID",
+    "lines": [
+     {
+      "text": "BASE",
+      "score": 1.0
+     },
+     {
+      "text": "pH",
+      "score": 1.0
+     },
+     {
+      "text": "Examples",
+      "score": 1.0
+     },
+     {
+      "text": "Liquid drain cleaner",
+      "score": 1.0
+     },
+     {
+      "text": "14",
+      "score": 1.0
+     },
+     {
+      "text": "(pH=14)",
+      "score": 1.0
+     },
+     {
+      "text": "DRAIN AING",
+      "score": 0.712
+     },
+     {
+      "text": "13",
+      "score": 1.0
+     },
+     {
+      "text": "Bleaches, oven cleaner, lye",
+      "score": 0.973
+     },
+     {
+      "text": "(pH=13.5)",
+      "score": 1.0
+     },
+     {
+      "text": "12",
+      "score": 1.0
+     },
+     {
+      "text": "Lye",
+      "score": 1.0
+     },
+     {
+      "text": "Ammonia solution",
+      "score": 0.983
+     },
+     {
+      "text": "11",
+      "score": 1.0
+     },
+     {
+      "text": "(pH=10.5-11.5)",
+      "score": 0.977
+     },
+     {
+      "text": "Ammonia",
+      "score": 1.0
+     },
+     {
+      "text": "10",
+      "score": 1.0
+     },
+     {
+      "text": "Baking soda",
+      "score": 1.0
+     },
+     {
+      "text": "(pH=9.5)",
+      "score": 1.0
+     },
+     {
+      "text": "9",
+      "score": 1.0
+     },
+     {
+      "text": "Sea water",
+      "score": 1.0
+     },
+     {
+      "text": "8",
+      "score": 1.0
+     },
+     {
+      "text": "(pH=8)",
+      "score": 0.978
+     },
+     {
+      "text": "Blood",
+      "score": 1.0
+     },
+     {
+      "text": "7",
+      "score": 1.0
+     },
+     {
+      "text": "Neutral",
+      "score": 1.0
+     },
+     {
+      "text": "(pH=7.4)",
+      "score": 1.0
+     },
+     {
+      "text": "Milk, urine, saliva",
+      "score": 1.0
+     },
+     {
+      "text": "6",
+      "score": 1.0
+     },
+     {
+      "text": "(pH=6.3–6.6)",
+      "score": 0.97
+     },
+     {
+      "text": "5",
+      "score": 1.0
+     },
+     {
+      "text": "Black coffee",
+      "score": 1.0
+     },
+     {
+      "text": "(pH=5)",
+      "score": 1.0
+     },
+     {
+      "text": "4",
+      "score": 1.0
+     },
+     {
+      "text": "Grapefruit juice, soda,",
+      "score": 0.999
+     },
+     {
+      "text": "tomato juice",
+      "score": 1.0
+     },
+     {
+      "text": "3",
+      "score": 1.0
+     },
+     {
+      "text": "(pH=2.5–3.5)",
+      "score": 0.99
+     },
+     {
+      "text": "2",
+      "score": 1.0
+     },
+     {
+      "text": "Lemon juice, vinegar",
+      "score": 0.993
+     },
+     {
+      "text": "(pH=2)",
+      "score": 1.0
+     },
+     {
+      "text": "Battery acid, hydrochloric acid",
+      "score": 0.996
+     },
+     {
+      "text": "0",
+      "score": 1.0
+     },
+     {
+      "text": "(pH=0)",
+      "score": 1.0
+     },
+     {
+      "text": "ACID",
+      "score": 1.0
+     }
+    ],
+    "seconds": 21.07
+   }
+  ],
+  "57": [],
+  "58": [
+   {
+    "xref": 332,
+    "size": [
+     265,
+     150
+    ],
+    "rect": [
+     135.8,
+     223.4,
+     210.8,
+     265.9
+    ],
+    "text": "O R-C /O-H",
+    "lines": [
+     {
+      "text": "O",
+      "score": 0.99
+     },
+     {
+      "text": "R-C",
+      "score": 0.969
+     },
+     {
+      "text": "/O-H",
+      "score": 0.699
+     }
+    ],
+    "seconds": 0.8
+   }
+  ],
+  "59": [
+   {
+    "xref": 340,
+    "size": [
+     1614,
+     1278
+    ],
+    "rect": [
+     148.5,
+     57.6,
+     463.5,
+     307.0
+    ],
+    "text": "CH2OH CH2OH CH2OH O O O H H OH HO OH H H OH H HO OH H OH CH2OH H HO H H OH OH H OH Glucose Fructose Galactose (a) Hexoses O O HOCH2 OH HOCH2 OH H H H H H H H H OH H OH OH Deoxyribose Ribose (b) Pentoses",
+    "lines": [
+     {
+      "text": "CH2OH",
+      "score": 0.908
+     },
+     {
+      "text": "CH2OH",
+      "score": 0.908
+     },
+     {
+      "text": "CH2OH",
+      "score": 0.873
+     },
+     {
+      "text": "O",
+      "score": 0.994
+     },
+     {
+      "text": "O",
+      "score": 0.987
+     },
+     {
+      "text": "O",
+      "score": 0.994
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "HO",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "HO",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "CH2OH",
+      "score": 0.919
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "HO",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "Glucose",
+      "score": 1.0
+     },
+     {
+      "text": "Fructose",
+      "score": 1.0
+     },
+     {
+      "text": "Galactose",
+      "score": 1.0
+     },
+     {
+      "text": "(a) Hexoses",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.995
+     },
+     {
+      "text": "O",
+      "score": 0.994
+     },
+     {
+      "text": "HOCH2",
+      "score": 0.964
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "HOCH2",
+      "score": 0.927
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "Deoxyribose",
+      "score": 1.0
+     },
+     {
+      "text": "Ribose",
+      "score": 1.0
+     },
+     {
+      "text": "(b) Pentoses",
+      "score": 1.0
+     }
+    ],
+    "seconds": 18.23
+   }
+  ],
+  "60": [
+   {
+    "xref": 345,
+    "size": [
+     1511,
+     2498
+    ],
+    "rect": [
+     148.5,
+     57.6,
+     463.5,
+     578.4
+    ],
+    "text": "(a) The monosaccharides glucose and fructose bond to form sucrose CH2OH CH2OH H O O H H OH H HO H CH2OH OH O H OH OH H Sucrose (b) The monosaccharides galactose and glucose bond to form lactose. CH2OH O OH CH2OH O OH OH O OH OH Lactose OH (c) Two glucose monosaccharides bond to form maltose. CH2OH CH2OH O O H H H OH H H OH H OH H HO H H OH H OH Maltose",
+    "lines": [
+     {
+      "text": "(a) The monosaccharides glucose and fructose bond to form sucrose",
+      "score": 0.99
+     },
+     {
+      "text": "CH2OH",
+      "score": 0.987
+     },
+     {
+      "text": "CH2OH",
+      "score": 0.938
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.993
+     },
+     {
+      "text": "O",
+      "score": 0.995
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "HO",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "CH2OH",
+      "score": 0.924
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.994
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "Sucrose",
+      "score": 1.0
+     },
+     {
+      "text": "(b) The monosaccharides galactose and glucose bond to form lactose.",
+      "score": 0.993
+     },
+     {
+      "text": "CH2OH",
+      "score": 0.955
+     },
+     {
+      "text": "O",
+      "score": 0.98
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "CH2OH",
+      "score": 0.905
+     },
+     {
+      "text": "O",
+      "score": 0.995
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.993
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "Lactose",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "(c) Two glucose monosaccharides bond to form maltose.",
+      "score": 1.0
+     },
+     {
+      "text": "CH2OH",
+      "score": 0.956
+     },
+     {
+      "text": "CH2OH",
+      "score": 0.95
+     },
+     {
+      "text": "O",
+      "score": 0.987
+     },
+     {
+      "text": "O",
+      "score": 0.991
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "HO",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "Maltose",
+      "score": 1.0
+     }
+    ],
+    "seconds": 29.15
+   }
+  ],
+  "61": [
+   {
+    "xref": 352,
+    "size": [
+     1582,
+     547
+    ],
+    "rect": [
+     148.5,
+     164.7,
+     463.5,
+     273.6
+    ],
+    "text": "Amylose Amylopectin Starch Glycogen Cellulose (fiber)",
+    "lines": [
+     {
+      "text": "Amylose",
+      "score": 1.0
+     },
+     {
+      "text": "Amylopectin",
+      "score": 1.0
+     },
+     {
+      "text": "Starch",
+      "score": 1.0
+     },
+     {
+      "text": "Glycogen",
+      "score": 1.0
+     },
+     {
+      "text": "Cellulose (fiber)",
+      "score": 1.0
+     }
+    ],
+    "seconds": 5.56
+   }
+  ],
+  "62": [
+   {
+    "xref": 357,
+    "size": [
+     2335,
+     698
+    ],
+    "rect": [
+     99.8,
+     57.6,
+     512.2,
+     180.9
+    ],
+    "text": "Three fatty acid chains are bound to glycerol by dehydration synthesis. 3 water 3 fatty acid chains Triglyceride, or neutral fat Glycerol molecules H O H O I — II H-C-O-H HO—C—CH₂—CH₂CH₂—CH₂—CH3 H-C-O- C-CH₂—CH2CH₂—CH_₂—CH₃ O II _ H-C-O-H+HO—C-CH₂—CH₂CH₂-CH₂—CH₃ H-C—O—C—CH₂—CH₂CH₂—CH₂—CH₃+3H₂O O II II H-C-O-H HO—C-CH₂—CH₂CH_₂-CH₂—CH3 H-C-O—C-CH₂—CH₂CH₂—CH₂—CH₃ I I H H",
+    "lines": [
+     {
+      "text": "Three fatty acid chains are bound to glycerol by dehydration synthesis.",
+      "score": 0.997
+     },
+     {
+      "text": "3 water",
+      "score": 1.0
+     },
+     {
+      "text": "3 fatty acid chains",
+      "score": 1.0
+     },
+     {
+      "text": "Triglyceride, or neutral fat",
+      "score": 0.998
+     },
+     {
+      "text": "Glycerol",
+      "score": 1.0
+     },
+     {
+      "text": "molecules",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.99
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.956
+     },
+     {
+      "text": "I",
+      "score": 0.598
+     },
+     {
+      "text": "—",
+      "score": 0.527
+     },
+     {
+      "text": "II",
+      "score": 0.849
+     },
+     {
+      "text": "H-C-O-H",
+      "score": 0.743
+     },
+     {
+      "text": "HO—C—CH₂—CH₂CH₂—CH₂—CH3",
+      "score": 0.838
+     },
+     {
+      "text": "H-C-O-",
+      "score": 0.719
+     },
+     {
+      "text": "C-CH₂—CH2CH₂—CH_₂—CH₃",
+      "score": 0.82
+     },
+     {
+      "text": "O",
+      "score": 0.992
+     },
+     {
+      "text": "II",
+      "score": 0.718
+     },
+     {
+      "text": "_",
+      "score": 0.931
+     },
+     {
+      "text": "H-C-O-H+HO—C-CH₂—CH₂CH₂-CH₂—CH₃",
+      "score": 0.855
+     },
+     {
+      "text": "H-C—O—C—CH₂—CH₂CH₂—CH₂—CH₃+3H₂O",
+      "score": 0.888
+     },
+     {
+      "text": "O",
+      "score": 0.993
+     },
+     {
+      "text": "II",
+      "score": 0.854
+     },
+     {
+      "text": "II",
+      "score": 0.818
+     },
+     {
+      "text": "H-C-O-H",
+      "score": 0.83
+     },
+     {
+      "text": "HO—C-CH₂—CH₂CH_₂-CH₂—CH3",
+      "score": 0.821
+     },
+     {
+      "text": "H-C-O—C-CH₂—CH₂CH₂—CH₂—CH₃",
+      "score": 0.868
+     },
+     {
+      "text": "I",
+      "score": 0.934
+     },
+     {
+      "text": "I",
+      "score": 0.956
+     },
+     {
+      "text": "H",
+      "score": 0.999
+     },
+     {
+      "text": "H",
+      "score": 0.998
+     }
+    ],
+    "seconds": 17.92
+   },
+   {
+    "xref": 358,
+    "size": [
+     1471,
+     781
+    ],
+    "rect": [
+     163.5,
+     346.8,
+     448.5,
+     498.1
+    ],
+    "text": "H H H H H H H H H O I I I I I I I I ı 二 C—C —C—C—C—C—C—C—C—C—H (a) Saturated O I I I I I I I I I I H H H H H H H H H H H H H H H H O I I I I I I H 二 H C-C-C-C-C-C-C H O I I I I (b) Unsaturated I C I H H H H H I C H H 一H H",
+    "lines": [
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.882
+     },
+     {
+      "text": "I",
+      "score": 0.903
+     },
+     {
+      "text": "I",
+      "score": 0.689
+     },
+     {
+      "text": "I",
+      "score": 0.859
+     },
+     {
+      "text": "I",
+      "score": 0.802
+     },
+     {
+      "text": "I",
+      "score": 0.835
+     },
+     {
+      "text": "I",
+      "score": 0.791
+     },
+     {
+      "text": "I",
+      "score": 0.595
+     },
+     {
+      "text": "I",
+      "score": 0.812
+     },
+     {
+      "text": "ı",
+      "score": 0.522
+     },
+     {
+      "text": "二",
+      "score": 0.865
+     },
+     {
+      "text": "C—C",
+      "score": 0.839
+     },
+     {
+      "text": "—C—C—C—C—C—C—C—C—H",
+      "score": 0.932
+     },
+     {
+      "text": "(a) Saturated",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.761
+     },
+     {
+      "text": "I",
+      "score": 0.896
+     },
+     {
+      "text": "I",
+      "score": 0.77
+     },
+     {
+      "text": "I",
+      "score": 0.811
+     },
+     {
+      "text": "I",
+      "score": 0.761
+     },
+     {
+      "text": "I",
+      "score": 0.794
+     },
+     {
+      "text": "I",
+      "score": 0.886
+     },
+     {
+      "text": "I",
+      "score": 0.832
+     },
+     {
+      "text": "I",
+      "score": 0.848
+     },
+     {
+      "text": "I",
+      "score": 0.698
+     },
+     {
+      "text": "I",
+      "score": 0.902
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.942
+     },
+     {
+      "text": "I",
+      "score": 0.865
+     },
+     {
+      "text": "I",
+      "score": 0.863
+     },
+     {
+      "text": "I",
+      "score": 0.882
+     },
+     {
+      "text": "I",
+      "score": 0.85
+     },
+     {
+      "text": "I",
+      "score": 0.786
+     },
+     {
+      "text": "I",
+      "score": 0.877
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "二",
+      "score": 0.705
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "C-C-C-C-C-C-C",
+      "score": 0.821
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.859
+     },
+     {
+      "text": "I",
+      "score": 0.877
+     },
+     {
+      "text": "I",
+      "score": 0.73
+     },
+     {
+      "text": "I",
+      "score": 0.882
+     },
+     {
+      "text": "I",
+      "score": 0.842
+     },
+     {
+      "text": "(b) Unsaturated",
+      "score": 1.0
+     },
+     {
+      "text": "I",
+      "score": 0.912
+     },
+     {
+      "text": "C",
+      "score": 0.999
+     },
+     {
+      "text": "I",
+      "score": 0.715
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "I",
+      "score": 0.761
+     },
+     {
+      "text": "C",
+      "score": 0.999
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 0.992
+     },
+     {
+      "text": "一H",
+      "score": 0.804
+     },
+     {
+      "text": "H",
+      "score": 0.999
+     }
+    ],
+    "seconds": 22.51
+   }
+  ],
+  "63": [
+   {
+    "xref": 364,
+    "size": [
+     2137,
+     2144
+    ],
+    "rect": [
+     81.0,
+     209.7,
+     531.0,
+     661.2
+    ],
+    "text": "(a) Phospholipids Two fatty acid chains and a phosphorus-containing group are attached to the glycerol backbone. Example: Phosphatidylcholine Glycerol Phosphorus-containing group 2 fatty acid chains (polar “head”) backbone (nonpolar “tail”) Polar “head” O CH₂—O C—CH₂—CH₂—CH₂—CH₂CH₂—CH₂—CH₂—CH₃ O H II Nonpolar “tail” CH3 O CH—O (schematic CH₃—N+—CH₂—CH₂—O——O—CH₂ phospholipid) CH3 (b) Sterols Four interlocking hydrocarbon rings from a steroid. Example: Cholesterol (cholesterol is the basis for all steroids formed in the body) H3C. CH3 CH3 CH3 CH3 HO (c) Prostaglandins HO COOH COOH PGF2X PGE2 HO HO OH OH",
+    "lines": [
+     {
+      "text": "(a) Phospholipids",
+      "score": 1.0
+     },
+     {
+      "text": "Two fatty acid chains and a phosphorus-containing group are attached to the glycerol backbone.",
+      "score": 0.993
+     },
+     {
+      "text": "Example: Phosphatidylcholine",
+      "score": 0.991
+     },
+     {
+      "text": "Glycerol",
+      "score": 1.0
+     },
+     {
+      "text": "Phosphorus-containing group",
+      "score": 1.0
+     },
+     {
+      "text": "2 fatty acid chains",
+      "score": 1.0
+     },
+     {
+      "text": "(polar “head”)",
+      "score": 0.963
+     },
+     {
+      "text": "backbone",
+      "score": 1.0
+     },
+     {
+      "text": "(nonpolar “tail”)",
+      "score": 0.984
+     },
+     {
+      "text": "Polar “head”",
+      "score": 0.967
+     },
+     {
+      "text": "O",
+      "score": 0.99
+     },
+     {
+      "text": "CH₂—O",
+      "score": 0.796
+     },
+     {
+      "text": "C—CH₂—CH₂—CH₂—CH₂CH₂—CH₂—CH₂—CH₃",
+      "score": 0.976
+     },
+     {
+      "text": "O",
+      "score": 0.947
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "II",
+      "score": 0.731
+     },
+     {
+      "text": "Nonpolar “tail”",
+      "score": 0.99
+     },
+     {
+      "text": "CH3",
+      "score": 0.958
+     },
+     {
+      "text": "O",
+      "score": 0.989
+     },
+     {
+      "text": "CH—O",
+      "score": 0.814
+     },
+     {
+      "text": "(schematic",
+      "score": 1.0
+     },
+     {
+      "text": "CH₃—N+—CH₂—CH₂—O——O—CH₂",
+      "score": 0.876
+     },
+     {
+      "text": "phospholipid)",
+      "score": 1.0
+     },
+     {
+      "text": "CH3",
+      "score": 0.942
+     },
+     {
+      "text": "(b) Sterols",
+      "score": 1.0
+     },
+     {
+      "text": "Four interlocking hydrocarbon rings from a steroid.",
+      "score": 1.0
+     },
+     {
+      "text": "Example: Cholesterol (cholesterol is the basis for all steroids formed in the body)",
+      "score": 0.996
+     },
+     {
+      "text": "H3C.",
+      "score": 0.79
+     },
+     {
+      "text": "CH3",
+      "score": 0.978
+     },
+     {
+      "text": "CH3",
+      "score": 0.957
+     },
+     {
+      "text": "CH3",
+      "score": 0.853
+     },
+     {
+      "text": "CH3",
+      "score": 0.987
+     },
+     {
+      "text": "HO",
+      "score": 1.0
+     },
+     {
+      "text": "(c) Prostaglandins",
+      "score": 1.0
+     },
+     {
+      "text": "HO",
+      "score": 1.0
+     },
+     {
+      "text": "COOH",
+      "score": 1.0
+     },
+     {
+      "text": "COOH",
+      "score": 1.0
+     },
+     {
+      "text": "PGF2X",
+      "score": 0.909
+     },
+     {
+      "text": "PGE2",
+      "score": 0.996
+     },
+     {
+      "text": "HO",
+      "score": 0.873
+     },
+     {
+      "text": "HO",
+      "score": 0.997
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     }
+    ],
+    "seconds": 39.23
+   }
+  ],
+  "64": [
+   {
+    "xref": 369,
+    "size": [
+     1048,
+     767
+    ],
+    "rect": [
+     186.0,
+     539.1,
+     426.0,
+     714.7
+    ],
+    "text": "Amino group Carboxyl group H H H N C H R α carbon Side chain",
+    "lines": [
+     {
+      "text": "Amino group",
+      "score": 1.0
+     },
+     {
+      "text": "Carboxyl group",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "C",
+      "score": 0.997
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "R",
+      "score": 1.0
+     },
+     {
+      "text": "α carbon",
+      "score": 0.999
+     },
+     {
+      "text": "Side",
+      "score": 1.0
+     },
+     {
+      "text": "chain",
+      "score": 1.0
+     }
+    ],
+    "seconds": 7.11
+   }
+  ],
+  "65": [
+   {
+    "xref": 378,
+    "size": [
+     842,
+     604
+    ],
+    "rect": [
+     201.0,
+     208.8,
+     411.0,
+     359.4
+    ],
+    "text": "R1 =〇 R2 H H I I N-C 一 C N-C 一 H I OH H I OH H H R O H R H I 11 I N-C-C-N-C 一 H I OH H H Peptide Bond",
+    "lines": [
+     {
+      "text": "R1",
+      "score": 1.0
+     },
+     {
+      "text": "=〇",
+      "score": 0.626
+     },
+     {
+      "text": "R2",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "I",
+      "score": 0.852
+     },
+     {
+      "text": "I",
+      "score": 0.853
+     },
+     {
+      "text": "N-C",
+      "score": 0.859
+     },
+     {
+      "text": "一",
+      "score": 0.665
+     },
+     {
+      "text": "C",
+      "score": 0.999
+     },
+     {
+      "text": "N-C",
+      "score": 0.945
+     },
+     {
+      "text": "一",
+      "score": 0.855
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "I",
+      "score": 0.864
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 0.999
+     },
+     {
+      "text": "I",
+      "score": 0.895
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "R",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.989
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "R",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "I",
+      "score": 0.839
+     },
+     {
+      "text": "11",
+      "score": 0.827
+     },
+     {
+      "text": "I",
+      "score": 0.641
+     },
+     {
+      "text": "N-C-C-N-C",
+      "score": 0.861
+     },
+     {
+      "text": "一",
+      "score": 0.924
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "I",
+      "score": 0.507
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "Peptide Bond",
+      "score": 1.0
+     }
+    ],
+    "seconds": 10.26
+   }
+  ],
+  "66": [
+   {
+    "xref": 384,
+    "size": [
+     2219,
+     1886
+    ],
+    "rect": [
+     126.0,
+     57.6,
+     486.0,
+     363.6
+    ],
+    "text": "A1A2A3A4A5A A8A9A10A11 (a) Primary structure Chain of amino acids A1 A2 A3 A4 Bonds A2 A6 A10 A7 A6 A5 A1 A5 A9 OR A3 A7 A11 A8 A9 A10 A11 A4 A8 Alpha-helix (b) Secondary structure (pleated sheet) Heme units (c) Tertiary structure (d) Quaternary structure Hemoglobin (globular protein)",
+    "lines": [
+     {
+      "text": "A1A2A3A4A5A",
+      "score": 0.944
+     },
+     {
+      "text": "A8A9A10A11",
+      "score": 0.97
+     },
+     {
+      "text": "(a) Primary structure",
+      "score": 1.0
+     },
+     {
+      "text": "Chain of amino acids",
+      "score": 1.0
+     },
+     {
+      "text": "A1",
+      "score": 1.0
+     },
+     {
+      "text": "A2",
+      "score": 1.0
+     },
+     {
+      "text": "A3",
+      "score": 1.0
+     },
+     {
+      "text": "A4",
+      "score": 1.0
+     },
+     {
+      "text": "Bonds",
+      "score": 0.984
+     },
+     {
+      "text": "A2",
+      "score": 1.0
+     },
+     {
+      "text": "A6",
+      "score": 1.0
+     },
+     {
+      "text": "A10",
+      "score": 1.0
+     },
+     {
+      "text": "A7",
+      "score": 1.0
+     },
+     {
+      "text": "A6",
+      "score": 1.0
+     },
+     {
+      "text": "A5",
+      "score": 1.0
+     },
+     {
+      "text": "A1",
+      "score": 1.0
+     },
+     {
+      "text": "A5",
+      "score": 1.0
+     },
+     {
+      "text": "A9",
+      "score": 1.0
+     },
+     {
+      "text": "OR",
+      "score": 1.0
+     },
+     {
+      "text": "A3",
+      "score": 1.0
+     },
+     {
+      "text": "A7",
+      "score": 1.0
+     },
+     {
+      "text": "A11",
+      "score": 1.0
+     },
+     {
+      "text": "A8",
+      "score": 1.0
+     },
+     {
+      "text": "A9",
+      "score": 1.0
+     },
+     {
+      "text": "A10",
+      "score": 1.0
+     },
+     {
+      "text": "A11",
+      "score": 1.0
+     },
+     {
+      "text": "A4",
+      "score": 1.0
+     },
+     {
+      "text": "A8",
+      "score": 1.0
+     },
+     {
+      "text": "Alpha-helix",
+      "score": 1.0
+     },
+     {
+      "text": "(b) Secondary structure (pleated sheet)",
+      "score": 1.0
+     },
+     {
+      "text": "Heme units",
+      "score": 1.0
+     },
+     {
+      "text": "(c) Tertiary structure",
+      "score": 0.986
+     },
+     {
+      "text": "(d) Quaternary structure",
+      "score": 1.0
+     },
+     {
+      "text": "Hemoglobin",
+      "score": 1.0
+     },
+     {
+      "text": "(globular protein)",
+      "score": 1.0
+     }
+    ],
+    "seconds": 31.08
+   }
+  ],
+  "67": [
+   {
+    "xref": 391,
+    "size": [
+     2261,
+     844
+    ],
+    "rect": [
+     111.0,
+     367.2,
+     501.0,
+     512.8
+    ],
+    "text": "Substrates Product detaches and process can repeat S₁ S2 Product Substrates form a product S₁ S2 Product Active sites Enzyme Enzyme Enzyme Enzyme (a) (b) (c) (d)",
+    "lines": [
+     {
+      "text": "Substrates",
+      "score": 1.0
+     },
+     {
+      "text": "Product detaches",
+      "score": 1.0
+     },
+     {
+      "text": "and process can",
+      "score": 1.0
+     },
+     {
+      "text": "repeat",
+      "score": 1.0
+     },
+     {
+      "text": "S₁",
+      "score": 0.83
+     },
+     {
+      "text": "S2",
+      "score": 0.98
+     },
+     {
+      "text": "Product",
+      "score": 1.0
+     },
+     {
+      "text": "Substrates form",
+      "score": 1.0
+     },
+     {
+      "text": "a product",
+      "score": 0.946
+     },
+     {
+      "text": "S₁",
+      "score": 0.856
+     },
+     {
+      "text": "S2",
+      "score": 0.987
+     },
+     {
+      "text": "Product",
+      "score": 1.0
+     },
+     {
+      "text": "Active",
+      "score": 1.0
+     },
+     {
+      "text": "sites",
+      "score": 1.0
+     },
+     {
+      "text": "Enzyme",
+      "score": 1.0
+     },
+     {
+      "text": "Enzyme",
+      "score": 1.0
+     },
+     {
+      "text": "Enzyme",
+      "score": 1.0
+     },
+     {
+      "text": "Enzyme",
+      "score": 1.0
+     },
+     {
+      "text": "(a)",
+      "score": 1.0
+     },
+     {
+      "text": "(b)",
+      "score": 1.0
+     },
+     {
+      "text": "(c)",
+      "score": 1.0
+     },
+     {
+      "text": "(d)",
+      "score": 1.0
+     }
+    ],
+    "seconds": 14.28
+   }
+  ],
+  "68": [
+   {
+    "xref": 398,
+    "size": [
+     2202,
+     1633
+    ],
+    "rect": [
+     111.0,
+     272.7,
+     501.0,
+     561.9
+    ],
+    "text": "Pyrimidines NH3 O O II 三 C C CH3 C N CH HN C HN CH Nitrogenous CH CH CH base N N N H H H Cytosine Thymine (in DNA) Uracil (in RNA) C T U O II Purines O-P-O CH2 O. NH2 o=c I O⁻ N C N C N N NH Phosphate HC HC group C CH C C N N N NH2 Pentose N H H sugar Adenine Guanine A G Phosphodiester linkage (b) (a) Polynucleotide HOCH2 HOCH2 O. OH O. OH H H H H H H H H OH H OH OH Deoxyribose (in DNA) Ribose (in RNA) (c)",
+    "lines": [
+     {
+      "text": "Pyrimidines",
+      "score": 1.0
+     },
+     {
+      "text": "NH3",
+      "score": 0.994
+     },
+     {
+      "text": "O",
+      "score": 0.991
+     },
+     {
+      "text": "O",
+      "score": 0.989
+     },
+     {
+      "text": "II",
+      "score": 0.95
+     },
+     {
+      "text": "三",
+      "score": 0.634
+     },
+     {
+      "text": "C",
+      "score": 0.969
+     },
+     {
+      "text": "C",
+      "score": 0.988
+     },
+     {
+      "text": "CH3",
+      "score": 0.978
+     },
+     {
+      "text": "C",
+      "score": 0.974
+     },
+     {
+      "text": "N",
+      "score": 0.999
+     },
+     {
+      "text": "CH",
+      "score": 1.0
+     },
+     {
+      "text": "HN",
+      "score": 1.0
+     },
+     {
+      "text": "C",
+      "score": 0.999
+     },
+     {
+      "text": "HN",
+      "score": 0.999
+     },
+     {
+      "text": "CH",
+      "score": 1.0
+     },
+     {
+      "text": "Nitrogenous",
+      "score": 1.0
+     },
+     {
+      "text": "CH",
+      "score": 0.999
+     },
+     {
+      "text": "CH",
+      "score": 0.999
+     },
+     {
+      "text": "CH",
+      "score": 0.999
+     },
+     {
+      "text": "base",
+      "score": 1.0
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "Cytosine",
+      "score": 1.0
+     },
+     {
+      "text": "Thymine (in DNA)",
+      "score": 0.999
+     },
+     {
+      "text": "Uracil (in RNA)",
+      "score": 1.0
+     },
+     {
+      "text": "C",
+      "score": 0.999
+     },
+     {
+      "text": "T",
+      "score": 1.0
+     },
+     {
+      "text": "U",
+      "score": 0.997
+     },
+     {
+      "text": "O",
+      "score": 0.992
+     },
+     {
+      "text": "II",
+      "score": 0.876
+     },
+     {
+      "text": "Purines",
+      "score": 1.0
+     },
+     {
+      "text": "O-P-O",
+      "score": 0.96
+     },
+     {
+      "text": "CH2",
+      "score": 0.99
+     },
+     {
+      "text": "O.",
+      "score": 0.901
+     },
+     {
+      "text": "NH2",
+      "score": 0.989
+     },
+     {
+      "text": "o=c",
+      "score": 0.87
+     },
+     {
+      "text": "I",
+      "score": 0.943
+     },
+     {
+      "text": "O⁻",
+      "score": 0.683
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "C",
+      "score": 0.924
+     },
+     {
+      "text": "N",
+      "score": 0.999
+     },
+     {
+      "text": "C",
+      "score": 1.0
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "NH",
+      "score": 0.997
+     },
+     {
+      "text": "Phosphate",
+      "score": 1.0
+     },
+     {
+      "text": "HC",
+      "score": 1.0
+     },
+     {
+      "text": "HC",
+      "score": 1.0
+     },
+     {
+      "text": "group",
+      "score": 1.0
+     },
+     {
+      "text": "C",
+      "score": 0.862
+     },
+     {
+      "text": "CH",
+      "score": 0.998
+     },
+     {
+      "text": "C",
+      "score": 0.691
+     },
+     {
+      "text": "C",
+      "score": 0.94
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "NH2",
+      "score": 0.995
+     },
+     {
+      "text": "Pentose",
+      "score": 1.0
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "sugar",
+      "score": 1.0
+     },
+     {
+      "text": "Adenine",
+      "score": 1.0
+     },
+     {
+      "text": "Guanine",
+      "score": 1.0
+     },
+     {
+      "text": "A",
+      "score": 1.0
+     },
+     {
+      "text": "G",
+      "score": 1.0
+     },
+     {
+      "text": "Phosphodiester",
+      "score": 1.0
+     },
+     {
+      "text": "linkage",
+      "score": 1.0
+     },
+     {
+      "text": "(b)",
+      "score": 1.0
+     },
+     {
+      "text": "(a)",
+      "score": 1.0
+     },
+     {
+      "text": "Polynucleotide",
+      "score": 1.0
+     },
+     {
+      "text": "HOCH2",
+      "score": 0.956
+     },
+     {
+      "text": "HOCH2",
+      "score": 0.971
+     },
+     {
+      "text": "O.",
+      "score": 0.781
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "O.",
+      "score": 0.837
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "Deoxyribose (in DNA)",
+      "score": 1.0
+     },
+     {
+      "text": "Ribose (in RNA)",
+      "score": 1.0
+     },
+     {
+      "text": "(c)",
+      "score": 1.0
+     }
+    ],
+    "seconds": 33.74
+   }
+  ],
+  "69": [
+   {
+    "xref": 403,
+    "size": [
+     1404,
+     1809
+    ],
+    "rect": [
+     186.0,
+     183.6,
+     426.0,
+     492.8
+    ],
+    "text": "Nitrogenous bases: Adenine Thymine Guanine Cytosine Base pair Sugar phosphate backbone",
+    "lines": [
+     {
+      "text": "Nitrogenous bases:",
+      "score": 1.0
+     },
+     {
+      "text": "Adenine",
+      "score": 1.0
+     },
+     {
+      "text": "Thymine",
+      "score": 1.0
+     },
+     {
+      "text": "Guanine",
+      "score": 1.0
+     },
+     {
+      "text": "Cytosine",
+      "score": 1.0
+     },
+     {
+      "text": "Base pair",
+      "score": 1.0
+     },
+     {
+      "text": "Sugar phosphate backbone",
+      "score": 1.0
+     }
+    ],
+    "seconds": 15.67
+   }
+  ],
+  "70": [
+   {
+    "xref": 409,
+    "size": [
+     691,
+     603
+    ],
+    "rect": [
+     148.5,
+     57.6,
+     463.5,
+     332.5
+    ],
+    "text": "Adenine NH2 C N N C HC CH N N H High-energy bonds O C O⁻ O O⁻ H H C H O -P- O P– O P— 0 C C II I II ö ö O OH OH Phosphate Ribose Adenosine Adenosine monophosphate (AMP) Adenosine diphosphate (ADP) Adenosine triphosphate (ATP)",
+    "lines": [
+     {
+      "text": "Adenine",
+      "score": 1.0
+     },
+     {
+      "text": "NH2",
+      "score": 0.993
+     },
+     {
+      "text": "C",
+      "score": 0.977
+     },
+     {
+      "text": "N",
+      "score": 0.999
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "C",
+      "score": 0.989
+     },
+     {
+      "text": "HC",
+      "score": 0.999
+     },
+     {
+      "text": "CH",
+      "score": 1.0
+     },
+     {
+      "text": "N",
+      "score": 1.0
+     },
+     {
+      "text": "N",
+      "score": 0.998
+     },
+     {
+      "text": "H",
+      "score": 1.0
+     },
+     {
+      "text": "High-energy bonds",
+      "score": 1.0
+     },
+     {
+      "text": "O",
+      "score": 0.889
+     },
+     {
+      "text": "C",
+      "score": 0.993
+     },
+     {
+      "text": "O⁻",
+      "score": 0.621
+     },
+     {
+      "text": "O",
+      "score": 0.956
+     },
+     {
+      "text": "O⁻",
+      "score": 0.693
+     },
+     {
+      "text": "H",
+      "score": 0.986
+     },
+     {
+      "text": "H",
+      "score": 0.957
+     },
+     {
+      "text": "C",
+      "score": 0.972
+     },
+     {
+      "text": "H",
+      "score": 0.997
+     },
+     {
+      "text": "O -P- O",
+      "score": 0.662
+     },
+     {
+      "text": "P– O",
+      "score": 0.667
+     },
+     {
+      "text": "P— 0",
+      "score": 0.634
+     },
+     {
+      "text": "C",
+      "score": 0.936
+     },
+     {
+      "text": "C",
+      "score": 0.994
+     },
+     {
+      "text": "II",
+      "score": 0.812
+     },
+     {
+      "text": "I",
+      "score": 0.864
+     },
+     {
+      "text": "II",
+      "score": 0.825
+     },
+     {
+      "text": "ö",
+      "score": 0.706
+     },
+     {
+      "text": "ö",
+      "score": 0.75
+     },
+     {
+      "text": "O",
+      "score": 0.764
+     },
+     {
+      "text": "OH",
+      "score": 0.999
+     },
+     {
+      "text": "OH",
+      "score": 1.0
+     },
+     {
+      "text": "Phosphate",
+      "score": 1.0
+     },
+     {
+      "text": "Ribose",
+      "score": 1.0
+     },
+     {
+      "text": "Adenosine",
+      "score": 1.0
+     },
+     {
+      "text": "Adenosine monophosphate (AMP)",
+      "score": 0.987
+     },
+     {
+      "text": "Adenosine diphosphate (ADP)",
+      "score": 0.991
+     },
+     {
+      "text": "Adenosine triphosphate (ATP)",
+      "score": 0.985
+     }
+    ],
+    "seconds": 10.68
+   }
+  ]
+ },
+ "finished_utc": "2026-11-14T03:35:22+00:00"
+}

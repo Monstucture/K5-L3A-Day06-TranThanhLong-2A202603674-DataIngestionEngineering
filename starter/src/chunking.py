@@ -1,4 +1,4 @@
-"""Fixed-size chunking (strategy A) and section-aware chunking (strategies B and C)."""
+"""Fixed-size chunking (strategy A), section-aware chunking (strategies B and C) and OCR figure chunks."""
 import re
 
 from .models import Chunk, DocumentPage
@@ -120,4 +120,26 @@ def by_section(pages: list[DocumentPage], max_size: int) -> list[Chunk]:
                     first = page
                 current, last = joined, page
     close()
+    return chunks
+
+
+def figure_chunks(page: DocumentPage, figures: list[dict], max_size: int) -> list[Chunk]:
+    """One chunk per image's OCR text (split if longer than `max_size`), tagged content_type=figure_ocr.
+
+    `figures` comes from scripts/ocr_images.py: [{"xref": int, "text": str, ...}] for this page.
+    """
+    chunks = []
+    for figure in figures:
+        text = " ".join(figure["text"].split())
+        if not text:
+            continue
+        for k, piece in enumerate(_split_long(text, max_size)):
+            chunks.append(Chunk(
+                chunk_id=f"{page.document_id}:p{page.page:03d}:fig{figure['xref']}:c{k:02d}",
+                document_id=page.document_id,
+                source=page.source,
+                page=page.page,
+                text=piece,
+                metadata={**page.metadata, "page_end": page.page, "content_type": "figure_ocr"},
+            ))
     return chunks

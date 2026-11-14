@@ -20,7 +20,7 @@ import psycopg
 from dotenv import load_dotenv
 from pypdf.errors import PdfReadError
 
-from .chunking import by_section, fixed_size
+from .chunking import by_section, figure_chunks, fixed_size
 from .embeddings import MyEmbedder
 from .evaluation import evaluate_query, flat, summarize
 from .ingestion import load_pdf
@@ -31,7 +31,7 @@ STARTER = Path(__file__).resolve().parents[1]
 ROOT = STARTER.parent
 # Corpus switch: the graded lab corpus (chapters 1-2 extract) or the full textbook.
 # PDF, manifest and questions must change together: page numbers differ by 22 between them.
-FULL_BOOK = True
+FULL_BOOK = False  # branch feature/paddle-ocr: the OCR experiment runs on the 70-page extract
 if FULL_BOOK:
     PDF_PATH = ROOT / "data" / "anatomy-and-physiology-2e.pdf"
     MANIFEST_PATH = ROOT / "data" / "manifest_full_book.json"  # from scripts/make_manifest.py
@@ -40,7 +40,12 @@ else:
     PDF_PATH = ROOT / "data" / "anatomy-and-physiology-2e_70pages.pdf"
     MANIFEST_PATH = ROOT / "data" / "manifest.json"
     QUESTIONS_PATH = ROOT / "benchmark" / "questions.json"
-RESULTS = STARTER / "results"
+# OCR switch: add one chunk per image's OCR text (from scripts/ocr_images.py) to every index.
+# OCR runs write to results_ocr/ so the graded results in results/ are never overwritten.
+USE_OCR = True
+RESULTS = STARTER / ("results_ocr" if USE_OCR else "results")
+OCR_PATH = ROOT / "data" / f"ocr_{PDF_PATH.stem}.json"
+FIGURES: dict[int, list[dict]] = {}  # page -> OCR'd images; filled by run_pipeline when USE_OCR
 DEFAULT_MODEL = "qwen3-embedding:4b"
 TOP_K = 3
 COHERENCE_POSITIONS = 10
@@ -61,7 +66,18 @@ def build_chunks(name: str, pages: list[DocumentPage]) -> list[Chunk]:
         chunks = [c for page in pages for c in fixed_size(page, config["size"], config["overlap"])]
     else:
         chunks = by_section(pages, config["max_size"])
+    budget = config.get("size") or config["max_size"]
+    chunks += [c for page in pages for c in figure_chunks(page, FIGURES.get(page.page, []), budget)]
     return [replace(c, chunk_id=f"{name}:{c.chunk_id}") for c in chunks]
+
+
+def load_figures(manifest: dict) -> dict[int, list[dict]]:
+    """OCR results for this PDF, refusing results made from a different file."""
+    ocr = read_json(OCR_PATH)
+    if ocr.get("pdf_sha256") != manifest.get("snapshot", {}).get("sha256"):
+        raise SystemExit(f"{OCR_PATH.name} was made from a different PDF than {PDF_PATH.name}. "
+                         f"Re-run scripts/ocr_images.py.")
+    return {int(page): figures for page, figures in ocr["pages"].items()}
 
 
 def package_version(name: str) -> str:
@@ -303,6 +319,8 @@ def run_pipeline(split: str) -> None:
         raise SystemExit(f"Cannot read {PDF_PATH.name}: {error}")
     pages = check_corpus(all_pages, counted)
     check_benchmark(questions, pages)
+    if USE_OCR:
+        FIGURES.update(load_figures(manifest))
     run_questions = [q for q in questions if split == "all" or q["split"] == split]
     print(f"Loaded {len(pages)} content pages of {len(all_pages)}; running {len(run_questions)} {split} questions")
 
@@ -326,6 +344,8 @@ def run_pipeline(split: str) -> None:
         "embedding": {"provider": "ollama (local)", "model": embedder.model_name,
                       "dimensions": embedder.dimensions, "cost_usd": 0},
         "vector_store": "PostgreSQL + pgvector, cosine distance (<=>), exact search",
+        "ocr": {"enabled": USE_OCR, "file": OCR_PATH.name if USE_OCR else None,
+                "images_with_text": sum(1 for figs in FIGURES.values() for f in figs if f["text"].strip())},
         "strategies": STRATEGIES,
         "index_stats": index_stats,
         "metrics": summarize(traces),
