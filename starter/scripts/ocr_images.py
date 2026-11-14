@@ -3,6 +3,7 @@
 Runs in its own Python 3.12 venv (PaddlePaddle has no build for Python 3.14). From starter/:
     .venv-ocr\\Scripts\\python.exe scripts/ocr_images.py ../data/anatomy-and-physiology-2e_70pages.pdf ../data/manifest.json
 writes ../data/ocr_<pdf name>.json. Results are saved after every page, so an interrupted run resumes.
+On an NVIDIA GPU: .venv-ocr-gpu\\Scripts\\python.exe scripts/ocr_images.py <pdf> <manifest> --device gpu
 """
 import argparse
 import hashlib
@@ -13,6 +14,7 @@ from importlib.metadata import version
 from pathlib import Path
 
 import numpy as np
+import paddle
 import pymupdf
 from paddleocr import PaddleOCR
 
@@ -23,6 +25,7 @@ DET_MODEL, REC_MODEL = "PP-OCRv6_medium_det", "PP-OCRv6_medium_rec"
 parser = argparse.ArgumentParser()
 parser.add_argument("pdf", type=Path)
 parser.add_argument("manifest", type=Path, help="only the manifest's counted pages are read")
+parser.add_argument("--device", default="cpu", help="cpu, or gpu (needs paddlepaddle-gpu; see .venv-ocr-gpu)")
 args = parser.parse_args()
 out_path = args.pdf.with_name(f"ocr_{args.pdf.stem}.json")
 
@@ -32,19 +35,24 @@ counted = sorted(p["page"] for ch in manifest["chapters"] for p in ch["counted_p
 
 result = {
     "pdf": args.pdf.name, "pdf_sha256": pdf_sha256,
-    "engine": {"paddleocr": version("paddleocr"), "paddlepaddle": version("paddlepaddle"),
-               "det_model": DET_MODEL, "rec_model": REC_MODEL, "device": "cpu", "min_score": MIN_SCORE},
+    # paddle.__version__ works for both builds (the GPU one is installed as "paddlepaddle-gpu")
+    "engine": {"paddleocr": version("paddleocr"), "paddlepaddle": paddle.__version__,
+               "cuda_build": paddle.device.is_compiled_with_cuda(),
+               "det_model": DET_MODEL, "rec_model": REC_MODEL, "device": args.device, "min_score": MIN_SCORE},
     "pages": {},
 }
-if out_path.exists():  # resume a run of the same PDF
+if out_path.exists():  # resume a run of the same PDF (pages done on another device are kept)
     previous = json.loads(out_path.read_text(encoding="utf-8"))
     if previous.get("pdf_sha256") == pdf_sha256:
         result["pages"] = previous["pages"]
+        devices = set(previous["engine"].get("devices", [previous["engine"]["device"]]))
+        result["engine"]["devices"] = sorted(devices | {args.device})
 
 # enable_mkldnn=False: Paddle 3.x's oneDNN path fails on Windows CPUs ("ConvertPirAttribute2RuntimeAttribute")
 ocr = PaddleOCR(lang="en", text_detection_model_name=DET_MODEL, text_recognition_model_name=REC_MODEL,
                 use_doc_orientation_classify=False, use_doc_unwarping=False,
-                use_textline_orientation=False, enable_mkldnn=False)
+                use_textline_orientation=False, device=args.device,
+                **({"enable_mkldnn": False} if args.device == "cpu" else {}))
 doc = pymupdf.open(args.pdf)
 started = time.perf_counter()
 todo = [n for n in counted if str(n) not in result["pages"]]

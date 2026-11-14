@@ -1,6 +1,7 @@
 __pycache__/
 .venv/
 .venv-ocr/
+.venv-ocr-gpu/
 .env
 *.pyc
 .vscode

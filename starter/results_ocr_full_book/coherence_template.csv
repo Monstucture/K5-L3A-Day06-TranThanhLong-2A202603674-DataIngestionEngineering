@@ -1,0 +1,87 @@
+position_id,page,char_offset,strategy,chunk_id,chunk_text,score_0_2,reason
+pos01,23,1102,A,A:openstax-ap2e-full:p023:c002,"in many aspects of your life. An
+understanding of anatomy and physiology is not only fundamental to any career in the health professions, but it can
+also benefit your own health. Familiarity with the human body can help you make healthful choices and prompt you
+to take appropriate action when signs of illness arise. Your knowledge in this field will help you understand news
+about nutrition, medications, medical devices, and procedures and help you understand genetic or infectious
+diseases. At so",,
+pos01,23,1102,B,B:openstax-ap2e-full:s1.0:c002,"An understanding of anatomy and physiology is not only fundamental to any career in the health professions, but it can also benefit your own health. Familiarity with the human body can help you make healthful choices and prompt you to take appropriate action when signs of illness arise. Your knowledge in this field will help you understand news about nutrition, medications, medical devices, and procedures and help you understand genetic or infectious diseases.",,
+pos01,23,1102,C,B:openstax-ap2e-full:s1.0:c002,"An understanding of anatomy and physiology is not only fundamental to any career in the health professions, but it can also benefit your own health. Familiarity with the human body can help you make healthful choices and prompt you to take appropriate action when signs of illness arise. Your knowledge in this field will help you understand news about nutrition, medications, medical devices, and procedures and help you understand genetic or infectious diseases.",,
+pos02,150,2296,A,A:openstax-ap2e-full:p150:c005,"he urinary and reproductive systems, all of which are lined by an epithelium. Hollow organs and body cavities
+that do not connect to the exterior of the body, which includes, blood vessels and serous membranes, are lined by
+endothelium (plural = endothelia), which is a type of epithelium.
+Epithelial cells derive from all three major embryonic layers. The epithelia lining the skin, parts of the mouth and
+nose, and the anus develop from the ectoderm. Cells lining the airways and most of the digest",,
+pos02,150,2296,B,B:openstax-ap2e-full:s4.2:c002,"Other areas include the airways, the digestive tract, as well as the urinary and reproductive systems, all of which are lined by an epithelium. Hollow organs and body cavities that do not connect to the exterior of the body, which includes, blood vessels and serous membranes, are lined by endothelium (plural = endothelia), which is a type of epithelium.",,
+pos02,150,2296,C,B:openstax-ap2e-full:s4.2:c002,"Other areas include the airways, the digestive tract, as well as the urinary and reproductive systems, all of which are lined by an epithelium. Hollow organs and body cavities that do not connect to the exterior of the body, which includes, blood vessels and serous membranes, are lined by endothelium (plural = endothelia), which is a type of epithelium.",,
+pos03,276,1295,A,A:openstax-ap2e-full:p276:c002,"f a
+spinal nerve. See the section on Intervertebral Discs and Ligaments of the Vertebral Column for more information.
+Regional Modifications of Vertebrae
+In addition to the general characteristics of a typical vertebra described above, vertebrae also display characteristic
+size and structural features that vary between the different vertebral column regions. Thus, cervical vertebrae are
+smaller than lumbar vertebrae due to differences in the proportion of body weight that each supports. Thoracic",,
+pos03,276,1295,B,B:openstax-ap2e-full:s7.3:c029,"In addition to the general characteristics of a typical vertebra described above, vertebrae also display characteristic size and structural features that vary between the different vertebral column regions. Thus, cervical vertebrae are smaller than lumbar vertebrae due to differences in the proportion of body weight that each supports. Thoracic vertebrae have sites for rib attachment, and the vertebrae that give rise to the sacrum and coccyx have fused together into single bones.",,
+pos03,276,1295,C,B:openstax-ap2e-full:s7.3:c029,"In addition to the general characteristics of a typical vertebra described above, vertebrae also display characteristic size and structural features that vary between the different vertebral column regions. Thus, cervical vertebrae are smaller than lumbar vertebrae due to differences in the proportion of body weight that each supports. Thoracic vertebrae have sites for rib attachment, and the vertebrae that give rise to the sacrum and coccyx have fused together into single bones.",,
+pos04,425,1108,A,A:openstax-ap2e-full:p425:c002,"ccurs around the joints in the body. The focus of
+this chapter is on skeletal muscle organization. The system to name skeletal muscles will be explained; in some
+cases, the muscle is named by its shape, and in other cases it is named by its location or attachments to the
+skeleton. If you understand the meaning of the name of the muscle, often it will help you remember its location and/
+or what it does. This chapter also will describe how skeletal muscles are arranged to accomplish movement, and
+",,
+pos04,425,1108,B,B:openstax-ap2e-full:s11.0:c002,"If you recall from your study of the skeletal system and joints, body movement occurs around the joints in the body. The focus of this chapter is on skeletal muscle organization. The system to name skeletal muscles will be explained; in some cases, the muscle is named by its shape, and in other cases it is named by its location or attachments to the skeleton. If you understand the meaning of the name of the muscle, often it will help you remember its location and/ or what it does.",,
+pos04,425,1108,C,B:openstax-ap2e-full:s11.0:c002,"If you recall from your study of the skeletal system and joints, body movement occurs around the joints in the body. The focus of this chapter is on skeletal muscle organization. The system to name skeletal muscles will be explained; in some cases, the muscle is named by its shape, and in other cases it is named by its location or attachments to the skeleton. If you understand the meaning of the name of the muscle, often it will help you remember its location and/ or what it does.",,
+pos05,551,1143,A,A:openstax-ap2e-full:p551:c002,"stem; these
+structures are known as the enteric nervous system and are a special subset of the PNS.
+Ganglia
+A ganglion is a group of neuron cell bodies in the periphery. Ganglia can be categorized, for the most part, as either
+sensory ganglia or autonomic ganglia, referring to their primary functions. The most common type of sensory
+ganglion is a dorsal (posterior) root ganglion. These ganglia are the cell bodies of neurons with axons that are
+sensory endings in the periphery, such as in the ski",,
+pos05,551,1143,B,B:openstax-ap2e-full:s13.4:c003,"A ganglion is a group of neuron cell bodies in the periphery. Ganglia can be categorized, for the most part, as either sensory ganglia or autonomic ganglia, referring to their primary functions. The most common type of sensory ganglion is a dorsal (posterior) root ganglion. These ganglia are the cell bodies of neurons with axons that are sensory endings in the periphery, such as in the skin, and that extend into the CNS through the dorsal nerve root.",,
+pos05,551,1143,C,B:openstax-ap2e-full:s13.4:c003,"A ganglion is a group of neuron cell bodies in the periphery. Ganglia can be categorized, for the most part, as either sensory ganglia or autonomic ganglia, referring to their primary functions. The most common type of sensory ganglion is a dorsal (posterior) root ganglion. These ganglia are the cell bodies of neurons with axons that are sensory endings in the periphery, such as in the skin, and that extend into the CNS through the dorsal nerve root.",,
+pos06,685,853,A,A:openstax-ap2e-full:p685:c001,"his is to remove the visual feedback for the movement
+and force the driver to rely just on proprioceptive information about the movement and position of their fingertip
+relative to their nose. With eyes open, the corrections to the movement of the arm might be so small as to be
+hard to see, but proprioceptive feedback is not as immediate and broader movements of the arm will probably
+be needed, particularly if the cerebellum is affected by alcohol.
+Reciting the alphabet backwards is not always a",,
+pos06,685,853,B,B:openstax-ap2e-full:s16.5:c036,"With eyes open, the corrections to the movement of the arm might be so small as to be hard to see, but proprioceptive feedback is not as immediate and broader movements of the arm will probably be needed, particularly if the cerebellum is affected by alcohol.",,
+pos06,685,853,C,B:openstax-ap2e-full:s16.5:c036,"With eyes open, the corrections to the movement of the arm might be so small as to be hard to see, but proprioceptive feedback is not as immediate and broader movements of the arm will probably be needed, particularly if the cerebellum is affected by alcohol.",,
+pos07,818,329,A,A:openstax-ap2e-full:p818:c000,"would be visible in the PR interval. Figure 19.24 correlates events of heart contraction to the corresponding
+segments and intervals of an ECG.
+INTER ACTIVE LINK
+Visit this site (http://openstax.org/l/ECG) for a more detailed analysis of ECGs.
+FIGURE 19.23 Electrocardiogram A normal tracing shows the P wave, QRS complex, and T wave. Also indicated are the PR, QT, QRS, and
+ST intervals, plus the P-R and S-T segments.
+FIGURE 19.24 ECG Tracing Correlated to the Cardiac Cycle This diagram correlates",,
+pos07,818,329,B,B:openstax-ap2e-full:s19.2:c057,"FIGURE 19.23 Electrocardiogram A normal tracing shows the P wave, QRS complex, and T wave. Also indicated are the PR, QT, QRS, and ST intervals, plus the P-R and S-T segments. FIGURE 19.24 ECG Tracing Correlated to the Cardiac Cycle This diagram correlates an ECG tracing with the electrical and mechanical events of a heart contraction. Each segment of an ECG tracing corresponds to one event in the cardiac cycle. EVERYDAY CONNECTION ECG Abnormalities",,
+pos07,818,329,C,B:openstax-ap2e-full:s19.2:c057,"FIGURE 19.23 Electrocardiogram A normal tracing shows the P wave, QRS complex, and T wave. Also indicated are the PR, QT, QRS, and ST intervals, plus the P-R and S-T segments. FIGURE 19.24 ECG Tracing Correlated to the Cardiac Cycle This diagram correlates an ECG tracing with the electrical and mechanical events of a heart contraction. Each segment of an ECG tracing corresponds to one event in the cardiac cycle. EVERYDAY CONNECTION ECG Abnormalities",,
+pos08,944,608,A,A:openstax-ap2e-full:p944:c001," pharyngeal tonsil is located on the roof of the posterior superior wall of the
+nasopharynx. The palatine tonsils lay on each side of the pharynx. (b) A micrograph shows the palatine tonsil tissue. LM × 40. (Micrograph
+provided by the Regents of the University of Michigan Medical School © 2012)
+INTER ACTIVE LINK
+View the University of Michigan WebScope (http://openstax.org/l/tonsilMG) to explore the tissue sample in greater
+detail.
+Mucosa-associated lymphoid tissue (MALT) consists of an aggregat",,
+pos08,944,608,B,B:openstax-ap2e-full:s21.1:c065,FIGURE 21.10 Locations and Histology of the Tonsils (a) The pharyngeal tonsil is located on the roof of the posterior superior wall of the nasopharynx. The palatine tonsils lay on each side of the pharynx. (b) A micrograph shows the palatine tonsil tissue. LM × 40. (Micrograph provided by the Regents of the University of Michigan Medical School © 2012) INTER ACTIVE LINK View the University of Michigan WebScope (http://openstax.org/l/tonsilMG) to explore the tissue sample in greater detail.,,
+pos08,944,608,C,B:openstax-ap2e-full:s21.1:c065,FIGURE 21.10 Locations and Histology of the Tonsils (a) The pharyngeal tonsil is located on the roof of the posterior superior wall of the nasopharynx. The palatine tonsils lay on each side of the pharynx. (b) A micrograph shows the palatine tonsil tissue. LM × 40. (Micrograph provided by the Regents of the University of Michigan Medical School © 2012) INTER ACTIVE LINK View the University of Michigan WebScope (http://openstax.org/l/tonsilMG) to explore the tissue sample in greater detail.,,
+pos09,1067,1521,A,A:openstax-ap2e-full:p1067:c003,"e duodenum, jejunum, and ileum.
+The jejunum is about 0.9 meters (3 feet) long (in life) and runs from the duodenum to the ileum. Jejunum means
+“empty” in Latin and supposedly was so named by the ancient Greeks who noticed it was always empty at death. No
+clear demarcation exists between the jejunum and the final segment of the small intestine, the ileum.
+The ileum is the longest part of the small intestine, measuring about 1.8 meters (6 feet) in length. It is thicker, more
+vascular, and has more",,
+pos09,1067,1521,B,B:openstax-ap2e-full:s23.5:c009,"The jejunum is about 0.9 meters (3 feet) long (in life) and runs from the duodenum to the ileum. Jejunum means “empty” in Latin and supposedly was so named by the ancient Greeks who noticed it was always empty at death. No clear demarcation exists between the jejunum and the final segment of the small intestine, the ileum.",,
+pos09,1067,1521,C,B:openstax-ap2e-full:s23.5:c009,"The jejunum is about 0.9 meters (3 feet) long (in life) and runs from the duodenum to the ileum. Jejunum means “empty” in Latin and supposedly was so named by the ancient Greeks who noticed it was always empty at death. No clear demarcation exists between the jejunum and the final segment of the small intestine, the ileum.",,
+pos10,1187,1365,A,A:openstax-ap2e-full:p1187:c003," a concentration gradient.
+25.10 The Urinary System and Homeostasis
+LEARNING OBJECTIVES
+By the end of this section, you will be able to:
+• Describe the role of the kidneys in vitamin D activation
+• Describe the role of the kidneys in regulating erythropoiesis
+• Provide specific examples to demonstrate how the urinary system responds to maintain homeostasis in
+the body
+• Explain how the urinary system relates to other body systems in maintaining homeostasis
+• Predict factors or situations affecti",,
+pos10,1187,1365,B,B:openstax-ap2e-full:s25.9:c020,"The body rids itself of excess H+ and raises blood pH. In the collecting ducts, the apical surfaces of intercalated cells have proton pumps that actively secrete H+ into the luminal, forming urine to remove it from the body. As hydrogen ions are pumped into the forming urine, it is buffered by bicarbonate (HCO3–), H2PO4– (dihydrogen phosphate ion), or ammonia (forming NH4+, ammonium ion). Urine pH typically varies in a normal range from 4.5 to 8.0. Regulation of Nitrogen Wastes",,
+pos10,1187,1365,C,B:openstax-ap2e-full:s25.9:c020,"The body rids itself of excess H+ and raises blood pH. In the collecting ducts, the apical surfaces of intercalated cells have proton pumps that actively secrete H+ into the luminal, forming urine to remove it from the body. As hydrogen ions are pumped into the forming urine, it is buffered by bicarbonate (HCO3–), H2PO4– (dihydrogen phosphate ion), or ammonia (forming NH4+, ammonium ion). Urine pH typically varies in a normal range from 4.5 to 8.0. Regulation of Nitrogen Wastes",,

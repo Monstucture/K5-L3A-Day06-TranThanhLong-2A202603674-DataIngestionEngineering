@@ -31,7 +31,7 @@ STARTER = Path(__file__).resolve().parents[1]
 ROOT = STARTER.parent
 # Corpus switch: the graded lab corpus (chapters 1-2 extract) or the full textbook.
 # PDF, manifest and questions must change together: page numbers differ by 22 between them.
-FULL_BOOK = False  # branch feature/paddle-ocr: the OCR experiment runs on the 70-page extract
+FULL_BOOK = True  # False = the 70-page extract (its OCR results are in results_ocr/)
 if FULL_BOOK:
     PDF_PATH = ROOT / "data" / "anatomy-and-physiology-2e.pdf"
     MANIFEST_PATH = ROOT / "data" / "manifest_full_book.json"  # from scripts/make_manifest.py
@@ -43,7 +43,7 @@ else:
 # OCR switch: add one chunk per image's OCR text (from scripts/ocr_images.py) to every index.
 # OCR runs write to results_ocr/ so the graded results in results/ are never overwritten.
 USE_OCR = True
-RESULTS = STARTER / ("results_ocr" if USE_OCR else "results")
+RESULTS = STARTER / (("results_ocr_full_book" if FULL_BOOK else "results_ocr") if USE_OCR else "results")
 OCR_PATH = ROOT / "data" / f"ocr_{PDF_PATH.stem}.json"
 FIGURES: dict[int, list[dict]] = {}  # page -> OCR'd images; filled by run_pipeline when USE_OCR
 DEFAULT_MODEL = "qwen3-embedding:4b"
