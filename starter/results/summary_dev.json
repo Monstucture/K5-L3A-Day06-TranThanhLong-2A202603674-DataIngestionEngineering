@@ -1,5 +1,5 @@
 {
-  "run_started_utc": "2026-11-13T12:01:23+00:00",
+  "run_started_utc": "2026-11-13T10:04:59+00:00",
   "split": "dev",
   "questions": 24,
   "embedding": {
@@ -32,30 +32,30 @@
   },
   "index_stats": {
     "A": {
-      "chunks": 6356,
-      "total_chars": 2951476,
-      "min_chars": 51,
+      "chunks": 368,
+      "total_chars": 170206,
+      "min_chars": 63,
       "median_chars": 500.0,
-      "mean_chars": 464.4,
+      "mean_chars": 462.5,
       "max_chars": 500,
-      "chunk_seconds": 0.016,
-      "embed_seconds": 229.289,
-      "upsert_seconds": 7.863,
+      "chunk_seconds": 0.001,
+      "embed_seconds": 12.605,
+      "upsert_seconds": 0.342,
       "rows_before_upsert": 368,
-      "rows_after_upsert": 6356
+      "rows_after_upsert": 368
     },
     "B": {
-      "chunks": 6675,
-      "total_chars": 2679483,
-      "min_chars": 9,
-      "median_chars": 424,
-      "mean_chars": 401.4,
+      "chunks": 390,
+      "total_chars": 154578,
+      "min_chars": 27,
+      "median_chars": 415.5,
+      "mean_chars": 396.4,
       "max_chars": 500,
-      "chunk_seconds": 0.832,
-      "embed_seconds": 210.52,
-      "upsert_seconds": 7.427,
+      "chunk_seconds": 0.006,
+      "embed_seconds": 11.993,
+      "upsert_seconds": 0.34,
       "rows_before_upsert": 390,
-      "rows_after_upsert": 6675
+      "rows_after_upsert": 390
     }
   },
   "metrics": {
@@ -64,8 +64,8 @@
         "questions": 24,
         "hit@1": "13/24",
         "hit@1_rate": 0.542,
-        "hit@3": "17/24",
-        "hit@3_rate": 0.708,
+        "hit@3": "18/24",
+        "hit@3_rate": 0.75,
         "page_hit@3": "22/24",
         "page_hit@3_rate": 0.917,
         "misses@3": [
@@ -74,8 +74,7 @@
           "q17",
           "q23",
           "q24",
-          "q33",
-          "q34"
+          "q33"
         ]
       }
     },

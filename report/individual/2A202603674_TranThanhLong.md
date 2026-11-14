@@ -36,14 +36,14 @@ Thời gian = embed toàn bộ chunk của index trên laptop (upsert thêm kho�
 | B | 1 (10) | N/A | N/A (không filter) | 0 / 3 / 7 — 1.7 |
 | C | 1 (10, cùng chunk với B) | 30/30 | 2/2 (q04, q29) | 0 / 3 / 7 — 1.7 |
 
-# Full book
+# Full book (Cho demo only didn't check reports and runs)
 | Strategy | Split | Hit@1 (n/N) | Evidence Hit@3 (n/N) | Chunk count | Thời gian | Chi phí |
 |---|---|---|---|---|---|---|
 | A | dev | 13/24 | 17/24 | 6356 | 229.3 s | 0 |
 | B | dev | 18/24 | 20/24 | 6675 | 210.5 s | 0 |
 | C | dev | 18/24 | 20/24 | 6675 | 210.5 s | 0 |
 
-miss "q18", "q23", "q24", "q33" ; 
+miss "q18", "q23", "q24", "q33" ; Same miss bởi vì không đổi cách chunk lẫn phân loại metadata từ bảng trên
 
 | A | test | 5/10 | 9/10 | 6356 | 221.4s s | 0 |
 | B | test | 8/10 | 10/10 | 6675 | 212.8 s | 0 |
